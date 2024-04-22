@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elementarlabs/elementar-admin.git"
+    "url": "https://github.com/elementarlabs/protrack.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elementarlabs/elementar-admin/issues"
+    "url": "https://github.com/elementarlabs/protrack/issues"
   },
   "homepage": "https://elementarui.com",
   "keywords": [
