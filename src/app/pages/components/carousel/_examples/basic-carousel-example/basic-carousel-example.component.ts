@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CarouselComponent } from '@elementar/components';
-import { CarouselCardComponent } from '@elementar/components';
+import { CarouselComponent } from 'protrack/components';
+import { CarouselCardComponent } from 'protrack/components';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { CarouselPreviousDirective } from '@elementar/components';
-import { CarouselNextDirective } from '@elementar/components';
+import { CarouselPreviousDirective } from 'protrack/components';
+import { CarouselNextDirective } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-carousel-example',

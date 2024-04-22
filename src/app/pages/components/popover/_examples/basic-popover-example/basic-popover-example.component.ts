@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { EmrPopoverModule } from '@elementar/components';
+import { EmrPopoverModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-popover-example',

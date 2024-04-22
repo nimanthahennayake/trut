@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
-import { EmrPhoneInputModule } from '@elementar/components';
+import { EmrPhoneInputModule } from 'protrack/components';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { phoneValidator } from '@elementar/components';
+import { phoneValidator } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-phone-input-example',

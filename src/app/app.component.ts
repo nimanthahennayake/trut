@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs';
 import { AnalyticsService } from '@services/analytics.service';
 import { SeoService } from '@services/seo.service';
-import { PageLoadingBarComponent } from '@elementar/components';
+import { PageLoadingBarComponent } from 'protrack/components';
 
 @Component({
   selector: 'app-root',

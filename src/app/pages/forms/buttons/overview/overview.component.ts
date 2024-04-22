@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { PlaygroundComponent } from '@meta/playground/playground.component';
 import { MatAnchor, MatButton, MatFabButton, MatIconButton, MatMiniFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { EmrScrollSpyModule } from '@elementar/components';
+import { EmrScrollSpyModule } from 'protrack/components';
 import {
   SimpleAutocompleteExampleComponent
 } from '../../autocomplete/_examples/simple-autocomplete-example/simple-autocomplete-example.component';
@@ -16,7 +16,7 @@ import {
   MiniFabButtonsExampleComponent
 } from '../_examples/mini-fab-buttons-example/mini-fab-buttons-example.component';
 import { ButtonLoadingExampleComponent } from '../_examples/button-loading-example/button-loading-example.component';
-import { EmrBreadcrumbsModule } from '@elementar/components';
+import { EmrBreadcrumbsModule } from 'protrack/components';
 import { RouterLink } from '@angular/router';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrResizableContainerModule } from '@elementar/components';
+import { EmrResizableContainerModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-resizable-container-example',

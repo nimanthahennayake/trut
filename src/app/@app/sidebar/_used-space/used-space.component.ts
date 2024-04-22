@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrGaugeModule } from '@elementar/components';
+import { EmrGaugeModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({

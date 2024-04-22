@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAlertModule } from '@elementar/components';
+import { EmrAlertModule } from 'protrack/components';
 
 @Component({
   selector: 'app-alert-with-border-example',

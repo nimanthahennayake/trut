@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { LayoutBodyComponent } from '@elementar/components';
-import { LayoutComponent } from '@elementar/components';
-import { LayoutHeaderComponent } from '@elementar/components';
-import { LayoutSidebarComponent } from '@elementar/components';
+import { LayoutBodyComponent } from 'protrack/components';
+import { LayoutComponent } from 'protrack/components';
+import { LayoutHeaderComponent } from 'protrack/components';
+import { LayoutSidebarComponent } from 'protrack/components';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@app/header/header/header.component';
 import { SidebarComponent } from '@app/sidebar/sidebar/sidebar.component';

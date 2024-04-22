@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from '@elementar/components';
+import { EmrAvatarModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { SuggestionBlockComponent } from '@elementar/components';
-import { SuggestionComponent } from '@elementar/components';
-import { SuggestionIconDirective } from '@elementar/components';
-import { SuggestionThumbDirective } from '@elementar/components';
-import { SuggestionsComponent } from '@elementar/components';
+import { SuggestionBlockComponent } from 'protrack/components';
+import { SuggestionComponent } from 'protrack/components';
+import { SuggestionIconDirective } from 'protrack/components';
+import { SuggestionThumbDirective } from 'protrack/components';
+import { SuggestionsComponent } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-suggestions-example',

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from '@elementar/components';
+import { EmrAvatarModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-import { EmrDividerModule } from '@elementar/components';
+import { EmrDividerModule } from 'protrack/components';
 
 @Component({
   standalone: true,

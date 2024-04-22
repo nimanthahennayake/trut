@@ -20,7 +20,7 @@
       "@meta/*": [
         "./src/app/@meta/*"
       ],
-      "@elementar/components": [
+      "protrack/components": [
         "./projects/components/src"
       ]
     },

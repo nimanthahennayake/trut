@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EmrTimelineModule } from '@elementar/components';
-import { EmrAvatarModule } from '@elementar/components';
+import { EmrTimelineModule } from 'protrack/components';
+import { EmrAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-timeline-timestamp-example',

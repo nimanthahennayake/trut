@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EmrAvatarModule, IconComponent } from '@elementar/components';
+import { EmrAvatarModule, IconComponent } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';

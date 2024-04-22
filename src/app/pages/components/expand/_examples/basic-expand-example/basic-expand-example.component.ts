@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrExpandModule } from '@elementar/components';
+import { EmrExpandModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-expand-example',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrDividerModule } from '@elementar/components';
+import { EmrDividerModule } from 'protrack/components';
 
 @Component({
   selector: 'app-divider-with-text-example',

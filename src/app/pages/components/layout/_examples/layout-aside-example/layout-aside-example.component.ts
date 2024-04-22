@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { LayoutBodyComponent } from '@elementar/components';
-import { LayoutComponent } from '@elementar/components';
-import { LayoutSidebarComponent } from '@elementar/components';
-import { LayoutAsideComponent } from '@elementar/components';
+import { LayoutBodyComponent } from 'protrack/components';
+import { LayoutComponent } from 'protrack/components';
+import { LayoutSidebarComponent } from 'protrack/components';
+import { LayoutAsideComponent } from 'protrack/components';
 
 @Component({
   selector: 'app-layout-aside-example',

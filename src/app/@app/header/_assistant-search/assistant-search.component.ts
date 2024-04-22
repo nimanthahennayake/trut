@@ -10,13 +10,13 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { CdkConnectedOverlay, CdkOverlayOrigin, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-import { SuggestionsComponent } from '@elementar/components';
-import { SuggestionBlockComponent } from '@elementar/components';
-import { SuggestionComponent } from '@elementar/components';
+import { SuggestionsComponent } from 'protrack/components';
+import { SuggestionBlockComponent } from 'protrack/components';
+import { SuggestionComponent } from 'protrack/components';
 import { MatButton, MatIconButton } from '@angular/material/button';
-import { SuggestionIconDirective } from '@elementar/components';
-import { EmrAvatarModule } from '@elementar/components';
-import { SuggestionThumbDirective } from '@elementar/components';
+import { SuggestionIconDirective } from 'protrack/components';
+import { EmrAvatarModule } from 'protrack/components';
+import { SuggestionThumbDirective } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 
 @Component({

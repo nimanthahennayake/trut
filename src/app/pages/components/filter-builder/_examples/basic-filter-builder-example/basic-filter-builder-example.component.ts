@@ -5,7 +5,7 @@ import {
   FilterBuilderFieldDef, FilterBuilderGroup,
   FilterBuilderItemType,
   IconComponent
-} from '@elementar/components';
+} from 'protrack/components';
 import { JsonPipe } from '@angular/common';
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { EmrNavigationModule } from '@elementar/components';
-import { LayoutBodyComponent } from '@elementar/components';
-import { LayoutComponent } from '@elementar/components';
-import { LayoutSidebarComponent } from '@elementar/components';
+import { EmrNavigationModule } from 'protrack/components';
+import { LayoutBodyComponent } from 'protrack/components';
+import { LayoutComponent } from 'protrack/components';
+import { LayoutSidebarComponent } from 'protrack/components';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { Location } from '@angular/common';

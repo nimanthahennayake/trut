@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { EmrSegmentedModule } from '@elementar/components';
+import { EmrSegmentedModule } from 'protrack/components';
 
 @Component({
   selector: 'app-segmented-with-icons-example',

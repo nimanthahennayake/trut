@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from '@elementar/components';
+import { EmrAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-grouped-avatars-example',

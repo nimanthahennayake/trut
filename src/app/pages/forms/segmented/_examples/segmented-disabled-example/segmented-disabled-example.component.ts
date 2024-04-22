@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrSegmentedModule } from '@elementar/components';
+import { EmrSegmentedModule } from 'protrack/components';
 
 @Component({
   selector: 'app-segmented-disabled-example',

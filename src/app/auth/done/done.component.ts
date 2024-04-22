@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrPinInputModule } from '@elementar/components';
+import { EmrPinInputModule } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 import { MatAnchor, MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';

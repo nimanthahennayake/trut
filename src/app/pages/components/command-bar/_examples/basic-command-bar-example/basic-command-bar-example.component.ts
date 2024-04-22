@@ -1,11 +1,11 @@
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EmrCommandBarModule } from '@elementar/components';
+import { EmrCommandBarModule } from 'protrack/components';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatOption } from '@angular/material/autocomplete';
 import { MatSelect } from '@angular/material/select';
-import { CommandBarPosition } from '@elementar/components';
+import { CommandBarPosition } from 'protrack/components';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({

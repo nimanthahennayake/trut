@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
-import { EmrAvatarModule } from '@elementar/components';
+import { EmrAvatarModule } from 'protrack/components';
 import { MatRipple } from '@angular/material/core';
-import { EmrSkeletonModule } from '@elementar/components';
+import { EmrSkeletonModule } from 'protrack/components';
 import { NgTemplateOutlet } from '@angular/common';
 import { Notification } from '@app/header/_notifications/types';
 import {

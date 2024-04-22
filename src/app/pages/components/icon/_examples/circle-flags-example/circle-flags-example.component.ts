@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IconComponent } from '@elementar/components';
+import { IconComponent } from 'protrack/components';
 
 @Component({
   selector: 'app-circle-flags-example',

@@ -7,13 +7,13 @@ import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 import { MatDivider } from '@angular/material/divider';
 import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
-import { IconComponent, MenuOptionGroupDirective } from '@elementar/components';
+import { IconComponent, MenuOptionGroupDirective } from 'protrack/components';
 import { MatCheckbox, MatCheckboxChange } from '@angular/material/checkbox';
 import { MatRipple } from '@angular/material/core';
 import { MatMenuBarItem } from '@angular/material-experimental/menubar';
 import { MatTooltip } from '@angular/material/tooltip';
 import { SelectionModel } from '@angular/cdk/collections';
-import { FormatFileSizePipe } from '@elementar/components';
+import { FormatFileSizePipe } from 'protrack/components';
 
 @Component({
   selector: 'app-file-grid-layout',

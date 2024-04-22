@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrNavigationModule } from '@elementar/components';
+import { EmrNavigationModule } from 'protrack/components';
 
 @Component({
   selector: 'app-navigation-with-heading-example',

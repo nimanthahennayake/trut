@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrTabPanelModule } from '@elementar/components';
+import { EmrTabPanelModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({

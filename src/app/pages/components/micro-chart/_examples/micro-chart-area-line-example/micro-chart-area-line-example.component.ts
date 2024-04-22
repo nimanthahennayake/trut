@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AreaLineChartComponent } from '@elementar/components';
+import { AreaLineChartComponent } from 'protrack/components';
 
 @Component({
   selector: 'app-micro-chart-area-line-example',

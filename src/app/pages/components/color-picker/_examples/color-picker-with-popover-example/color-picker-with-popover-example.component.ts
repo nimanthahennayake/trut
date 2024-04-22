@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrColorPickerModule } from '@elementar/components';
+import { EmrColorPickerModule } from 'protrack/components';
 
 @Component({
   selector: 'app-color-picker-with-popover-example',

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CarouselCardComponent } from '@elementar/components';
-import { CarouselComponent } from '@elementar/components';
-import { CarouselNextDirective } from '@elementar/components';
-import { CarouselPreviousDirective } from '@elementar/components';
+import { CarouselCardComponent } from 'protrack/components';
+import { CarouselComponent } from 'protrack/components';
+import { CarouselNextDirective } from 'protrack/components';
+import { CarouselPreviousDirective } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 
