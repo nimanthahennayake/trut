@@ -24,8 +24,8 @@ export class MyProfileComponent {
   myProfile = {
     firstName: 'Pavel',
     lastName: 'Salauyou',
-    username: '@pavel.salauyou',
-    email: 'pavel.salauyou@example.com',
+    username: '@nimantha.hennayake',
+    email: 'nimantha.hennayake@example.com',
     jobTitle: 'Team Lead',
     bio: 'Senior Angular Developer',
     phoneNumber: '+1(23)4567890',

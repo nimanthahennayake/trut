@@ -21,7 +21,7 @@ import { EmrDividerModule } from 'protrack/components';
 })
 export class SecurityComponent {
   securityProfile = {
-    email: 'pavel.salauyou@gmail.com',
+    email: 'nimantha.hennayake@gmail.com',
     isEmailVerified: false,
     mfaConfigured: false,
     mfaEnabled: false

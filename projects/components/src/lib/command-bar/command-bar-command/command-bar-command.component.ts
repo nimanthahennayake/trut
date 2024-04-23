@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'emr-command-bar-command',
+  selector: 'trut-command-bar-command',
   exportAs: 'emrCommandBarCommand',
   templateUrl: './command-bar-command.component.html',
   styleUrl: './command-bar-command.component.css',
   host: {
-    'class': 'emr-command-bar-command'
+    'class': 'trut-command-bar-command'
   }
 })
 export class CommandBarCommandComponent {

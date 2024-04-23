@@ -4,14 +4,14 @@ import { filter } from 'rxjs';
 import { isPlatformServer } from '@angular/common';
 
 @Component({
-  selector: 'emr-layout-body',
+  selector: 'trut-layout-body',
   exportAs: 'emrLayoutBody',
   standalone: true,
   imports: [],
   templateUrl: './layout-body.component.html',
   styleUrl: './layout-body.component.scss',
   host: {
-    'class': 'emr-layout-body emr-scroll-lg'
+    'class': 'trut-layout-body trut-scroll-lg'
   }
 })
 export class LayoutBodyComponent implements OnInit {

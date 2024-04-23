@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-list-file',
+  selector: 'trut-list-file',
   standalone: true,
   imports: [],
   templateUrl: './list-file.component.html',

@@ -1,34 +1,34 @@
 :host {
   display: block;
   position: relative;
-  border: var(--emr-popover-border);
-  box-shadow: var(--emr-popover-shadow);
-  border-radius: var(--emr-popover-border-radius);
-  background: var(--emr-popover-bg);
-  animation: .15s emr-popover-animation;
+  border: var(--trut-popover-border);
+  box-shadow: var(--trut-popover-shadow);
+  border-radius: var(--trut-popover-border-radius);
+  background: var(--trut-popover-bg);
+  animation: .15s trut-popover-animation;
 }
 
-:host-context(.emr-popover-above) {
-  margin-bottom: var(--emr-popover-margin-offset);
+:host-context(.trut-popover-above) {
+  margin-bottom: var(--trut-popover-margin-offset);
   transform-origin: bottom;
 }
 
-:host-context(.emr-popover-below) {
-  margin-top: var(--emr-popover-margin-offset);
+:host-context(.trut-popover-below) {
+  margin-top: var(--trut-popover-margin-offset);
   transform-origin: top;
 }
 
-:host-context(.emr-popover-before) {
-  margin-inline-end: var(--emr-popover-margin-offset);
+:host-context(.trut-popover-before) {
+  margin-inline-end: var(--trut-popover-margin-offset);
   transform-origin: right;
 }
 
-:host-context(.emr-popover-after) {
-  margin-inline-start: var(--emr-popover-margin-offset);
+:host-context(.trut-popover-after) {
+  margin-inline-start: var(--trut-popover-margin-offset);
   transform-origin: left;
 }
 
-@keyframes emr-popover-animation {
+@keyframes trut-popover-animation {
   0% {
     transform: scale(.9);
     opacity: 0;

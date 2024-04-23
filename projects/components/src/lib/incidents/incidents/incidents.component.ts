@@ -4,7 +4,7 @@ import {
 import { INCIDENTS } from '../properties';
 
 @Component({
-  selector: 'emr-incidents',
+  selector: 'trut-incidents',
   exportAs: 'emrIncidents',
   templateUrl: './incidents.component.html',
   styleUrls: ['./incidents.component.css'],
@@ -15,7 +15,7 @@ import { INCIDENTS } from '../properties';
     }
   ],
   host: {
-    'class': 'emr-incidents',
+    'class': 'trut-incidents',
     '[class.is-visible]': 'isVisible',
   }
 })

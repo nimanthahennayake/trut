@@ -17,7 +17,7 @@ import { RegExpValidator } from '../validator/regexp.class';
 import { ThemePalette } from '@angular/material/core';
 
 @Component({
-  selector: 'emr-password-strength',
+  selector: 'trut-password-strength',
   exportAs: 'emrPasswordStrength',
   templateUrl: './password-strength.component.html',
   styleUrls: ['./password-strength.component.scss'],

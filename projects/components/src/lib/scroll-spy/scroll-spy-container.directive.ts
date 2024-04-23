@@ -4,7 +4,7 @@ import { Directive } from '@angular/core';
   selector: '[emrScrollSpyContainer]',
   exportAs: 'emrScrollSpyContainer',
   host: {
-    'class': 'emr-scroll-spy-container'
+    'class': 'trut-scroll-spy-container'
   }
 })
 export class ScrollSpyContainerDirective {

@@ -26,7 +26,7 @@ import { ColorPickerPosition } from './properties';
   selector: '[emrColorPickerTriggerFor]',
   exportAs: 'emrColorPickerTriggerFor',
   host: {
-    'class': 'emr-color-picker-trigger-for'
+    'class': 'trut-color-picker-trigger-for'
   }
 })
 export class ColorPickerTriggerForDirective {
@@ -132,7 +132,7 @@ export class ColorPickerTriggerForDirective {
       positionStrategy: this._getOverlayPositionStrategy(),
       scrollStrategy: this._overlay.scrollStrategies.reposition(),
       direction: this._directionality || undefined,
-      panelClass: 'emr-color-picker-overlay-panel'
+      panelClass: 'trut-color-picker-overlay-panel'
     });
   }
 

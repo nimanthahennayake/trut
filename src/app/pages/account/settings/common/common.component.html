@@ -1,14 +1,14 @@
-<emr-layout-body>
-  <emr-layout>
-    <emr-layout-sidebar class="border-r dark:border-r-neutral-600 w-[300px] py-7 px-5">
-      <emr-navigation [activeKey]="activeLinkId" theme="secondary">
+<trut-layout-body>
+  <trut-layout>
+    <trut-layout-sidebar class="border-r dark:border-r-neutral-600 w-[300px] py-7 px-5">
+      <trut-navigation [activeKey]="activeLinkId" theme="secondary">
         @for (navItem of navItems; track navItem) {
-          <a [routerLink]="navItem.link" emr-navigation-item [key]="navItem.link">{{ navItem.name }}</a>
+          <a [routerLink]="navItem.link" trut-navigation-item [key]="navItem.link">{{ navItem.name }}</a>
         }
-      </emr-navigation>
-    </emr-layout-sidebar>
-    <emr-layout-body>
+      </trut-navigation>
+    </trut-layout-sidebar>
+    <trut-layout-body>
       <router-outlet></router-outlet>
-    </emr-layout-body>
-  </emr-layout>
-</emr-layout-body>
+    </trut-layout-body>
+  </trut-layout>
+</trut-layout-body>

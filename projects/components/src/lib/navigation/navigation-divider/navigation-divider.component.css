@@ -1,6 +1,6 @@
 :host {
   display: block;
-  height: var(--emr-navigation-divider-height);
-  background-color: var(--emr-navigation-divider-bg);
-  margin: var(--emr-navigation-divider-margin);
+  height: var(--trut-navigation-divider-height);
+  background-color: var(--trut-navigation-divider-bg);
+  margin: var(--trut-navigation-divider-margin);
 }

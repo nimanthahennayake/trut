@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-incident-details',
+  selector: 'trut-incident-details',
   templateUrl: './incident-details.component.html',
   styleUrls: ['./incident-details.component.css']
 })

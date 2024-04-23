@@ -4,5 +4,5 @@
 
 :host .list-container {
   display: none;
-  height: calc(100vh - var(--emr-layout-top-header-top) + var(--emr-layout-top-header-height));
+  height: calc(100vh - var(--trut-layout-top-header-top) + var(--trut-layout-top-header-height));
 }

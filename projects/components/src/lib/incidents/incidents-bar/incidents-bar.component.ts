@@ -3,12 +3,12 @@ import { INCIDENTS } from '../properties';
 import { IncidentsComponent } from '../incidents/incidents.component';
 
 @Component({
-  selector: 'emr-incidents-bar',
+  selector: 'trut-incidents-bar',
   exportAs: 'emrIncidentsBar',
   templateUrl: './incidents-bar.component.html',
   styleUrls: ['./incidents-bar.component.css'],
   host: {
-    'class': 'emr-incidents-bar'
+    'class': 'trut-incidents-bar'
   }
 })
 export class IncidentsBarComponent {

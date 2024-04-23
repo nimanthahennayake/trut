@@ -16,7 +16,7 @@ import { SCROLL_SPY_NAV } from '../types';
 import { ScrollSpyOnComponent } from '../scroll-spy-on/scroll-spy-on.component';
 
 @Component({
-  selector: 'emr-scroll-spy-nav,[emr-scroll-spy-nav]',
+  selector: 'trut-scroll-spy-nav,[trut-scroll-spy-nav]',
   exportAs: 'emrScrollSpyNav',
   templateUrl: './scroll-spy-nav.component.html',
   styleUrl: './scroll-spy-nav.component.scss',
@@ -28,7 +28,7 @@ import { ScrollSpyOnComponent } from '../scroll-spy-on/scroll-spy-on.component';
     }
   ],
   host: {
-    'class': 'emr-scroll-spy-nav'
+    'class': 'trut-scroll-spy-nav'
   }
 })
 export class ScrollSpyNavComponent implements AfterContentInit {
@@ -51,7 +51,7 @@ export class ScrollSpyNavComponent implements AfterContentInit {
       return;
     }
 
-    this._elementToScroll = this._document.querySelector('.emr-layout-body:has(:not(.emr-layout-body))') as HTMLElement;
+    this._elementToScroll = this._document.querySelector('.trut-layout-body:has(:not(.trut-layout-body))') as HTMLElement;
 
     if (this._elementToScroll) {
       this._zone.runOutsideAngular(() => {

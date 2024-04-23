@@ -2,5 +2,5 @@
   display: flex;
   align-items: center;
   flex: none;
-  height: var(--emr-panel-footer-height);
+  height: var(--trut-panel-footer-height);
 }

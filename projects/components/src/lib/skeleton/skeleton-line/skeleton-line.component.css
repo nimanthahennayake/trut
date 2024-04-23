@@ -1,17 +1,17 @@
 :host {
-  animation: var(--emr-skeleton-item-animation);
+  animation: var(--trut-skeleton-item-animation);
   display: block;
   flex: none;
 }
 
 :host:not([class*="w-"]):not([class*="size-"]) {
-  width: var(--emr-skeleton-line-width);
+  width: var(--trut-skeleton-line-width);
 }
 
 :host:not([class*="h-"]):not([class*="size-"]) {
-  height: var(--emr-skeleton-line-height);
+  height: var(--trut-skeleton-line-height);
 }
 
 :host:not([class*="rounded-"]) {
-  border-radius: var(--emr-skeleton-line-border-radius);
+  border-radius: var(--trut-skeleton-line-border-radius);
 }

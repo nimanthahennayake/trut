@@ -26,8 +26,8 @@ import { PositionManager } from './position-manager';
   selector: '[emrPopoverTriggerFor]',
   exportAs: 'emrPopoverTriggerFor',
   host: {
-    class: 'emr-popover-trigger-for',
-    '[class.emr-popover-trigger-for--is-open]': 'api.isOpen()',
+    class: 'trut-popover-trigger-for',
+    '[class.trut-popover-trigger-for--is-open]': 'api.isOpen()',
   }
 })
 export class PopoverTriggerForDirective implements  OnDestroy {

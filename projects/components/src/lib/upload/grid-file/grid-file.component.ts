@@ -5,7 +5,7 @@ import { EmrGaugeModule } from '../../gauge';
 import { UploadFileState } from '../properties';
 
 @Component({
-  selector: 'emr-grid-file',
+  selector: 'trut-grid-file',
   exportAs: 'emrGridFile',
   standalone: true,
   imports: [

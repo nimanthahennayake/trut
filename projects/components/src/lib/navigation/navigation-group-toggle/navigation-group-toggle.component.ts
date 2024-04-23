@@ -3,12 +3,12 @@ import { NavigationApiService } from '../navigation-api.service';
 import { NavigationGroupToggleIconDirective } from '../navigation-group-toggle-icon.directive';
 
 @Component({
-  selector: 'emr-navigation-group-toggle',
+  selector: 'trut-navigation-group-toggle',
   exportAs: 'emrNavigationGroupToggle',
   templateUrl: './navigation-group-toggle.component.html',
   styleUrls: ['./navigation-group-toggle.component.css'],
   host: {
-    class: 'emr-navigation-group-toggle',
+    class: 'trut-navigation-group-toggle',
     '[class.is-active]': 'active'
   }
 })

@@ -7,7 +7,7 @@ import { map, take } from 'rxjs/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'emr-page-loading-bar',
+  selector: 'trut-page-loading-bar',
   exportAs: 'emrPageLoadingBar',
   standalone: true,
   imports: [
@@ -17,7 +17,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   templateUrl: './page-loading-bar.component.html',
   styleUrl: './page-loading-bar.component.scss',
   host: {
-    'class': 'emr--page-loading-bar',
+    'class': 'trut--page-loading-bar',
     '[class.is-visible]': 'visible',
     '[class.is-fixed]': 'fixed'
   }

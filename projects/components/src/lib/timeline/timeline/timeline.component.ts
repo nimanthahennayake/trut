@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-timeline',
+  selector: 'trut-timeline',
   exportAs: 'emrTimeline',
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
   host: {
-    'class': 'emr-timeline'
+    'class': 'trut-timeline'
   }
 })
 export class TimelineComponent {

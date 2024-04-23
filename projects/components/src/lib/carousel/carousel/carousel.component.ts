@@ -8,8 +8,8 @@ import { CAROUSEL, CAROUSEL_CARD, CarouselApiInterface, CarouselCardInterface } 
 
 
 @Component({
-  selector: 'emr-carousel',
-  exportAs: 'emr-carousel',
+  selector: 'trut-carousel',
+  exportAs: 'trut-carousel',
   standalone: true,
   imports: [],
   providers: [

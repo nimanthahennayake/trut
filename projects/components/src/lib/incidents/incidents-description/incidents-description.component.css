@@ -1,5 +1,5 @@
 :host {
   display: block;
-  font-size: var(--emr-incidents-description-font-size);
-  opacity: var(--emr-incidents-description-opacity);
+  font-size: var(--trut-incidents-description-font-size);
+  opacity: var(--trut-incidents-description-opacity);
 }

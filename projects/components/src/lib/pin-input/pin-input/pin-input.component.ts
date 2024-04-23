@@ -22,7 +22,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 // import { DELETE, BACKSPACE, TAB } from '@angular/cdk/keycodes';
 
 @Component({
-  selector: 'emr-pin-input',
+  selector: 'trut-pin-input',
   exportAs: 'emrPinInput',
   templateUrl: './pin-input.component.html',
   styleUrl: './pin-input.component.css',
@@ -34,7 +34,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
     }
   ],
   host: {
-    'class': 'emr-pin-input',
+    'class': 'trut-pin-input',
     '[class.is-disabled]': 'disabled',
   }
 })

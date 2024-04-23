@@ -2,7 +2,7 @@ import { booleanAttribute, Component, Input } from '@angular/core';
 import { LAYOUT } from '../types';
 
 @Component({
-  selector: 'emr-layout',
+  selector: 'trut-layout',
   exportAs: 'emrLayout',
   standalone: true,
   templateUrl: './layout.component.html',
@@ -14,7 +14,7 @@ import { LAYOUT } from '../types';
     }
   ],
   host: {
-    'class': 'emr-layout',
+    'class': 'trut-layout',
     '[class.is-window-mode]': 'windowMode'
   }
 })

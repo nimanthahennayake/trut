@@ -1,6 +1,6 @@
 :host {
   display: block;
-  width: var(--emr-command-bar-separator-width);
-  height: var(--emr-command-bar-separator-height);
-  background: var(--emr-command-bar-separator-bg);
+  width: var(--trut-command-bar-separator-width);
+  height: var(--trut-command-bar-separator-height);
+  background: var(--trut-command-bar-separator-bg);
 }

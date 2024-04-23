@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-navigation-divider',
+  selector: 'trut-navigation-divider',
   exportAs: 'emrNavigationDivider',
   template: '',
   styleUrls: ['./navigation-divider.component.css'],
   host: {
-    class: 'emr-navigation-divider'
+    class: 'trut-navigation-divider'
   }
 })
 export class NavigationDividerComponent {

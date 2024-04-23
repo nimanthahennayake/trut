@@ -9,19 +9,19 @@
 }
 
 :host:not([class*="w-"]):not([class*="size-"]) {
-  width: var(--emr-gauge-size);
+  width: var(--trut-gauge-size);
 }
 
 :host:not([class*="h-"]):not([class*="size-"]) {
-  height: var(--emr-gauge-size);
+  height: var(--trut-gauge-size);
 }
 
 :host .bg {
-  color: var(--emr-gauge-bg);
+  color: var(--trut-gauge-bg);
 }
 
 :host .fill {
   transition: stroke-dasharray 1s ease 0s, stroke 1s ease 0s;
-  animation: emr-gauge-fill 1s ease forwards;
-  color: var(--emr-gauge-fill);
+  animation: trut-gauge-fill 1s ease forwards;
+  color: var(--trut-gauge-fill);
 }

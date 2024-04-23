@@ -12,12 +12,12 @@ import { NavigationItemComponent } from '../navigation-item/navigation-item.comp
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'emr-navigation-group-menu',
+  selector: 'trut-navigation-group-menu',
   exportAs: 'emrNavigationGroupMenu',
   templateUrl: './navigation-group-menu.component.html',
   styleUrls: ['./navigation-group-menu.component.css'],
   host: {
-    'class': 'emr-navigation-group-menu',
+    'class': 'trut-navigation-group-menu',
     '[class.is-active]': 'active'
   }
 })

@@ -10,51 +10,51 @@
 }
 
 <ng-template #suggestionDropdown>
-  <emr-suggestions class="rounded-b border-t dark:border-t-neutral-600 w-[600px] dark:bg-neutral-700 p-4 space-y-4">
-    <emr-suggestion-block heading="Recently Viewed">
-      <emr-suggestion (click)="close()">
+  <trut-suggestions class="rounded-b border-t dark:border-t-neutral-600 w-[600px] dark:bg-neutral-700 p-4 space-y-4">
+    <trut-suggestion-block heading="Recently Viewed">
+      <trut-suggestion (click)="close()">
         <mat-icon emrSuggestionIcon class="material-symbols-outlined">tune</mat-icon>
         <span>Settings</span> &ndash; <span class="text-neutral-500 dark:text-neutral-400">My Profile</span>
-      </emr-suggestion>
-      <emr-suggestion>
+      </trut-suggestion>
+      <trut-suggestion>
         <mat-icon emrSuggestionIcon class="material-symbols-outlined">timeline</mat-icon>
         <span>Application statistics</span> &ndash; <span class="text-neutral-500 dark:text-neutral-400">Admin
           Panel</span>
-      </emr-suggestion>
-    </emr-suggestion-block>
-    <emr-suggestion-block heading="Users">
-      <emr-suggestion>
-        <emr-avatar text="PS" emrSuggestionThumb></emr-avatar>
-        Pavel Salauyou
-      </emr-suggestion>
-      <emr-suggestion>
-        <emr-avatar src="https://avatar.iran.liara.run/public" text="JJ" emrSuggestionThumb></emr-avatar>
+      </trut-suggestion>
+    </trut-suggestion-block>
+    <trut-suggestion-block heading="Users">
+      <trut-suggestion>
+        <trut-avatar text="PS" emrSuggestionThumb></trut-avatar>
+        Nimantha Hennayake
+      </trut-suggestion>
+      <trut-suggestion>
+        <trut-avatar src="https://avatar.iran.liara.run/public" text="JJ" emrSuggestionThumb></trut-avatar>
         Jessica Jones
-      </emr-suggestion>
-    </emr-suggestion-block>
-    <emr-suggestion-block heading="Files">
-      <emr-suggestion>
+      </trut-suggestion>
+    </trut-suggestion-block>
+    <trut-suggestion-block heading="Files">
+      <trut-suggestion>
         <div class="size-8 rounded bg-neutral-200 dark:bg-neutral-500 text-neutral-800 shadow-sm
                     flex items-center justify-center dark:text-neutral-200" emrSuggestionThumb>
           <mat-icon class="material-symbols-outlined">image</mat-icon>
         </div>
         <span>Application flow.png</span> &ndash; <span class="text-neutral-500 dark:text-neutral-400">30KB</span>
-      </emr-suggestion>
-      <emr-suggestion>
+      </trut-suggestion>
+      <trut-suggestion>
         <div class="size-8 rounded bg-neutral-200 dark:bg-neutral-500 text-neutral-800 shadow-sm
                     flex items-center justify-center dark:text-neutral-200" emrSuggestionThumb>
           <mat-icon class="material-symbols-outlined">description</mat-icon>
         </div>
         <span>Monthly Report.pdf</span> &ndash; <span class="text-neutral-500 dark:text-neutral-400">502KB</span>
-      </emr-suggestion>
-    </emr-suggestion-block>
-    <emr-suggestion-block heading="Create Team" showDivider inline>
+      </trut-suggestion>
+    </trut-suggestion-block>
+    <trut-suggestion-block heading="Create Team" showDivider inline>
       <button mat-stroked-button>
         <mat-icon class="material-symbols-outlined">add</mat-icon>Create new team
       </button>
       <button mat-stroked-button>
         <mat-icon class="material-symbols-outlined">add</mat-icon>Add new member
       </button>
-    </emr-suggestion-block>
-  </emr-suggestions>
+    </trut-suggestion-block>
+  </trut-suggestions>
 </ng-template>

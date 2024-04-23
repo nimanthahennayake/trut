@@ -1,12 +1,12 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'emr-skeleton',
+  selector: 'trut-skeleton',
   exportAs: 'emrSkeleton',
   templateUrl: './skeleton.component.html',
   styleUrls: ['./skeleton.component.css'],
   host: {
-    'class': 'emr-skeleton',
+    'class': 'trut-skeleton',
     '[class.is-direction-row]': 'direction() === "row"',
     '[class.is-direction-col]': 'direction() === "col"',
   }

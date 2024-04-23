@@ -15,7 +15,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
-  selector: 'emr-segmented',
+  selector: 'trut-segmented',
   exportAs: 'emrSegmented',
   templateUrl: './segmented.component.html',
   styleUrl: './segmented.component.css',
@@ -31,7 +31,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
     }
   ],
   host: {
-    'class': 'emr-segmented',
+    'class': 'trut-segmented',
     '[class.is-disabled]': 'disabled',
   },
 })
@@ -51,7 +51,7 @@ export class SegmentedComponent implements OnInit, ControlValueAccessor {
   @Input()
   set size(size: SegmentedTriggerSize) {
     this._size = size;
-    this._renderer.setAttribute(this._elementRef.nativeElement, 'emr-segmented-size', this._size);
+    this._renderer.setAttribute(this._elementRef.nativeElement, 'trut-segmented-size', this._size);
   }
   private _size: SegmentedTriggerSize = 'default';
 
@@ -69,7 +69,7 @@ export class SegmentedComponent implements OnInit, ControlValueAccessor {
   }
 
   ngOnInit() {
-    this._renderer.setAttribute(this._elementRef.nativeElement, 'emr-segmented-size', this._size);
+    this._renderer.setAttribute(this._elementRef.nativeElement, 'trut-segmented-size', this._size);
   }
 
   writeValue(value: any) {

@@ -66,7 +66,7 @@ const _emrPhoneInputMixinBase: typeof emrPhoneInputBase = mixinErrorState(
 )
 
 @Component({
-  selector: 'emr-phone-input',
+  selector: 'trut-phone-input',
   templateUrl: './phone-input.component.html',
   styleUrls: ['./phone-input.component.scss'],
   providers: [
@@ -83,7 +83,7 @@ const _emrPhoneInputMixinBase: typeof emrPhoneInputBase = mixinErrorState(
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'emr-phone-input'
+    'class': 'trut-phone-input'
   }
 })
 export class PhoneInputComponent

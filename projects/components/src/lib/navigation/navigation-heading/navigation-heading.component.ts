@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-navigation-heading',
+  selector: 'trut-navigation-heading',
   exportAs: 'emrNavigationHeading',
   templateUrl: './navigation-heading.component.html',
   styleUrls: ['./navigation-heading.component.css'],
   host: {
-    class: 'emr-navigation-heading'
+    class: 'trut-navigation-heading'
   }
 })
 export class NavigationHeadingComponent {

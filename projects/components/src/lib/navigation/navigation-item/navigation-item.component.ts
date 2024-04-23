@@ -9,12 +9,12 @@ import { NavigationApiService } from '../navigation-api.service';
 import { NavigationItemIconDirective } from '../navigation-item-icon.directive';
 
 @Component({
-  selector: 'emr-navigation-item,[emr-navigation-item]',
+  selector: 'trut-navigation-item,[trut-navigation-item]',
   exportAs: 'emrNavigationItem',
   templateUrl: './navigation-item.component.html',
   styleUrls: ['./navigation-item.component.css'],
   host: {
-    'class': 'emr-navigation-item',
+    'class': 'trut-navigation-item',
     '[class.is-active]': 'forceActive || active'
   }
 })

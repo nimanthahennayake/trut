@@ -16,13 +16,13 @@ import { FilterBuilderOperationDefDirective } from '../filter-builder-operation-
 import { FilterBuilderCondition, FilterBuilderFieldDef, FilterBuilderGroup, FilterBuilderItemType } from '../types';
 
 @Component({
-  selector: 'emr-filter-builder',
+  selector: 'trut-filter-builder',
   exportAs: 'emrFilterBuilder',
   templateUrl: './filter-builder.component.html',
   styleUrl: './filter-builder.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'emr-filter-builder'
+    'class': 'trut-filter-builder'
   }
 })
 export class FilterBuilderComponent implements OnInit, AfterViewInit {

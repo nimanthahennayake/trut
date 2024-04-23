@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-panel-body',
+  selector: 'trut-panel-body',
   exportAs: 'emrPanelBody',
   templateUrl: './panel-body.component.html',
   styleUrls: ['./panel-body.component.css'],
   host: {
-    'class': 'emr-panel-body'
+    'class': 'trut-panel-body'
   }
 })
 export class PanelBodyComponent {

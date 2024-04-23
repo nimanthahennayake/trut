@@ -4,7 +4,7 @@ import { Directive, inject, TemplateRef } from '@angular/core';
   selector: '[emrAlertIcon]',
   exportAs: 'emrAlertIcon',
   host: {
-    'class': 'emr-alert-icon'
+    'class': 'trut-alert-icon'
   }
 })
 export class AlertIconDirective {

@@ -4,7 +4,7 @@ import { Directive } from '@angular/core';
   selector: '[emrSegmentedIcon]',
   exportAs: 'emrSegmentedIcon',
   host: {
-    'class': 'emr-segmented-icon'
+    'class': 'trut-segmented-icon'
   }
 })
 export class SegmentedIconDirective {

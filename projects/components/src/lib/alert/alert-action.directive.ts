@@ -4,7 +4,7 @@ import { Directive } from '@angular/core';
   selector: '[emrAlertAction]',
   exportAs: 'emrAlertAction',
   host: {
-    'class': 'emr-alert-action'
+    'class': 'trut-alert-action'
   }
 })
 export class AlertActionDirective {

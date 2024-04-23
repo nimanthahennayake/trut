@@ -8,84 +8,84 @@ export class PositionManager {
       overlayY: 'top',
       originX: 'start',
       overlayX: 'start',
-      panelClass: ['emr-popover-below', 'emr-popover-below-start']
+      panelClass: ['trut-popover-below', 'trut-popover-below-start']
     },
     'below-center': {
       originY: 'bottom',
       overlayY: 'top',
       originX: 'center',
       overlayX: 'center',
-      panelClass: ['emr-popover-below', 'emr-popover-below-center']
+      panelClass: ['trut-popover-below', 'trut-popover-below-center']
     },
     'below-end': {
       originY: 'bottom',
       overlayY: 'top',
       originX: 'end',
       overlayX: 'end',
-      panelClass: ['emr-popover-below', 'emr-popover-below-end']
+      panelClass: ['trut-popover-below', 'trut-popover-below-end']
     },
     'above-start': {
       originY: 'top',
       overlayY: 'bottom',
       originX: 'start',
       overlayX: 'start',
-      panelClass: ['emr-popover-above', 'emr-popover-above-start']
+      panelClass: ['trut-popover-above', 'trut-popover-above-start']
     },
     'above-center': {
       originY: 'top',
       overlayY: 'bottom',
       originX: 'center',
       overlayX: 'center',
-      panelClass: ['emr-popover-above', 'emr-popover-above-center']
+      panelClass: ['trut-popover-above', 'trut-popover-above-center']
     },
     'above-end': {
       originY: 'top',
       overlayY: 'bottom',
       originX: 'end',
       overlayX: 'end',
-      panelClass: ['emr-popover-above', 'emr-popover-above-end']
+      panelClass: ['trut-popover-above', 'trut-popover-above-end']
     },
     'before-start': {
       originY: 'top',
       overlayY: 'top',
       originX: 'start',
       overlayX: 'end',
-      panelClass: ['emr-popover-before', 'emr-popover-before-start']
+      panelClass: ['trut-popover-before', 'trut-popover-before-start']
     },
     'before-center': {
       originY: 'center',
       overlayY: 'center',
       originX: 'start',
       overlayX: 'end',
-      panelClass: ['emr-popover-before', 'emr-popover-before-center']
+      panelClass: ['trut-popover-before', 'trut-popover-before-center']
     },
     'before-end': {
       originY: 'bottom',
       overlayY: 'bottom',
       originX: 'start',
       overlayX: 'end',
-      panelClass: ['emr-popover-before', 'emr-popover-before-end']
+      panelClass: ['trut-popover-before', 'trut-popover-before-end']
     },
     'after-end': {
       originY: 'bottom',
       overlayY: 'bottom',
       originX: 'end',
       overlayX: 'start',
-      panelClass: ['emr-popover-after', 'emr-popover-after-end']
+      panelClass: ['trut-popover-after', 'trut-popover-after-end']
     },
     'after-center': {
       originY: 'center',
       overlayY: 'center',
       originX: 'end',
       overlayX: 'start',
-      panelClass: ['emr-popover-after', 'emr-popover-after-center']
+      panelClass: ['trut-popover-after', 'trut-popover-after-center']
     },
     'after-start': {
       originY: 'top',
       overlayY: 'top',
       originX: 'end',
       overlayX: 'start',
-      panelClass: ['emr-popover-after', 'emr-popover-after-start']
+      panelClass: ['trut-popover-after', 'trut-popover-after-start']
     }
   };
 

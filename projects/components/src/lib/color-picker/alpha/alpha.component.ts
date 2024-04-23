@@ -12,12 +12,12 @@ import { BaseComponent } from '../base.component';
 import { Color } from '../helpers/color';
 
 @Component({
-  selector: 'emr-alpha',
+  selector: 'trut-alpha',
   exportAs: 'emrAlpha',
   templateUrl: './alpha.component.html',
   styleUrls: ['./alpha.component.css'],
   host: {
-    'class': 'emr-alpha'
+    'class': 'trut-alpha'
   }
 })
 export class AlphaComponent extends BaseComponent implements OnChanges {

@@ -4,7 +4,7 @@ import { Directive } from '@angular/core';
   selector: '[emrIncidentIcon]',
   exportAs: 'emrIncidentIcon',
   host: {
-    'class': 'emr-incident-icon'
+    'class': 'trut-incident-icon'
   }
 })
 export class IncidentIconDirective {

@@ -11,7 +11,7 @@ import {
 import { AvatarColor, ULT_AVATAR_ACCESSOR } from '../avatar.properties';
 
 @Component({
-  selector: 'emr-avatar,[emr-avatar]',
+  selector: 'trut-avatar,[trut-avatar]',
   exportAs: 'emrAvatar',
   templateUrl: './avatar.component.html',
   styleUrls: ['./avatar.component.scss'],
@@ -23,7 +23,7 @@ import { AvatarColor, ULT_AVATAR_ACCESSOR } from '../avatar.properties';
     }
   ],
   host: {
-    'class': 'emr-avatar',
+    'class': 'trut-avatar',
     '[class.is-clickable]': 'clickable'
   }
 })

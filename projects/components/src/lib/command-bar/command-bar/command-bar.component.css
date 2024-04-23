@@ -2,40 +2,40 @@
   position: fixed;
   width: min-content;
   display: flex;
-  margin: var(--emr-command-bar-margin);
+  margin: var(--trut-command-bar-margin);
   left: 50%;
   translate: -50% 0;
-  height: var(--emr-command-bar-height);
-  border: var(--emr-command-bar-border);
-  box-shadow: var(--emr-command-bar-shadow);
-  border-radius: var(--emr-command-bar-border-radius);
+  height: var(--trut-command-bar-height);
+  border: var(--trut-command-bar-border);
+  box-shadow: var(--trut-command-bar-shadow);
+  border-radius: var(--trut-command-bar-border-radius);
   z-index: -1;
   opacity: 0;
-  background: var(--emr-command-bar-bg);
+  background: var(--trut-command-bar-bg);
 }
 
 :host.is-open {
   opacity: 1;
-  z-index: var(--emr-command-bar-zindex);
+  z-index: var(--trut-command-bar-zindex);
 }
 
-:host[emr-command-bar-position="top"] {
+:host[trut-command-bar-position="top"] {
   top: 0;
 }
 
-:host[emr-command-bar-position="top"].is-open {
-  animation: 0.3s emr-command-bar-animation-from-top;
+:host[trut-command-bar-position="top"].is-open {
+  animation: 0.3s trut-command-bar-animation-from-top;
 }
 
-:host[emr-command-bar-position="bottom"] {
+:host[trut-command-bar-position="bottom"] {
   bottom: 0;
 }
 
-:host[emr-command-bar-position="bottom"].is-open {
-  animation: 0.3s emr-command-bar-animation-from-bottom;
+:host[trut-command-bar-position="bottom"].is-open {
+  animation: 0.3s trut-command-bar-animation-from-bottom;
 }
 
-@keyframes emr-command-bar-animation-from-top {
+@keyframes trut-command-bar-animation-from-top {
   0% {
     transform: translateY(-150%) scale(.9);
     opacity: 0;
@@ -47,7 +47,7 @@
   }
 }
 
-@keyframes emr-command-bar-animation-from-bottom {
+@keyframes trut-command-bar-animation-from-bottom {
   0% {
     transform: translateY(150%) scale(.9);
     opacity: 0;

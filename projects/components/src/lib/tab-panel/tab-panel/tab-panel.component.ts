@@ -2,7 +2,7 @@ import { booleanAttribute, Component, EventEmitter, inject, Input, Output } from
 import { TabPanelApiService } from '../tab-panel-api.service';
 
 @Component({
-  selector: 'emr-tab-panel',
+  selector: 'trut-tab-panel',
   exportAs: 'emrTabPanel',
   templateUrl: './tab-panel.component.html',
   styleUrls: ['tab-panel.component.css'],
@@ -10,7 +10,7 @@ import { TabPanelApiService } from '../tab-panel-api.service';
     TabPanelApiService
   ],
   host: {
-    'class': 'emr-tab-panel',
+    'class': 'trut-tab-panel',
     '[class.is-hide-content-if-tab-not-selected]': 'hideContentIfTabNotSelected'
   }
 })

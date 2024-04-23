@@ -12,7 +12,7 @@ import { BaseComponent } from '../base.component';
 import { Color } from '../helpers/color';
 
 @Component({
-  selector: 'emr-hue',
+  selector: 'trut-hue',
   exportAs: 'emrHue',
   templateUrl: './hue.component.html',
   styleUrls: ['./hue.component.css'],

@@ -5,7 +5,7 @@
   width: 100%;
   overflow: hidden;
 
-  &:has(:not(.emr-layout-body)) {
+  &:has(:not(.trut-layout-body)) {
     overflow: auto;
   }
 }

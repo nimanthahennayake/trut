@@ -46,7 +46,7 @@ export class TotalTasksWidgetComponent implements OnInit {
     xaxis: {
       type: 'datetime',
     },
-    colors: ['var(--emr-primary-500)'],
+    colors: ['var(--trut-primary-500)'],
     grid: {
       padding: {
         right: 0,

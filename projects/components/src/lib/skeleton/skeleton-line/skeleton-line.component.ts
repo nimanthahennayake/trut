@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-skeleton-line',
+  selector: 'trut-skeleton-line',
   exportAs: 'emrSkeletonLine',
   template: '',
   styleUrls: ['./skeleton-line.component.css'],
   host: {
-    'class': 'emr-skeleton-item emr-skeleton-line'
+    'class': 'trut-skeleton-item trut-skeleton-line'
   }
 })
 export class SkeletonLineComponent {

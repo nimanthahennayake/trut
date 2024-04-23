@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TAB_PANEL_NAV } from '../types';
 
 @Component({
-  selector: 'emr-tab-panel-nav',
+  selector: 'trut-tab-panel-nav',
   exportAs: 'emrTabPanelNav',
   templateUrl: './tab-panel-nav.component.html',
   styleUrls: ['./tab-panel-nav.component.css'],
@@ -13,7 +13,7 @@ import { TAB_PANEL_NAV } from '../types';
     }
   ],
   host: {
-    'class': 'emr-tab-panel-nav'
+    'class': 'trut-tab-panel-nav'
   }
 })
 export class TabPanelNavComponent {

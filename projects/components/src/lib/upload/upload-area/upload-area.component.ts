@@ -13,13 +13,13 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { UploadSelectedEvent } from '../properties';
 
 @Component({
-  selector: 'emr-upload-area',
+  selector: 'trut-upload-area',
   exportAs: 'emrUploadArea',
   templateUrl: './upload-area.component.html',
   styleUrls: ['./upload-area.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'emr-upload-area',
+    'class': 'trut-upload-area',
     '[class.is-drop-active]': 'isDropActive'
   }
 })
@@ -65,7 +65,7 @@ export class UploadAreaComponent {
   private _handleDragLeave(event: DragEvent) {
     const relatedTarget = event.relatedTarget as HTMLElement;
 
-    if (!relatedTarget.closest('.emr-upload-area')) {
+    if (!relatedTarget.closest('.trut-upload-area')) {
       this.isDropActive = false;
     }
 

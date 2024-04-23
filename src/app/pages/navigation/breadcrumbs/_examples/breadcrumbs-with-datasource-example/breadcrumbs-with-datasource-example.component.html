@@ -1,5 +1,5 @@
-<emr-breadcrumbs [dataSource]="dataSource">
-  <a *emrBreadcrumbItemDef="let item" emr-breadcrumb-item [routerLink]="item.link">{{ item.name }}</a>
-  <emr-breadcrumb-separator *emrBreadcrumbSeparatorDef>/</emr-breadcrumb-separator>
-  <emr-breadcrumb-active-item *emrBreadcrumbActiveItemDef="let item">{{ item.name }}</emr-breadcrumb-active-item>
-</emr-breadcrumbs>
+<trut-breadcrumbs [dataSource]="dataSource">
+  <a *emrBreadcrumbItemDef="let item" trut-breadcrumb-item [routerLink]="item.link">{{ item.name }}</a>
+  <trut-breadcrumb-separator *emrBreadcrumbSeparatorDef>/</trut-breadcrumb-separator>
+  <trut-breadcrumb-active-item *emrBreadcrumbActiveItemDef="let item">{{ item.name }}</trut-breadcrumb-active-item>
+</trut-breadcrumbs>

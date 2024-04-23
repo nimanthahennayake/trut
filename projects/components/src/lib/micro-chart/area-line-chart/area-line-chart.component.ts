@@ -2,7 +2,7 @@ import { afterNextRender, Component, ElementRef, Input, numberAttribute, OnInit,
 import { SVG } from '@svgdotjs/svg.js';
 
 @Component({
-  selector: 'emr-area-line-chart',
+  selector: 'trut-area-line-chart',
   exportAs: 'emrAreaLineChart',
   standalone: true,
   imports: [
@@ -63,7 +63,7 @@ export class AreaLineChartComponent implements OnInit {
       .addTo(this._chartRef.nativeElement)
       .size(this.width, this.height)
     ;
-    draw.addClass('emr-area-line-chart');
+    draw.addClass('trut-area-line-chart');
     const path = draw.path(pathArray.join(''));
     path.fill('none').move(this.strokeWidth / 2, this.strokeWidth / 2);
     path.stroke({ color: '#f06', width: this.strokeWidth, linecap: 'round', linejoin: 'round' });

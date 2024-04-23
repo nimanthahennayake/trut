@@ -5,22 +5,22 @@
   user-select: none;
   flex: none;
   text-transform: uppercase;
-  font-weight: var(--emr-avatar-font-weight);
-  border-radius: var(--emr-avatar-border-radius);
+  font-weight: var(--trut-avatar-font-weight);
+  border-radius: var(--trut-avatar-border-radius);
   position: relative;
-  color: var(--emr-avatar-color);
+  color: var(--trut-avatar-color);
 }
 
 :host:not([class*="w-"]):not([class*="size-"]) {
-  width: var(--emr-avatar-size);
+  width: var(--trut-avatar-size);
 }
 
 :host:not([class*="h-"]):not([class*="size-"]) {
-  height: var(--emr-avatar-size);
+  height: var(--trut-avatar-size);
 }
 
 :host:not([class*="bg-"]) {
-  background: var(--emr-avatar-bg);
+  background: var(--trut-avatar-bg);
 }
 
 :host(.is-clickable) {
@@ -48,20 +48,20 @@
 :host .presence-indicator {
   position: absolute;
   z-index: 1;
-  outline: var(--emr-avatar-presence-indicator-outline);
+  outline: var(--trut-avatar-presence-indicator-outline);
   border-radius: 6.1875rem;
-  width: var(--emr-avatar-presence-indicator-size);
-  height: var(--emr-avatar-presence-indicator-size);
-  top: var(--emr-avatar-presence-indicator-position-top);
-  inset-inline-end: var(--emr-avatar-presence-indicator-position-end);
+  width: var(--trut-avatar-presence-indicator-size);
+  height: var(--trut-avatar-presence-indicator-size);
+  top: var(--trut-avatar-presence-indicator-position-top);
+  inset-inline-end: var(--trut-avatar-presence-indicator-position-end);
 }
 
 :host .presence-indicator.is-online {
-  background: var(--emr-avatar-presence-indicator-online-bg);
+  background: var(--trut-avatar-presence-indicator-online-bg);
 }
 
 :host .presence-indicator.is-offline {
-  background: var(--emr-avatar-presence-indicator-offline-bg);
+  background: var(--trut-avatar-presence-indicator-offline-bg);
 }
 
 :host ::ng-deep .mat-icon {

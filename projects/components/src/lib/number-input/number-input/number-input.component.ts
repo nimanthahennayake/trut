@@ -27,7 +27,7 @@ import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'emr-number-input',
+  selector: 'trut-number-input',
   exportAs: 'emrNumberInput',
   templateUrl: './number-input.component.html',
   styleUrl: './number-input.component.css',
@@ -39,7 +39,7 @@ import { Subject } from 'rxjs';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'emr-number-input'
+    'class': 'trut-number-input'
   }
 })
 export class NumberInputComponent implements MatFormFieldControl<any>, OnDestroy, DoCheck {
@@ -164,7 +164,7 @@ export class NumberInputComponent implements MatFormFieldControl<any>, OnDestroy
   private _value: number | undefined;
 
   @HostBinding()
-  id = `emr-number-input${NumberInputComponent.nextId++}`;
+  id = `trut-number-input${NumberInputComponent.nextId++}`;
 
   set value(value: number | undefined) {
     this._value = value;

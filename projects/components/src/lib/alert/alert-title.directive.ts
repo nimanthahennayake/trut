@@ -1,10 +1,10 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: 'emr-alert-title,[emrAlertTitle]',
+  selector: 'trut-alert-title,[emrAlertTitle]',
   exportAs: 'emrAlertTitle',
   host: {
-    'class': 'emr-alert-title'
+    'class': 'trut-alert-title'
   }
 })
 export class AlertTitleDirective {

@@ -4,7 +4,7 @@ import { SegmentedComponent } from '../segmented/segmented.component';
 import { MatRipple } from '@angular/material/core';
 
 @Component({
-  selector: 'emr-segmented-button,[emr-segmented-button]',
+  selector: 'trut-segmented-button,[trut-segmented-button]',
   exportAs: 'emrSegmentedButton',
   templateUrl: './segmented-button.component.html',
   styleUrl: './segmented-button.component.css',
@@ -12,7 +12,7 @@ import { MatRipple } from '@angular/material/core';
     MatRipple
   ],
   host: {
-    'class': 'emr-segmented-button',
+    'class': 'trut-segmented-button',
     '[class.is-selected]': '_isSelected',
     '[class.is-disabled]': 'disabled'
   }

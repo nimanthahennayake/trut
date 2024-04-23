@@ -17,7 +17,7 @@ import { Color } from '../helpers/color';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'emr-color-picker',
+  selector: 'trut-color-picker',
   exportAs: 'emrColorPicker',
   templateUrl: './color-picker.component.html',
   styleUrls: ['color-picker.component.css'],
@@ -30,7 +30,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     }
   ],
   host: {
-    'class': 'emr-color-picker',
+    'class': 'trut-color-picker',
     '[class.is-disabled]': 'disabled',
   }
 })

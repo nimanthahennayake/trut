@@ -46,11 +46,11 @@ export class ButtonDirective implements OnChanges {
     }
 
     if (changes['loading'].currentValue) {
-      this._matButton._elementRef.nativeElement.classList.add('emr-button-loading');
+      this._matButton._elementRef.nativeElement.classList.add('trut-button-loading');
       this._matButton.disabled = true;
       this.createSpinner();
     } else if (!changes['loading'].firstChange) {
-      this._matButton._elementRef.nativeElement.classList.remove('emr-button-loading');
+      this._matButton._elementRef.nativeElement.classList.remove('trut-button-loading');
       this._matButton.disabled = this.disabled;
       this.destroySpinner();
     }

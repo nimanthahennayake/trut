@@ -2,7 +2,7 @@ import { booleanAttribute, Component, Input } from '@angular/core';
 import { MatDivider } from '@angular/material/divider';
 
 @Component({
-  selector: 'emr-suggestion-block',
+  selector: 'trut-suggestion-block',
   exportAs: 'emrSuggestionBlock',
   standalone: true,
   imports: [

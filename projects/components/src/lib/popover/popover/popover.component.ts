@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'emr-popover',
+  selector: 'trut-popover',
   exportAs: 'emrPopover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.scss'],
   host: {
-    'class': 'emr-popover'
+    'class': 'trut-popover'
   }
 })
 export class PopoverComponent {

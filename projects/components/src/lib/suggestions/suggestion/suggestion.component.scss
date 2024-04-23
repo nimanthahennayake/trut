@@ -3,13 +3,13 @@
   align-items: center;
   width: 100%;
   gap: theme('gap[2.5]');
-  height: var(--emr-suggestion-height);
-  padding: var(--emr-suggestion-padding);
-  margin: var(--emr-suggestion-margin);
-  border-radius: var(--emr-suggestion-border-radius);
+  height: var(--trut-suggestion-height);
+  padding: var(--trut-suggestion-padding);
+  margin: var(--trut-suggestion-margin);
+  border-radius: var(--trut-suggestion-border-radius);
 
   &:hover {
-    background: var(--emr-suggestion-hover-bg);
+    background: var(--trut-suggestion-hover-bg);
     cursor: pointer;
   }
 
@@ -23,7 +23,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    --emr-avatar-size: theme('size.8');
+    --trut-avatar-size: theme('size.8');
   }
 
   .icon:empty,

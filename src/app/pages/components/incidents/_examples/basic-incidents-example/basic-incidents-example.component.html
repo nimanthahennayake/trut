@@ -1,19 +1,19 @@
 <div class="h-[400px] overflow-hidden">
-  <emr-incidents>
-    <emr-incidents-bar>
-      <emr-incidents-title>Maintenance work on the DNS</emr-incidents-title>
-      <emr-incidents-description>Description</emr-incidents-description>
+  <trut-incidents>
+    <trut-incidents-bar>
+      <trut-incidents-title>Maintenance work on the DNS</trut-incidents-title>
+      <trut-incidents-description>Description</trut-incidents-description>
       <mat-icon emrIncidentsToggleIcon class="material-symbols-outlined">expand_more</mat-icon>
-    </emr-incidents-bar>
-    <emr-incidents-list>
+    </trut-incidents-bar>
+    <trut-incidents-list>
       @for (incident of incidents; track incident) {
-        <emr-incident>
+        <trut-incident>
           <mat-icon emrIncidentIcon class="material-symbols-outlined">info</mat-icon>
           <mat-icon emrIncidentClose class="material-symbols-outlined">close</mat-icon>
-          <emr-incident-title>{{ incident.title }}</emr-incident-title>
-          <emr-incident-details>{{ incident.details }}</emr-incident-details>
-        </emr-incident>
+          <trut-incident-title>{{ incident.title }}</trut-incident-title>
+          <trut-incident-details>{{ incident.details }}</trut-incident-details>
+        </trut-incident>
       }
-    </emr-incidents-list>
-  </emr-incidents>
+    </trut-incidents-list>
+  </trut-incidents>
 </div>

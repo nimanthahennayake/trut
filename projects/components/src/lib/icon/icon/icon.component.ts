@@ -13,7 +13,7 @@ import { loadIcon } from 'iconify-icon';
 import { SafeHtmlPipe } from '../../safe-html.pipe';
 
 @Component({
-  selector: 'emr-icon',
+  selector: 'trut-icon',
   exportAs: 'emrIcon',
   standalone: true,
   templateUrl: './icon.component.html',
@@ -26,7 +26,7 @@ import { SafeHtmlPipe } from '../../safe-html.pipe';
     SafeHtmlPipe
   ],
   host: {
-    'class': 'emr-icon'
+    'class': 'trut-icon'
   }
 })
 export class IconComponent implements OnInit, OnChanges {

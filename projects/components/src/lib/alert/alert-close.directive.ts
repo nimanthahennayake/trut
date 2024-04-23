@@ -6,7 +6,7 @@ import { AlertComponent } from './alert/alert.component';
   selector: '[emrAlertClose]',
   exportAs: 'emrAlertClose',
   host: {
-    'class': 'emr-alert-close'
+    'class': 'trut-alert-close'
   }
 })
 export class AlertCloseDirective {
