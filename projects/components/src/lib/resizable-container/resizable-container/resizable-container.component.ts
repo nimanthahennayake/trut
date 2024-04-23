@@ -18,7 +18,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'trut-resizable-container',
-  exportAs: 'emrResizableContainer',
+  exportAs: 'trutResizableContainer',
   templateUrl: './resizable-container.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

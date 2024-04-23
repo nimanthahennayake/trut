@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-avatar-presence-indicator-example',
   standalone: true,
   imports: [
-    EmrAvatarModule
+    TrutAvatarModule
   ],
   templateUrl: './avatar-presence-indicator-example.component.html',
   styleUrl: './avatar-presence-indicator-example.component.scss'

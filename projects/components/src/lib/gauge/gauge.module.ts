@@ -16,4 +16,4 @@ import { GaugeValueComponent } from './gauge-value/gauge-value.component';
     GaugeValueComponent
   ]
 })
-export class EmrGaugeModule { }
+export class TrutGaugeModule { }

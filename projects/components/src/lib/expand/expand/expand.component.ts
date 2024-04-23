@@ -2,7 +2,7 @@ import { booleanAttribute, Component, ElementRef, EventEmitter, inject, Input, O
 
 @Component({
   selector: 'trut-expand',
-  exportAs: 'emrExpand',
+  exportAs: 'trutExpand',
   templateUrl: './expand.component.html',
   styleUrl: './expand.component.css',
   host: {

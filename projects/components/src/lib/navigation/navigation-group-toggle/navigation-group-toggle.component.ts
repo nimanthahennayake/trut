@@ -4,7 +4,7 @@ import { NavigationGroupToggleIconDirective } from '../navigation-group-toggle-i
 
 @Component({
   selector: 'trut-navigation-group-toggle',
-  exportAs: 'emrNavigationGroupToggle',
+  exportAs: 'trutNavigationGroupToggle',
   templateUrl: './navigation-group-toggle.component.html',
   styleUrls: ['./navigation-group-toggle.component.css'],
   host: {

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-avatar-example',
   standalone: true,
   imports: [
-    EmrAvatarModule
+    TrutAvatarModule
   ],
   templateUrl: './basic-avatar-example.component.html',
   styleUrl: './basic-avatar-example.component.scss'

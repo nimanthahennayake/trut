@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { EmrTimelineModule } from 'protrack/components';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutTimelineModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-timeline-with-cutsom-indicator-example',
   standalone: true,
   imports: [
-    EmrTimelineModule,
-    EmrAvatarModule,
+    TrutTimelineModule,
+    TrutAvatarModule,
     MatIcon
   ],
   templateUrl: './timeline-with-cutsom-indicator-example.component.html',

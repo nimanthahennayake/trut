@@ -12,7 +12,7 @@ import { AvatarColor, ULT_AVATAR_ACCESSOR } from '../avatar.properties';
 
 @Component({
   selector: 'trut-avatar,[trut-avatar]',
-  exportAs: 'emrAvatar',
+  exportAs: 'trutAvatar',
   templateUrl: './avatar.component.html',
   styleUrls: ['./avatar.component.scss'],
   providers: [

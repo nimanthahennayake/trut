@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-breadcrumb-item,[trut-breadcrumb-item]',
-  exportAs: 'emrBreadcrumbItem',
+  exportAs: 'trutBreadcrumbItem',
   templateUrl: './breadcrumb-item.component.html',
   styleUrls: ['./breadcrumb-item.component.css'],
   host: {

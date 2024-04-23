@@ -19,4 +19,4 @@ import { PopoverOriginDirective } from './popover-origin.directive';
     PopoverOriginDirective
   ]
 })
-export class EmrPopoverModule { }
+export class TrutPopoverModule { }

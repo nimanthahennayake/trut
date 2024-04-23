@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-suggestions',
-  exportAs: 'emrSuggestions',
+  exportAs: 'trutSuggestions',
   standalone: true,
   imports: [],
   templateUrl: './suggestions.component.html',

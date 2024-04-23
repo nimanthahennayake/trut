@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-popover',
-  exportAs: 'emrPopover',
+  exportAs: 'trutPopover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.scss'],
   host: {

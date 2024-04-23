@@ -2,7 +2,7 @@ import { Component, ElementRef, inject, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'trut-panel-header',
-  exportAs: 'emrPanelHeader',
+  exportAs: 'trutPanelHeader',
   templateUrl: './panel-header.component.html',
   styleUrls: ['./panel-header.component.css'],
   host: {

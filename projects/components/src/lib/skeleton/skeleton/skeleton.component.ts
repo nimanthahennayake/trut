@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'trut-skeleton',
-  exportAs: 'emrSkeleton',
+  exportAs: 'trutSkeleton',
   templateUrl: './skeleton.component.html',
   styleUrls: ['./skeleton.component.css'],
   host: {

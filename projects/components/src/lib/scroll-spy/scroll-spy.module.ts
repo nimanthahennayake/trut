@@ -22,4 +22,4 @@ import { ScrollSpyContainerDirective } from './scroll-spy-container.directive';
     ScrollSpyContainerDirective
   ]
 })
-export class EmrScrollSpyModule { }
+export class TrutScrollSpyModule { }

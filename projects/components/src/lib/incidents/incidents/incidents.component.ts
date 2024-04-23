@@ -5,7 +5,7 @@ import { INCIDENTS } from '../properties';
 
 @Component({
   selector: 'trut-incidents',
-  exportAs: 'emrIncidents',
+  exportAs: 'trutIncidents',
   templateUrl: './incidents.component.html',
   styleUrls: ['./incidents.component.css'],
   providers: [

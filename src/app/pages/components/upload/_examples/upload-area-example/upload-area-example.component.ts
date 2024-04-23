@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrUploadModule, UploadSelectedEvent } from 'protrack/components';
+import { TrutUploadModule, UploadSelectedEvent } from 'protrack/components';
 import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-upload-area-example',
   standalone: true,
   imports: [
-    EmrUploadModule,
+    TrutUploadModule,
     JsonPipe
   ],
   templateUrl: './upload-area-example.component.html',

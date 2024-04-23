@@ -8,7 +8,7 @@ import { NavigationItemComponent } from '../navigation-item/navigation-item.comp
 
 @Component({
   selector: 'trut-navigation',
-  exportAs: 'emrNavigation',
+  exportAs: 'trutNavigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css'],
   providers: [NavigationApiService],

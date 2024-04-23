@@ -18,7 +18,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'trut-color-picker',
-  exportAs: 'emrColorPicker',
+  exportAs: 'trutColorPicker',
   templateUrl: './color-picker.component.html',
   styleUrls: ['color-picker.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

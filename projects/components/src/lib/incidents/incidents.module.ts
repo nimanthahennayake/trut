@@ -46,4 +46,4 @@ import { IncidentCloseDirective } from './incident-close.directive';
     IncidentCloseDirective
   ]
 })
-export class EmrIncidentsModule { }
+export class TrutIncidentsModule { }

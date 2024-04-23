@@ -23,8 +23,8 @@ import { PopoverPosition, PopoverTrigger } from './popover.properties';
 import { PositionManager } from './position-manager';
 
 @Directive({
-  selector: '[emrPopoverTriggerFor]',
-  exportAs: 'emrPopoverTriggerFor',
+  selector: '[trutPopoverTriggerFor]',
+  exportAs: 'trutPopoverTriggerFor',
   host: {
     class: 'trut-popover-trigger-for',
     '[class.trut-popover-trigger-for--is-open]': 'api.isOpen()',
@@ -43,7 +43,7 @@ export class PopoverTriggerForDirective implements  OnDestroy {
   private _closeTimeout: any = null;
   private _closeDelay = 500;
 
-  @Input('emrPopoverTriggerFor')
+  @Input('trutPopoverTriggerFor')
   popoverTemplateRef!: TemplateRef<unknown>;
 
   @Input()

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrUploadModule } from 'protrack/components';
+import { TrutUploadModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 export interface File {
@@ -16,7 +16,7 @@ export interface File {
   selector: 'app-file-list-example',
   standalone: true,
   imports: [
-    EmrUploadModule,
+    TrutUploadModule,
     MatIcon
   ],
   templateUrl: './file-list-example.component.html',

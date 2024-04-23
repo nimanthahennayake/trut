@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 
@@ -8,7 +8,7 @@ import { MatIcon } from '@angular/material/icon';
   exportAs: 'appSidebarUpgradeToPro',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatButton,
     MatIcon
   ],

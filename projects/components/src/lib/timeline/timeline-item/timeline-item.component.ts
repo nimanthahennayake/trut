@@ -3,7 +3,7 @@ import { TimelineItemIndicatorDirective } from '../timeline-item-indicator.direc
 
 @Component({
   selector: 'trut-timeline-item',
-  exportAs: 'emrTimelineItem',
+  exportAs: 'trutTimelineItem',
   templateUrl: './timeline-item.component.html',
   styleUrl: './timeline-item.component.css',
   host: {

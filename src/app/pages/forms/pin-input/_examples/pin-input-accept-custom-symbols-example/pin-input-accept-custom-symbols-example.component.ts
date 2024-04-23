@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pin-input-accept-custom-symbols-example',
   standalone: true,
   imports: [
-    EmrPinInputModule,
+    TrutPinInputModule,
     FormsModule
   ],
   templateUrl: './pin-input-accept-custom-symbols-example.component.html',

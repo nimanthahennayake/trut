@@ -1,8 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[emrTabPanelItemIcon]',
-  exportAs: 'emrTabPanelItemIcon',
+  selector: '[trutTabPanelItemIcon]',
+  exportAs: 'trutTabPanelItemIcon',
   host: {
     'class': 'trut-tab-panel-item-icon'
   }

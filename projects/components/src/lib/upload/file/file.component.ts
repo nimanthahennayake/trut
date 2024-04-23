@@ -3,7 +3,7 @@ import { UploadFileState } from '../properties';
 
 @Component({
   selector: 'trut-file',
-  exportAs: 'emrFile',
+  exportAs: 'trutFile',
   templateUrl: './file.component.html',
   styleUrls: ['./file.component.css'],
   host: {

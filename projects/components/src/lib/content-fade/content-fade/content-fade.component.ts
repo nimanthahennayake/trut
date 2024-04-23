@@ -2,7 +2,7 @@ import { Component, ElementRef, inject, Input } from '@angular/core';
 
 @Component({
   selector: 'trut-content-fade',
-  exportAs: 'emrContentFade',
+  exportAs: 'trutContentFade',
   templateUrl: './content-fade.component.html',
   styleUrl: './content-fade.component.css',
   host: {

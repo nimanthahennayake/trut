@@ -1,11 +1,11 @@
 import { Component, input, numberAttribute } from '@angular/core';
-import { EmrSkeletonModule } from 'protrack/components';
+import { TrutSkeletonModule } from 'protrack/components';
 
 @Component({
   selector: 'app-dashboard-cards-skeleton-widget',
   standalone: true,
   imports: [
-    EmrSkeletonModule
+    TrutSkeletonModule
   ],
   templateUrl: './dashboard-cards-skeleton-widget.component.html',
   styleUrl: './dashboard-cards-skeleton-widget.component.scss'

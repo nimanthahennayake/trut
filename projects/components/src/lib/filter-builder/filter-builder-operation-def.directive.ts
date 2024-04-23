@@ -3,10 +3,10 @@ import { FilterBuilderOperationNameDirective } from './filter-builder-operation-
 import { FilterBuilderOperationIconDirective } from './filter-builder-operation-icon.directive';
 
 @Directive({
-  selector: '[emrFilterBuilderOperationDef]'
+  selector: '[trutFilterBuilderOperationDef]'
 })
 export class FilterBuilderOperationDefDirective {
-  @Input('emrFilterBuilderOperationDef')
+  @Input('trutFilterBuilderOperationDef')
   id: string;
 
   @Input()

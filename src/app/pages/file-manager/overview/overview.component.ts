@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatOptgroup, MatOption, MatRipple } from '@angular/material/core';
 import { MatButton, MatIconButton } from '@angular/material/button';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatTooltip } from '@angular/material/tooltip';
 import { MatChipListbox, MatChipOption } from '@angular/material/chips';
 import { MatCheckbox } from '@angular/material/checkbox';
@@ -23,7 +23,7 @@ import { File, FileSelectedEvent } from '../types';
     MatIcon,
     MatRipple,
     MatIconButton,
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatTooltip,
     MatChipOption,
     MatChipListbox,

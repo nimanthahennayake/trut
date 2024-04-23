@@ -23,7 +23,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
   selector: 'trut-pin-input',
-  exportAs: 'emrPinInput',
+  exportAs: 'trutPinInput',
   templateUrl: './pin-input.component.html',
   styleUrl: './pin-input.component.css',
   providers: [

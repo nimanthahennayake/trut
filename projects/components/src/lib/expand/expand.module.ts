@@ -16,4 +16,4 @@ import { ExpandButtonComponent } from './expand-button/expand-button.component';
     ExpandButtonComponent
   ]
 })
-export class EmrExpandModule { }
+export class TrutExpandModule { }

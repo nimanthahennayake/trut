@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EmrAvatarModule, IconComponent } from 'protrack/components';
+import { TrutAvatarModule, IconComponent } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
@@ -9,7 +9,7 @@ import { Notification } from '@app/header/_notifications/types';
   selector: 'app-mentioned-in-comment',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatIcon,
     MatRipple,
     RouterLink,

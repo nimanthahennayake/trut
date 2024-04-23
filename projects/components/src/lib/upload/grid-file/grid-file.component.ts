@@ -1,16 +1,16 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
-import { EmrGaugeModule } from '../../gauge';
+import { TrutGaugeModule } from '../../gauge';
 import { UploadFileState } from '../properties';
 
 @Component({
   selector: 'trut-grid-file',
-  exportAs: 'emrGridFile',
+  exportAs: 'trutGridFile',
   standalone: true,
   imports: [
     MatIcon,
-    EmrGaugeModule,
+    TrutGaugeModule,
     MatIconButton
   ],
   templateUrl: './grid-file.component.html',

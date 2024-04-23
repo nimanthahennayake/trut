@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 
@@ -7,7 +7,7 @@ import { MatIconButton } from '@angular/material/button';
   selector: 'app-team-widget',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatIcon,
     MatIconButton
   ],

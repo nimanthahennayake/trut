@@ -3,7 +3,7 @@ import { TAB_PANEL_ASIDE } from '../types';
 
 @Component({
   selector: 'trut-tab-panel-aside',
-  exportAs: 'emrTabPanelAside',
+  exportAs: 'trutTabPanelAside',
   templateUrl: './tab-panel-aside.component.html',
   styleUrls: ['./tab-panel-aside.component.css'],
   providers: [

@@ -3,7 +3,7 @@ import { AnnouncementType } from '../types';
 
 @Component({
   selector: 'trut-announcement',
-  exportAs: 'emrAnnouncement',
+  exportAs: 'trutAnnouncement',
   templateUrl: './announcement.component.html',
   styleUrl: './announcement.component.scss',
   host: {

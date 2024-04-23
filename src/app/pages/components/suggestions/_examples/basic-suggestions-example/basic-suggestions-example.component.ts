@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { SuggestionBlockComponent } from 'protrack/components';
@@ -12,7 +12,7 @@ import { SuggestionsComponent } from 'protrack/components';
   selector: 'app-basic-suggestions-example',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatButton,
     MatIcon,
     SuggestionBlockComponent,

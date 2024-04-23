@@ -16,10 +16,10 @@
       <trut-navigation-group>
         <trut-navigation-group-toggle matRipple [for]="navItem.id">
           @if (navItem.icon) {
-          <mat-icon emrNavigationItemIcon class="material-symbols-outlined">{{ navItem.icon }}</mat-icon>
+          <mat-icon trutNavigationItemIcon class="material-symbols-outlined">{{ navItem.icon }}</mat-icon>
           }
           {{ navItem.name }}
-          <mat-icon emrNavigationGroupToggleIcon class="material-symbols-outlined">arrow_drop_down</mat-icon>
+          <mat-icon trutNavigationGroupToggleIcon class="material-symbols-outlined">arrow_drop_down</mat-icon>
         </trut-navigation-group-toggle>
         <trut-navigation-group-menu [key]="navItem.id">
           @for (childItem of navItem.children | orderBy:'name'; track childItem) {
@@ -33,7 +33,7 @@
       @default {
       <a trut-navigation-item matRipple [routerLink]="navItem.link" [key]="navItem.link">
         @if (navItem.icon) {
-        <mat-icon emrNavigationItemIcon class="material-symbols-outlined">{{ navItem.icon }}</mat-icon>
+        <mat-icon trutNavigationItemIcon class="material-symbols-outlined">{{ navItem.icon }}</mat-icon>
         }
         {{ navItem.name }}
       </a>

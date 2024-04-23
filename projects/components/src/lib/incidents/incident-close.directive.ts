@@ -1,8 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[emrIncidentClose]',
-  exportAs: 'emrIncidentClose',
+  selector: '[trutIncidentClose]',
+  exportAs: 'trutIncidentClose',
   host: {
     'class': 'trut-incident-close'
   }

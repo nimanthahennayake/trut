@@ -23,14 +23,14 @@ import { PositionManager } from './position-manager';
 import { ColorPickerPosition } from './properties';
 
 @Directive({
-  selector: '[emrColorPickerTriggerFor]',
-  exportAs: 'emrColorPickerTriggerFor',
+  selector: '[trutColorPickerTriggerFor]',
+  exportAs: 'trutColorPickerTriggerFor',
   host: {
     'class': 'trut-color-picker-trigger-for'
   }
 })
 export class ColorPickerTriggerForDirective {
-  @Input('emrColorPickerTriggerFor')
+  @Input('trutColorPickerTriggerFor')
   colorPickerTemplateRef!: TemplateRef<unknown>;
 
   @Input()

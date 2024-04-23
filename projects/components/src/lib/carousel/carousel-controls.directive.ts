@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[emrCarouselControls]',
+  selector: '[trutCarouselControls]',
   standalone: true
 })
 export class CarouselControlsDirective {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { EmrNumberInputModule } from 'protrack/components';
+import { TrutNumberInputModule } from 'protrack/components';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angu
   standalone: true,
   imports: [
     MatFormField,
-    EmrNumberInputModule,
+    TrutNumberInputModule,
     FormsModule,
     ReactiveFormsModule,
     MatLabel

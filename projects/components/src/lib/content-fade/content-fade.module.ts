@@ -13,4 +13,4 @@ import { ContentFadeComponent } from './public-api';
     ContentFadeComponent
   ]
 })
-export class EmrContentFadeModule { }
+export class TrutContentFadeModule { }

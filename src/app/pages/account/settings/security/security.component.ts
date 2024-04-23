@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-import { EmrDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'protrack/components';
 
 @Component({
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatButton,
     MatIcon,
     MatSlideToggle,
     FormsModule,
-    EmrDividerModule
+    TrutDividerModule
   ],
   templateUrl: './security.component.html',
   styleUrl: './security.component.scss'

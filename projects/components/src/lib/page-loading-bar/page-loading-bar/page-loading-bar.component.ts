@@ -8,7 +8,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'trut-page-loading-bar',
-  exportAs: 'emrPageLoadingBar',
+  exportAs: 'trutPageLoadingBar',
   standalone: true,
   imports: [
     NgIf,

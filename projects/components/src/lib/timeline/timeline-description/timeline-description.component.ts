@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-timeline-description',
-  exportAs: 'emrTimelineDescription',
+  exportAs: 'trutTimelineDescription',
   templateUrl: './timeline-description.component.html',
   styleUrl: './timeline-description.component.css',
   host: {

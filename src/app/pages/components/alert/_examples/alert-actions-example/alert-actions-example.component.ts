@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrAlertModule } from 'protrack/components';
+import { TrutAlertModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatRipple } from '@angular/material/core';
 
@@ -7,7 +7,7 @@ import { MatRipple } from '@angular/material/core';
   selector: 'app-alert-actions-example',
   standalone: true,
   imports: [
-    EmrAlertModule,
+    TrutAlertModule,
     MatIcon,
     MatRipple
   ],

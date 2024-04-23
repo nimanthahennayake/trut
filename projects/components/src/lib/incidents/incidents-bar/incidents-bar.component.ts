@@ -4,7 +4,7 @@ import { IncidentsComponent } from '../incidents/incidents.component';
 
 @Component({
   selector: 'trut-incidents-bar',
-  exportAs: 'emrIncidentsBar',
+  exportAs: 'trutIncidentsBar',
   templateUrl: './incidents-bar.component.html',
   styleUrls: ['./incidents-bar.component.css'],
   host: {

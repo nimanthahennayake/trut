@@ -6,7 +6,7 @@ import { LayoutSidebarComponent } from 'protrack/components';
 import { LayoutFooterComponent } from 'protrack/components';
 import { LayoutTopbarComponent } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
-import { EmrAnnouncementModule } from 'protrack/components';
+import { TrutAnnouncementModule } from 'protrack/components';
 
 @Component({
   selector: 'app-layout-with-nested-layouts-example',
@@ -19,7 +19,7 @@ import { EmrAnnouncementModule } from 'protrack/components';
     LayoutFooterComponent,
     LayoutTopbarComponent,
     MatIcon,
-    EmrAnnouncementModule
+    TrutAnnouncementModule
   ],
   templateUrl: './layout-with-nested-layouts-example.component.html',
   styleUrl: './layout-with-nested-layouts-example.component.scss'

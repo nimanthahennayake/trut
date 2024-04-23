@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-customer-satisfaction-widget',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatIcon
   ],
   templateUrl: './customer-satisfaction-widget.component.html',

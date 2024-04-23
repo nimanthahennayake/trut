@@ -2,7 +2,7 @@ import { Component, ElementRef, inject, Input } from '@angular/core';
 
 @Component({
   selector: 'trut-panel-footer',
-  exportAs: 'emrPanelFooter',
+  exportAs: 'trutPanelFooter',
   templateUrl: './panel-footer.component.html',
   styleUrls: ['./panel-footer.component.css'],
   host: {

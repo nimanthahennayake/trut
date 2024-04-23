@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-panel-body',
-  exportAs: 'emrPanelBody',
+  exportAs: 'trutPanelBody',
   templateUrl: './panel-body.component.html',
   styleUrls: ['./panel-body.component.css'],
   host: {

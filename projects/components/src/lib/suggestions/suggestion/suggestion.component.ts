@@ -3,7 +3,7 @@ import { MatRipple } from '@angular/material/core';
 
 @Component({
   selector: 'trut-suggestion,[trut-suggestion]',
-  exportAs: 'emrSuggestion',
+  exportAs: 'trutSuggestion',
   standalone: true,
   imports: [],
   templateUrl: './suggestion.component.html',

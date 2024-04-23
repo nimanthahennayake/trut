@@ -1,8 +1,8 @@
 import { Directive, inject, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[emrNavigationGroupToggleIcon]',
-  exportAs: 'emrNavigationGroupToggleIcon',
+  selector: '[trutNavigationGroupToggleIcon]',
+  exportAs: 'trutNavigationGroupToggleIcon',
   host: {
     'class': 'trut-navigation-group-toggle-icon'
   }

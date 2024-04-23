@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { EmrUploadModule, UploadSelectedEvent } from 'protrack/components';
+import { TrutUploadModule, UploadSelectedEvent } from 'protrack/components';
 import { JsonPipe } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { JsonPipe } from '@angular/common';
   standalone: true,
   imports: [
     MatButton,
-    EmrUploadModule,
+    TrutUploadModule,
     JsonPipe
   ],
   templateUrl: './basic-upload-example.component.html',

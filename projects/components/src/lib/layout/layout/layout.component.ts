@@ -3,7 +3,7 @@ import { LAYOUT } from '../types';
 
 @Component({
   selector: 'trut-layout',
-  exportAs: 'emrLayout',
+  exportAs: 'trutLayout',
   standalone: true,
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',

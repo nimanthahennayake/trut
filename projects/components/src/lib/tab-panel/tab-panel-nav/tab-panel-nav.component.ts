@@ -3,7 +3,7 @@ import { TAB_PANEL_NAV } from '../types';
 
 @Component({
   selector: 'trut-tab-panel-nav',
-  exportAs: 'emrTabPanelNav',
+  exportAs: 'trutTabPanelNav',
   templateUrl: './tab-panel-nav.component.html',
   styleUrls: ['./tab-panel-nav.component.css'],
   providers: [

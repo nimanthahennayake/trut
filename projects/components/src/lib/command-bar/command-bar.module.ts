@@ -22,4 +22,4 @@ import { CommandBarValueComponent } from './command-bar-value/command-bar-value.
     CommandBarValueComponent
   ]
 })
-export class EmrCommandBarModule { }
+export class TrutCommandBarModule { }

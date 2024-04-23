@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrColorPickerModule } from 'protrack/components';
+import { TrutColorPickerModule } from 'protrack/components';
 import { MatFormField, MatLabel, MatPrefix, MatSuffix } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-input-with-color-picker-example',
   standalone: true,
   imports: [
-    EmrColorPickerModule,
+    TrutColorPickerModule,
     MatFormField,
     MatIcon,
     MatIconButton,

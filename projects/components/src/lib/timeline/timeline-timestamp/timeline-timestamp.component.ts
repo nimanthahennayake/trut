@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-timeline-timestamp',
-  exportAs: 'emrTimelineTimestamp',
+  exportAs: 'trutTimelineTimestamp',
   templateUrl: './timeline-timestamp.component.html',
   styleUrl: './timeline-timestamp.component.css',
   host: {

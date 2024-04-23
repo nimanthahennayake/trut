@@ -13,4 +13,4 @@ import { DividerComponent } from './divider/divider.component';
     DividerComponent
   ]
 })
-export class EmrDividerModule { }
+export class TrutDividerModule { }

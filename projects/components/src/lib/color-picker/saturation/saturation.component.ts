@@ -16,7 +16,7 @@ import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'trut-saturation',
-  exportAs: 'emrSaturation',
+  exportAs: 'trutSaturation',
   templateUrl: './saturation.component.html',
   styleUrls: ['./saturation.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

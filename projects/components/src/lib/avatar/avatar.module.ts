@@ -19,4 +19,4 @@ import { AvatarTotalComponent } from './avatar-total/avatar-total.component';
     AvatarTotalComponent
   ]
 })
-export class EmrAvatarModule { }
+export class TrutAvatarModule { }

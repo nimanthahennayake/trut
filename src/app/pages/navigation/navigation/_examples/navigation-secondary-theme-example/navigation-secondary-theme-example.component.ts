@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrNavigationModule } from 'protrack/components';
+import { TrutNavigationModule } from 'protrack/components';
 
 @Component({
   selector: 'app-navigation-secondary-theme-example',
   standalone: true,
   imports: [
-    EmrNavigationModule
+    TrutNavigationModule
   ],
   templateUrl: './navigation-secondary-theme-example.component.html',
   styleUrl: './navigation-secondary-theme-example.component.scss'

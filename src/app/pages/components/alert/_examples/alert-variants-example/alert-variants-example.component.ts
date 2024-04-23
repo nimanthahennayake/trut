@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrAlertModule } from 'protrack/components';
+import { TrutAlertModule } from 'protrack/components';
 
 @Component({
   selector: 'app-alert-variants-example',
   standalone: true,
   imports: [
-    EmrAlertModule
+    TrutAlertModule
   ],
   templateUrl: './alert-variants-example.component.html',
   styleUrl: './alert-variants-example.component.scss'

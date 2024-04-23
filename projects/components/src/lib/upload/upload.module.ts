@@ -25,4 +25,4 @@ import { UploadTriggerComponent } from './upload-trigger/upload-trigger.componen
     UploadTriggerComponent
   ]
 })
-export class EmrUploadModule { }
+export class TrutUploadModule { }

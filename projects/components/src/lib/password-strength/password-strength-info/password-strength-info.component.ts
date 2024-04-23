@@ -5,7 +5,7 @@ import { PasswordStrengthComponent } from '../password-strength/password-strengt
 
 @Component({
   selector: 'trut-password-strength-info',
-  exportAs: 'emrPasswordStrengthInfo',
+  exportAs: 'trutPasswordStrengthInfo',
   templateUrl: './password-strength-info.component.html',
   styleUrls: ['./password-strength-info.component.scss'],
   animations: [

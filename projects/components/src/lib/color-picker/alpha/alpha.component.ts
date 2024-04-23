@@ -13,7 +13,7 @@ import { Color } from '../helpers/color';
 
 @Component({
   selector: 'trut-alpha',
-  exportAs: 'emrAlpha',
+  exportAs: 'trutAlpha',
   templateUrl: './alpha.component.html',
   styleUrls: ['./alpha.component.css'],
   host: {

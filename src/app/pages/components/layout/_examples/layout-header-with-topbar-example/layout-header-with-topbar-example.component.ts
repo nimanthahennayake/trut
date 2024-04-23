@@ -4,7 +4,7 @@ import { LayoutComponent } from 'protrack/components';
 import { LayoutHeaderComponent } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { LayoutTopbarComponent } from 'protrack/components';
-import { EmrAnnouncementModule } from 'protrack/components';
+import { TrutAnnouncementModule } from 'protrack/components';
 
 @Component({
   selector: 'app-layout-header-with-topbar-example',
@@ -15,7 +15,7 @@ import { EmrAnnouncementModule } from 'protrack/components';
     LayoutHeaderComponent,
     LayoutTopbarComponent,
     MatIcon,
-    EmrAnnouncementModule
+    TrutAnnouncementModule
   ],
   templateUrl: './layout-header-with-topbar-example.component.html',
   styleUrl: './layout-header-with-topbar-example.component.scss'

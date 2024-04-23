@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
-import { EmrPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'protrack/components';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { MatFormField, MatHint, MatLabel } from '@angular/material/form-field';
@@ -14,7 +14,7 @@ import { PasswordStrengthModule } from 'protrack/components';
   imports: [
     MatIcon,
     RouterLink,
-    EmrPinInputModule,
+    TrutPinInputModule,
     FormsModule,
     MatButton,
     MatFormField,

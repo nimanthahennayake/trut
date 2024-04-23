@@ -34,4 +34,4 @@ import { TimelineItemIndicatorDirective } from './timeline-item-indicator.direct
     TimelineItemIndicatorDirective
   ]
 })
-export class EmrTimelineModule { }
+export class TrutTimelineModule { }

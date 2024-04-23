@@ -4,7 +4,7 @@ import {
 
 @Component({
   selector: 'trut-navigation-group',
-  exportAs: 'emrNavigationGroup',
+  exportAs: 'trutNavigationGroup',
   templateUrl: './navigation-group.component.html',
   styleUrls: ['./navigation-group.component.css'],
   host: {

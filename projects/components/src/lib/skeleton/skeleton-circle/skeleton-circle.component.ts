@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-skeleton-circle',
-  exportAs: 'emrSkeletonCircle',
+  exportAs: 'trutSkeletonCircle',
   template: '',
   styleUrls: ['./skeleton-circle.component.css'],
   host: {

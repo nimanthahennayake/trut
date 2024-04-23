@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { EmrSegmentedModule } from 'protrack/components';
+import { TrutSegmentedModule } from 'protrack/components';
 
 @Component({
   selector: 'app-segmented-with-icons-example',
   standalone: true,
   imports: [
     MatIcon,
-    EmrSegmentedModule
+    TrutSegmentedModule
   ],
   templateUrl: './segmented-with-icons-example.component.html',
   styleUrl: './segmented-with-icons-example.component.scss'

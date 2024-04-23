@@ -5,7 +5,7 @@ import { SCROLL_SPY_NAV } from '../types';
 
 @Component({
   selector: 'trut-scroll-spy-on,[trut-scroll-spy-on]',
-  exportAs: 'emrScrollSpyOn',
+  exportAs: 'trutScrollSpyOn',
   templateUrl: './scroll-spy-on.component.html',
   styleUrl: './scroll-spy-on.component.scss',
   host: {

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrAnnouncementModule } from 'protrack/components';
+import { TrutAnnouncementModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-announcement-example',
   standalone: true,
   imports: [
-    EmrAnnouncementModule
+    TrutAnnouncementModule
   ],
   templateUrl: './basic-announcement-example.component.html',
   styleUrl: './basic-announcement-example.component.scss'

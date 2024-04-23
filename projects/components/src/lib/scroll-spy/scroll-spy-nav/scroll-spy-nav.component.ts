@@ -17,7 +17,7 @@ import { ScrollSpyOnComponent } from '../scroll-spy-on/scroll-spy-on.component';
 
 @Component({
   selector: 'trut-scroll-spy-nav,[trut-scroll-spy-nav]',
-  exportAs: 'emrScrollSpyNav',
+  exportAs: 'trutScrollSpyNav',
   templateUrl: './scroll-spy-nav.component.html',
   styleUrl: './scroll-spy-nav.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

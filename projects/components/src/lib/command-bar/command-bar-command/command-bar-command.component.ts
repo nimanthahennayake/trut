@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'trut-command-bar-command',
-  exportAs: 'emrCommandBarCommand',
+  exportAs: 'trutCommandBarCommand',
   templateUrl: './command-bar-command.component.html',
   styleUrl: './command-bar-command.component.css',
   host: {

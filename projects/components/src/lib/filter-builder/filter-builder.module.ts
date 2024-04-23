@@ -34,4 +34,4 @@ import { MatIcon } from '@angular/material/icon';
     FilterBuilderOperationIconDirective
   ]
 })
-export class EmrFilterBuilderModule { }
+export class TrutFilterBuilderModule { }

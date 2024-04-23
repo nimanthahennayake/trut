@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { MatRipple } from '@angular/material/core';
-import { EmrSkeletonModule } from 'protrack/components';
+import { TrutSkeletonModule } from 'protrack/components';
 import { NgTemplateOutlet } from '@angular/common';
 import { Notification } from '@app/header/_notifications/types';
 import {
@@ -19,11 +19,11 @@ import {
   imports: [
     RouterLink,
     MatIcon,
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatRipple,
     MentionedInCommentNotification,
     InviteToEditFilesInFolderNotification,
-    EmrSkeletonModule,
+    TrutSkeletonModule,
     NgTemplateOutlet
   ],
   templateUrl: './notification-list.component.html',

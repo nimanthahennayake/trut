@@ -35,4 +35,4 @@ import { IconComponent } from '../icon';
     PhoneInputComponent
   ]
 })
-export class EmrPhoneInputModule { }
+export class TrutPhoneInputModule { }

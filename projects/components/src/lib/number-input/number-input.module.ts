@@ -31,4 +31,4 @@ import { MatRipple } from '@angular/material/core';
     NumberInputSuffixDirective
   ]
 })
-export class EmrNumberInputModule { }
+export class TrutNumberInputModule { }

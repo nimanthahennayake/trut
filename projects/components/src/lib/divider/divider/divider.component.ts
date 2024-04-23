@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-divider',
-  exportAs: 'emrDivider',
+  exportAs: 'trutDivider',
   templateUrl: './divider.component.html',
   styleUrl: './divider.component.scss',
   host: {

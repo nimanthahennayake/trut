@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { EmrNumberInputModule } from 'protrack/components';
+import { TrutNumberInputModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -8,7 +8,7 @@ import { MatIcon } from '@angular/material/icon';
   standalone: true,
   imports: [
     MatFormField,
-    EmrNumberInputModule,
+    TrutNumberInputModule,
     MatIcon,
     MatLabel
   ],

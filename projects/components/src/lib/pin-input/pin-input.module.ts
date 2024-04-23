@@ -21,4 +21,4 @@ import { MatInput } from '@angular/material/input';
     PinInputComponent
   ]
 })
-export class EmrPinInputModule { }
+export class TrutPinInputModule { }

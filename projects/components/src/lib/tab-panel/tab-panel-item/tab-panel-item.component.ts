@@ -6,7 +6,7 @@ import { MatRipple } from '@angular/material/core';
 
 @Component({
   selector: 'trut-tab-panel-item',
-  exportAs: 'emrTabPanelItem',
+  exportAs: 'trutTabPanelItem',
   templateUrl: './tab-panel-item.component.html',
   styleUrls: ['tab-panel-item.component.css'],
   hostDirectives: [

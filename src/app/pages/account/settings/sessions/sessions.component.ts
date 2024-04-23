@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'protrack/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
@@ -106,7 +106,7 @@ const DEVICES_TABLE_DATA = [
 @Component({
   standalone: true,
   imports: [
-    EmrDividerModule,
+    TrutDividerModule,
     MatButton,
     MatIcon,
     MatSlideToggle,

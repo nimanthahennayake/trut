@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmrNumberInputModule } from 'protrack/components';
+import { TrutNumberInputModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatFormField } from '@angular/material/form-field';
 
@@ -7,7 +7,7 @@ import { MatFormField } from '@angular/material/form-field';
   selector: 'app-basic-number-input-example',
   standalone: true,
   imports: [
-    EmrNumberInputModule,
+    TrutNumberInputModule,
     MatIcon,
     MatFormField
   ],

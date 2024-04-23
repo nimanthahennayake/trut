@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import {
-  EmrFilterBuilderModule,
+  TrutFilterBuilderModule,
   FilterBuilderFieldDef, FilterBuilderGroup,
   FilterBuilderItemType,
   IconComponent
@@ -13,7 +13,7 @@ import { JsonPipe } from '@angular/common';
   standalone: true,
   imports: [
     MatIcon,
-    EmrFilterBuilderModule,
+    TrutFilterBuilderModule,
     IconComponent,
     JsonPipe
   ],

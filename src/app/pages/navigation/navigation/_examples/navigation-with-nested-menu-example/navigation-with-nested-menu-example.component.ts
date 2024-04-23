@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrNavigationModule } from 'protrack/components';
+import { TrutNavigationModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navigation-with-nested-menu-example',
   standalone: true,
   imports: [
-    EmrNavigationModule,
+    TrutNavigationModule,
     MatIcon
   ],
   templateUrl: './navigation-with-nested-menu-example.component.html',

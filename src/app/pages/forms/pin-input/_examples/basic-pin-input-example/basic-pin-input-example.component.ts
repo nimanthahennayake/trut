@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-basic-pin-input-example',
   standalone: true,
   imports: [
-    EmrPinInputModule,
+    TrutPinInputModule,
     FormsModule
 
   ],

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrSegmentedModule } from 'protrack/components';
+import { TrutSegmentedModule } from 'protrack/components';
 
 @Component({
   selector: 'app-segmented-sizes-example',
   standalone: true,
   imports: [
-    EmrSegmentedModule
+    TrutSegmentedModule
   ],
   templateUrl: './segmented-sizes-example.component.html',
   styleUrl: './segmented-sizes-example.component.scss'

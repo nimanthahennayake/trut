@@ -13,7 +13,7 @@ import { Color } from '../helpers/color';
 
 @Component({
   selector: 'trut-hue',
-  exportAs: 'emrHue',
+  exportAs: 'trutHue',
   templateUrl: './hue.component.html',
   styleUrls: ['./hue.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush

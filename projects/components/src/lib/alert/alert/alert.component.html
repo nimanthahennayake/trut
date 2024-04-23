@@ -1,13 +1,13 @@
 <div class="thumbnail">
-  <ng-content select="[emrAlertIcon]"></ng-content>
+  <ng-content select="[trutAlertIcon]"></ng-content>
   <ng-container [ngTemplateOutlet]="iconRef.templateRef" *ngIf="iconRef"></ng-container>
 </div>
 <div class="content">
   <div class="title">
-    <ng-content select="trut-alert-title,[emrAlertTitle]"></ng-content>
+    <ng-content select="trut-alert-title,[trutAlertTitle]"></ng-content>
   </div>
   <ng-content></ng-content>
 </div>
 <div class="actions">
-  <ng-content select="[emrAlertAction]"></ng-content>
+  <ng-content select="[trutAlertAction]"></ng-content>
 </div>

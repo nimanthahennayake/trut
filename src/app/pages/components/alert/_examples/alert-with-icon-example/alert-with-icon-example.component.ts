@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrAlertModule } from 'protrack/components';
+import { TrutAlertModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-alert-with-icon-example',
   standalone: true,
   imports: [
-    EmrAlertModule,
+    TrutAlertModule,
     MatIcon
   ],
   templateUrl: './alert-with-icon-example.component.html',

@@ -32,5 +32,5 @@ import { ColorPickerInputDirective } from './directives/color-picker-input.direc
     ColorPickerTriggerForDirective
   ]
 })
-export class EmrColorPickerModule {
+export class TrutColorPickerModule {
 }

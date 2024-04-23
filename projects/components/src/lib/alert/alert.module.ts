@@ -25,4 +25,4 @@ import { AlertActionDirective } from './alert-action.directive';
     AlertActionDirective
   ]
 })
-export class EmrAlertModule { }
+export class TrutAlertModule { }

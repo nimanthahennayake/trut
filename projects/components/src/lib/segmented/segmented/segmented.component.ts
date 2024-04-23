@@ -16,7 +16,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
   selector: 'trut-segmented',
-  exportAs: 'emrSegmented',
+  exportAs: 'trutSegmented',
   templateUrl: './segmented.component.html',
   styleUrl: './segmented.component.css',
   providers: [

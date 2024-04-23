@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'protrack/components';
 
 @Component({
   selector: 'app-divider-with-text-example',
   standalone: true,
   imports: [
-    EmrDividerModule
+    TrutDividerModule
   ],
   templateUrl: './divider-with-text-example.component.html',
   styleUrl: './divider-with-text-example.component.scss'

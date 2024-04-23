@@ -15,7 +15,7 @@ import { SuggestionBlockComponent } from 'protrack/components';
 import { SuggestionComponent } from 'protrack/components';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { SuggestionIconDirective } from 'protrack/components';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 import { SuggestionThumbDirective } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 
@@ -32,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     SuggestionComponent,
     MatButton,
     SuggestionIconDirective,
-    EmrAvatarModule,
+    TrutAvatarModule,
     SuggestionThumbDirective,
     FormsModule,
     MatIconButton

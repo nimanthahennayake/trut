@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { EmrNavigationModule } from 'protrack/components';
+import { TrutNavigationModule } from 'protrack/components';
 import { LayoutBodyComponent } from 'protrack/components';
 import { LayoutComponent } from 'protrack/components';
 import { LayoutSidebarComponent } from 'protrack/components';
@@ -16,7 +16,7 @@ export interface NavItem {
   selector: 'app-common',
   standalone: true,
   imports: [
-    EmrNavigationModule,
+    TrutNavigationModule,
     LayoutBodyComponent,
     LayoutComponent,
     LayoutSidebarComponent,

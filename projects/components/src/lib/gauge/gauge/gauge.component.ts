@@ -7,7 +7,7 @@ import {
 
 @Component({
   selector: 'trut-gauge',
-  exportAs: 'emrGauge',
+  exportAs: 'trutGauge',
   templateUrl: './gauge.component.html',
   styleUrls: ['./gauge.component.css'],
   host: {

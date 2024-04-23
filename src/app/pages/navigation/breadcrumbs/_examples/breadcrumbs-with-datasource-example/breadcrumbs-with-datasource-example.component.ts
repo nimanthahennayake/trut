@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrBreadcrumbsModule } from 'protrack/components';
+import { TrutBreadcrumbsModule } from 'protrack/components';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-breadcrumbs-with-datasource-example',
   standalone: true,
   imports: [
-    EmrBreadcrumbsModule,
+    TrutBreadcrumbsModule,
     RouterLink
   ],
   templateUrl: './breadcrumbs-with-datasource-example.component.html',

@@ -37,4 +37,4 @@ import { NavigationGroupToggleIconDirective } from './navigation-group-toggle-ic
     NavigationGroupToggleIconDirective
   ]
 })
-export class EmrNavigationModule { }
+export class TrutNavigationModule { }

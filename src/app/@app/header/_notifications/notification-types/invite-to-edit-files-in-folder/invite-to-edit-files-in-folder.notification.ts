@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Notification } from '@app/header/_notifications/types';
-import { EmrAvatarModule, IconComponent } from 'protrack/components';
+import { TrutAvatarModule, IconComponent } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
@@ -10,7 +10,7 @@ import { MatButton } from '@angular/material/button';
   selector: 'app-invite-to-edit-files-in-folder',
   standalone: true,
   imports: [
-    EmrAvatarModule,
+    TrutAvatarModule,
     MatIcon,
     MatRipple,
     RouterLink,

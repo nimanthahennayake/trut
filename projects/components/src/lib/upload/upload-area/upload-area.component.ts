@@ -14,7 +14,7 @@ import { UploadSelectedEvent } from '../properties';
 
 @Component({
   selector: 'trut-upload-area',
-  exportAs: 'emrUploadArea',
+  exportAs: 'trutUploadArea',
   templateUrl: './upload-area.component.html',
   styleUrls: ['./upload-area.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

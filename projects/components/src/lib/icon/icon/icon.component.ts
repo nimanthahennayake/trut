@@ -14,7 +14,7 @@ import { SafeHtmlPipe } from '../../safe-html.pipe';
 
 @Component({
   selector: 'trut-icon',
-  exportAs: 'emrIcon',
+  exportAs: 'trutIcon',
   standalone: true,
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.css'],

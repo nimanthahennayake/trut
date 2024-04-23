@@ -16,7 +16,7 @@ import { AlertIconDirective } from '../alert-icon.directive';
 
 @Component({
   selector: 'trut-alert',
-  exportAs: 'emrAlert',
+  exportAs: 'trutAlert',
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.css'],
   providers: [

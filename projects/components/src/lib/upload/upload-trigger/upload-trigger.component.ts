@@ -6,7 +6,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'trut-upload-trigger,[trut-upload-trigger]',
-  exportAs: 'emrUploadTrigger',
+  exportAs: 'trutUploadTrigger',
   templateUrl: './upload-trigger.component.html',
   styleUrls: ['./upload-trigger.component.css'],
   host: {

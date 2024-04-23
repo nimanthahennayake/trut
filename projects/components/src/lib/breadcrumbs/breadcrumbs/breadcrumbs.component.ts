@@ -5,7 +5,7 @@ import { BreadcrumbActiveItemDefDirective } from '../breadcrumb-active-item-def.
 
 @Component({
   selector: 'trut-breadcrumbs',
-  exportAs: 'emrBreadcrumbs',
+  exportAs: 'trutBreadcrumbs',
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.css'],
   host: {

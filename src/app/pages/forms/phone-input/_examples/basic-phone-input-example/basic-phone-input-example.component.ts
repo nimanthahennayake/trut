@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
-import { EmrPhoneInputModule } from 'protrack/components';
+import { TrutPhoneInputModule } from 'protrack/components';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { phoneValidator } from 'protrack/components';
 
@@ -11,7 +11,7 @@ import { phoneValidator } from 'protrack/components';
     MatFormField,
     MatLabel,
     MatError,
-    EmrPhoneInputModule,
+    TrutPhoneInputModule,
     ReactiveFormsModule
   ],
   templateUrl: './basic-phone-input-example.component.html',

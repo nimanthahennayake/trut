@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-skeleton-line',
-  exportAs: 'emrSkeletonLine',
+  exportAs: 'trutSkeletonLine',
   template: '',
   styleUrls: ['./skeleton-line.component.css'],
   host: {

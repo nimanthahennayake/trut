@@ -13,4 +13,4 @@ import { ResizableContainerComponent } from './resizable-container/resizable-con
     ResizableContainerComponent
   ]
 })
-export class EmrResizableContainerModule { }
+export class TrutResizableContainerModule { }

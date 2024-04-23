@@ -4,7 +4,7 @@ import {
 
 @Component({
   selector: 'trut-avatar-group',
-  exportAs: 'emrAvatarGroup',
+  exportAs: 'trutAvatarGroup',
   styleUrls: ['./avatar-group.component.scss'],
   templateUrl: './avatar-group.component.html',
   host: {

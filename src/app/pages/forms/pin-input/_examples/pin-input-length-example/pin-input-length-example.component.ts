@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'protrack/components';
 
 @Component({
   selector: 'app-pin-input-length-example',
   standalone: true,
   imports: [
-    EmrPinInputModule
+    TrutPinInputModule
   ],
   templateUrl: './pin-input-length-example.component.html',
   styleUrl: './pin-input-length-example.component.scss'

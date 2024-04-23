@@ -19,4 +19,4 @@ import { SegmentedIconDirective } from './segmented-icon.directive';
     SegmentedIconDirective
   ]
 })
-export class EmrSegmentedModule { }
+export class TrutSegmentedModule { }

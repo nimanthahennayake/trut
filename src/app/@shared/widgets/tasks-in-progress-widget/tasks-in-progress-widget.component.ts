@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-tasks-in-progress-widget',
@@ -10,7 +10,7 @@ import { EmrAvatarModule } from 'protrack/components';
     MatButton,
     MatIcon,
     MatIconButton,
-    EmrAvatarModule
+    TrutAvatarModule
   ],
   templateUrl: './tasks-in-progress-widget.component.html',
   styleUrl: './tasks-in-progress-widget.component.scss'

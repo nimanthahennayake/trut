@@ -22,4 +22,4 @@ import { SkeletonBlockComponent } from './skeleton-block/skeleton-block.componen
     SkeletonBlockComponent
   ]
 })
-export class EmrSkeletonModule { }
+export class TrutSkeletonModule { }

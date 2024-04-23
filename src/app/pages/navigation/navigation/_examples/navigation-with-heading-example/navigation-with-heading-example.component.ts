@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrNavigationModule } from 'protrack/components';
+import { TrutNavigationModule } from 'protrack/components';
 
 @Component({
   selector: 'app-navigation-with-heading-example',
   standalone: true,
   imports: [
-    EmrNavigationModule
+    TrutNavigationModule
   ],
   templateUrl: './navigation-with-heading-example.component.html',
   styleUrl: './navigation-with-heading-example.component.scss'

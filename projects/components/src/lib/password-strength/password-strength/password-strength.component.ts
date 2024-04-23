@@ -18,7 +18,7 @@ import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'trut-password-strength',
-  exportAs: 'emrPasswordStrength',
+  exportAs: 'trutPasswordStrength',
   templateUrl: './password-strength.component.html',
   styleUrls: ['./password-strength.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

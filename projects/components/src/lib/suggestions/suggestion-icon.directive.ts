@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[emrSuggestionIcon]',
+  selector: '[trutSuggestionIcon]',
   standalone: true
 })
 export class SuggestionIconDirective {

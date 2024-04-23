@@ -37,5 +37,5 @@ import { TabPanelItemIconDirective } from './tab-panel-item-icon.directive';
     TabPanelItemIconDirective
   ]
 })
-export class EmrTabPanelModule {
+export class TrutTabPanelModule {
 }

@@ -2,7 +2,7 @@ import { booleanAttribute, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'trut-panel',
-  exportAs: 'emrPanel',
+  exportAs: 'trutPanel',
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.css'],
   host: {

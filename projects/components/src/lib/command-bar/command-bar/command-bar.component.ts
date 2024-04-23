@@ -3,7 +3,7 @@ import { CommandBarPosition } from '../types';
 
 @Component({
   selector: 'trut-command-bar',
-  exportAs: 'emrCommandBar',
+  exportAs: 'trutCommandBar',
   templateUrl: './command-bar.component.html',
   styleUrl: './command-bar.component.css',
   host: {

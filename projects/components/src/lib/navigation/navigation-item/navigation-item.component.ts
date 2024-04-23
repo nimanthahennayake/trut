@@ -10,7 +10,7 @@ import { NavigationItemIconDirective } from '../navigation-item-icon.directive';
 
 @Component({
   selector: 'trut-navigation-item,[trut-navigation-item]',
-  exportAs: 'emrNavigationItem',
+  exportAs: 'trutNavigationItem',
   templateUrl: './navigation-item.component.html',
   styleUrls: ['./navigation-item.component.css'],
   host: {

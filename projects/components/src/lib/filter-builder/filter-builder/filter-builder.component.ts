@@ -17,7 +17,7 @@ import { FilterBuilderCondition, FilterBuilderFieldDef, FilterBuilderGroup, Filt
 
 @Component({
   selector: 'trut-filter-builder',
-  exportAs: 'emrFilterBuilder',
+  exportAs: 'trutFilterBuilder',
   templateUrl: './filter-builder.component.html',
   styleUrl: './filter-builder.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -3,7 +3,7 @@ import { TabPanelApiService } from '../tab-panel-api.service';
 
 @Component({
   selector: 'trut-tab-panel',
-  exportAs: 'emrTabPanel',
+  exportAs: 'trutTabPanel',
   templateUrl: './tab-panel.component.html',
   styleUrls: ['tab-panel.component.css'],
   providers: [

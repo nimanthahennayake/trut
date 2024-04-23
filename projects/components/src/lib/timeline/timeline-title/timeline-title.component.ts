@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-timeline-title',
-  exportAs: 'emrTimelineTitle',
+  exportAs: 'trutTimelineTitle',
   templateUrl: './timeline-title.component.html',
   styleUrl: './timeline-title.component.css',
   host: {

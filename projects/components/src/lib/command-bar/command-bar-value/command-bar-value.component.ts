@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-command-bar-value',
-  exportAs: 'emrCommandBarValue',
+  exportAs: 'trutCommandBarValue',
   templateUrl: './command-bar-value.component.html',
   styleUrl: './command-bar-value.component.css',
   host: {

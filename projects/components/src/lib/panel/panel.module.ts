@@ -22,4 +22,4 @@ import { PanelFooterComponent } from './panel-footer/panel-footer.component';
     PanelFooterComponent
   ]
 })
-export class EmrPanelModule { }
+export class TrutPanelModule { }

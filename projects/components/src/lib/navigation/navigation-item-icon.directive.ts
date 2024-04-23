@@ -1,8 +1,8 @@
 import { Directive, inject, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[emrNavigationItemIcon]',
-  exportAs: 'emrNavigationItemIcon',
+  selector: '[trutNavigationItemIcon]',
+  exportAs: 'trutNavigationItemIcon',
   host: {
     'class': 'trut-navigation-item-icon'
   }

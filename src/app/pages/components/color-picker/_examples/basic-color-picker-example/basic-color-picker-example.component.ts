@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrColorPickerModule } from 'protrack/components';
+import { TrutColorPickerModule } from 'protrack/components';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-basic-color-picker-example',
   standalone: true,
   imports: [
-    EmrColorPickerModule,
+    TrutColorPickerModule,
     FormsModule
   ],
   templateUrl: './basic-color-picker-example.component.html',

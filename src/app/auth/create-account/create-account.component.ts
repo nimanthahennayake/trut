@@ -5,8 +5,8 @@ import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
 import { PasswordStrengthModule } from 'protrack/components';
-import { EmrDividerModule } from 'protrack/components';
-import { EmrPhoneInputModule } from 'protrack/components';
+import { TrutDividerModule } from 'protrack/components';
+import { TrutPhoneInputModule } from 'protrack/components';
 import { phoneValidator } from 'protrack/components';
 
 @Component({
@@ -21,8 +21,8 @@ import { phoneValidator } from 'protrack/components';
     ReactiveFormsModule,
     RouterLink,
     PasswordStrengthModule,
-    EmrDividerModule,
-    EmrPhoneInputModule,
+    TrutDividerModule,
+    TrutPhoneInputModule,
     MatError
   ],
   templateUrl: './create-account.component.html',

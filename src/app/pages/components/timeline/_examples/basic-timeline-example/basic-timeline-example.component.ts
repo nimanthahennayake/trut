@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { EmrTimelineModule } from 'protrack/components';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutTimelineModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-timeline-example',
   standalone: true,
   imports: [
-    EmrTimelineModule,
-    EmrAvatarModule
+    TrutTimelineModule,
+    TrutAvatarModule
   ],
   templateUrl: './basic-timeline-example.component.html',
   styleUrl: './basic-timeline-example.component.scss'

@@ -4,7 +4,7 @@ import { MatButton } from '@angular/material/button';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
-import { EmrPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -18,7 +18,7 @@ import { MatIcon } from '@angular/material/icon';
     MatLabel,
     RouterLink,
     ReactiveFormsModule,
-    EmrPinInputModule,
+    TrutPinInputModule,
     MatIcon
   ],
   templateUrl: './password-reset.component.html',

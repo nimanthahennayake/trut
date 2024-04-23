@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'trut-navigation-divider',
-  exportAs: 'emrNavigationDivider',
+  exportAs: 'trutNavigationDivider',
   template: '',
   styleUrls: ['./navigation-divider.component.css'],
   host: {

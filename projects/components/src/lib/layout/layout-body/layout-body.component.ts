@@ -5,7 +5,7 @@ import { isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'trut-layout-body',
-  exportAs: 'emrLayoutBody',
+  exportAs: 'trutLayoutBody',
   standalone: true,
   imports: [],
   templateUrl: './layout-body.component.html',

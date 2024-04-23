@@ -3,7 +3,7 @@ import { MatIcon } from '@angular/material/icon';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 import { Location } from '@angular/common';
-import { EmrNavigationModule } from 'protrack/components';
+import { TrutNavigationModule } from 'protrack/components';
 import { MatRipple } from '@angular/material/core';
 import { OrderByPipe } from 'protrack/components';
 import { ToolbarComponent } from '@app/sidebar/_toolbar/toolbar.component';
@@ -26,7 +26,7 @@ export interface NavItem {
   imports: [
     MatIcon,
     RouterLink,
-    EmrNavigationModule,
+    TrutNavigationModule,
     MatRipple,
     ToolbarComponent,
     OrderByPipe,
@@ -428,7 +428,7 @@ export class SidebarComponent {
         {
           type: 'link',
           name: 'Sign Up',
-          link: '/auth/signup'
+          link: '/auth/sign-up'
         },
         {
           type: 'link',

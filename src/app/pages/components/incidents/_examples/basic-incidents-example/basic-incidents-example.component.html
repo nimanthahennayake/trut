@@ -3,13 +3,13 @@
     <trut-incidents-bar>
       <trut-incidents-title>Maintenance work on the DNS</trut-incidents-title>
       <trut-incidents-description>Description</trut-incidents-description>
-      <mat-icon emrIncidentsToggleIcon class="material-symbols-outlined">expand_more</mat-icon>
+      <mat-icon trutIncidentsToggleIcon class="material-symbols-outlined">expand_more</mat-icon>
     </trut-incidents-bar>
     <trut-incidents-list>
       @for (incident of incidents; track incident) {
         <trut-incident>
-          <mat-icon emrIncidentIcon class="material-symbols-outlined">info</mat-icon>
-          <mat-icon emrIncidentClose class="material-symbols-outlined">close</mat-icon>
+          <mat-icon trutIncidentIcon class="material-symbols-outlined">info</mat-icon>
+          <mat-icon trutIncidentClose class="material-symbols-outlined">close</mat-icon>
           <trut-incident-title>{{ incident.title }}</trut-incident-title>
           <trut-incident-details>{{ incident.details }}</trut-incident-details>
         </trut-incident>

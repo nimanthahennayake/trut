@@ -3,8 +3,8 @@ import { ALERT } from './alert.properties';
 import { AlertComponent } from './alert/alert.component';
 
 @Directive({
-  selector: '[emrAlertClose]',
-  exportAs: 'emrAlertClose',
+  selector: '[trutAlertClose]',
+  exportAs: 'trutAlertClose',
   host: {
     'class': 'trut-alert-close'
   }

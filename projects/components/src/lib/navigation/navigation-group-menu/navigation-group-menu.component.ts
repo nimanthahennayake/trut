@@ -13,7 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'trut-navigation-group-menu',
-  exportAs: 'emrNavigationGroupMenu',
+  exportAs: 'trutNavigationGroupMenu',
   templateUrl: './navigation-group-menu.component.html',
   styleUrls: ['./navigation-group-menu.component.css'],
   host: {

@@ -8,7 +8,7 @@ import {
   MatCardTitle
 } from '@angular/material/card';
 import { MatButton } from '@angular/material/button';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-card-multiple-sections-example',
@@ -23,7 +23,7 @@ import { EmrAvatarModule } from 'protrack/components';
     MatCardTitle,
     MatCardAvatar,
     MatCardSubtitle,
-    EmrAvatarModule
+    TrutAvatarModule
   ],
   templateUrl: './card-multiple-sections-example.component.html',
   styleUrl: './card-multiple-sections-example.component.scss'

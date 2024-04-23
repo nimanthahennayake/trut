@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrIncidentsModule } from 'protrack/components';
+import { TrutIncidentsModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-basic-incidents-example',
   standalone: true,
   imports: [
-    EmrIncidentsModule,
+    TrutIncidentsModule,
     MatIcon
   ],
   templateUrl: './basic-incidents-example.component.html',

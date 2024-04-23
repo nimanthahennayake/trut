@@ -3,7 +3,7 @@ import { SVG } from '@svgdotjs/svg.js';
 
 @Component({
   selector: 'trut-area-line-chart',
-  exportAs: 'emrAreaLineChart',
+  exportAs: 'trutAreaLineChart',
   standalone: true,
   imports: [
   ],

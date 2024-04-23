@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'protrack/components';
 
 @Component({
   selector: 'app-grouped-avatars-example',
   standalone: true,
   imports: [
-    EmrAvatarModule
+    TrutAvatarModule
   ],
   templateUrl: './grouped-avatars-example.component.html',
   styleUrl: './grouped-avatars-example.component.scss'

@@ -3,7 +3,7 @@ import { MatDivider } from '@angular/material/divider';
 
 @Component({
   selector: 'trut-suggestion-block',
-  exportAs: 'emrSuggestionBlock',
+  exportAs: 'trutSuggestionBlock',
   standalone: true,
   imports: [
     MatDivider

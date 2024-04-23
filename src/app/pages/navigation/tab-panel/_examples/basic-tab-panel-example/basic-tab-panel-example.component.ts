@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmrTabPanelModule } from 'protrack/components';
+import { TrutTabPanelModule } from 'protrack/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-basic-tab-panel-example',
   standalone: true,
   imports: [
-    EmrTabPanelModule,
+    TrutTabPanelModule,
     MatIcon
   ],
   templateUrl: './basic-tab-panel-example.component.html',

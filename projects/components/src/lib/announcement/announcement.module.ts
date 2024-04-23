@@ -15,4 +15,4 @@ import { MatIcon } from '@angular/material/icon';
     AnnouncementComponent
   ]
 })
-export class EmrAnnouncementModule { }
+export class TrutAnnouncementModule { }

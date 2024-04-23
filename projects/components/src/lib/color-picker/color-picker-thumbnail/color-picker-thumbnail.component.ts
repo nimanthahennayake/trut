@@ -2,7 +2,7 @@ import { Component, ElementRef, inject, Input, SimpleChanges } from '@angular/co
 
 @Component({
   selector: 'trut-color-picker-thumbnail,[trut-color-picker-thumbnail]',
-  exportAs: 'emrColorPickerThumbnail',
+  exportAs: 'trutColorPickerThumbnail',
   templateUrl: './color-picker-thumbnail.component.html',
   styleUrls: ['./color-picker-thumbnail.component.css'],
   host: {

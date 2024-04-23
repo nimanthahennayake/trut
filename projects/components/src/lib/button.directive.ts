@@ -13,8 +13,8 @@ import { MatButton } from '@angular/material/button';
 import { isPlatformServer } from '@angular/common';
 
 @Directive({
-  selector: '[emrButtonLoading]',
-  exportAs: 'emrButtonLoading',
+  selector: '[trutButtonLoading]',
+  exportAs: 'trutButtonLoading',
   standalone: true
 })
 export class ButtonDirective implements OnChanges {
@@ -25,7 +25,7 @@ export class ButtonDirective implements OnChanges {
   private _platformId = inject(PLATFORM_ID);
 
   @Input({
-    alias: 'emrButtonLoading',
+    alias: 'trutButtonLoading',
     transform: booleanAttribute
   })
   loading = false;

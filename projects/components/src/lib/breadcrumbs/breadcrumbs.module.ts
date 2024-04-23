@@ -31,4 +31,4 @@ import { BreadcrumbActiveItemDefDirective } from './breadcrumb-active-item-def.d
     BreadcrumbActiveItemDefDirective
   ]
 })
-export class EmrBreadcrumbsModule { }
+export class TrutBreadcrumbsModule { }

@@ -3,7 +3,7 @@ import { CAROUSEL_CARD } from '../types';
 
 @Component({
   selector: 'trut-carousel-card,[trut-carousel-card]',
-  exportAs: 'emrCarouselCard',
+  exportAs: 'trutCarouselCard',
   standalone: true,
   imports: [],
   providers: [

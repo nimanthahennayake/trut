@@ -28,7 +28,7 @@ import { Subject } from 'rxjs';
 
 @Component({
   selector: 'trut-number-input',
-  exportAs: 'emrNumberInput',
+  exportAs: 'trutNumberInput',
   templateUrl: './number-input.component.html',
   styleUrl: './number-input.component.css',
   providers: [

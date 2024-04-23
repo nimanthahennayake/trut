@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { EmrContentFadeModule } from 'protrack/components';
+import { TrutContentFadeModule } from 'protrack/components';
 
 @Component({
   selector: 'app-basic-content-fade-example',
   standalone: true,
   imports: [
-    EmrContentFadeModule
+    TrutContentFadeModule
   ],
   templateUrl: './basic-content-fade-example.component.html',
   styleUrl: './basic-content-fade-example.component.scss'

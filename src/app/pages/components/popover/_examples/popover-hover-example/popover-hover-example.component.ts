@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { EmrPopoverModule } from 'protrack/components';
+import { TrutPopoverModule } from 'protrack/components';
 
 @Component({
   selector: 'app-popover-hover-example',
   standalone: true,
   imports: [
     MatButton,
-    EmrPopoverModule
+    TrutPopoverModule
   ],
   templateUrl: './popover-hover-example.component.html',
   styleUrl: './popover-hover-example.component.scss'

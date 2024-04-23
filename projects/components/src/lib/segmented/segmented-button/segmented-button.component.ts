@@ -5,7 +5,7 @@ import { MatRipple } from '@angular/material/core';
 
 @Component({
   selector: 'trut-segmented-button,[trut-segmented-button]',
-  exportAs: 'emrSegmentedButton',
+  exportAs: 'trutSegmentedButton',
   templateUrl: './segmented-button.component.html',
   styleUrl: './segmented-button.component.css',
   hostDirectives: [
