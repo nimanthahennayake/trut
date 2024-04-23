@@ -7,7 +7,7 @@ const routes: Routes = [
     loadComponent: () => import('./signin/signin.component').then(c => c.SigninComponent)
   },
   {
-    path: 'signup',
+    path: 'sign-up',
     loadComponent: () => import('./signup/signup.component').then(c => c.SignupComponent)
   },
   {
@@ -29,6 +29,11 @@ const routes: Routes = [
   {
     path: 'create-account',
     loadComponent: () => import('./create-account/create-account.component').then(c => c.CreateAccountComponent)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'sign-in'
   }
 ];
 
