@@ -1,5 +1,5 @@
 import { afterNextRender, Component, inject, OnInit, PLATFORM_ID, signal } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ThemeManagerService } from '@services/theme-manager.service';
 import { ScreenLoaderComponent } from '@app/screen-loader/screen-loader.component';
 import { ScreenLoaderService } from '@services/screen-loader.service';
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
       // Scroll a page to top if url changed
       this._router.events
         .pipe(
-          filter(event=> event instanceof NavigationEnd)
+          filter(event => event instanceof NavigationEnd)
         )
         .subscribe(() => {
           window.scrollTo({
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
             this.pageLoaded.set(true);
           }, 3000);
         })
-      ;
+        ;
       this._analyticsService.trackPageViews();
     });
   }

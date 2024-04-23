@@ -93,7 +93,7 @@ export class AssistantSearchComponent implements OnDestroy {
 
         this.close();
       })
-    ;
+      ;
   }
 
   close(): void {
