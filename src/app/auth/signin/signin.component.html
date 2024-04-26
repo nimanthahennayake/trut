@@ -8,16 +8,16 @@
       <p class="mt-2 text-left text-neutral-500 text-sm">Please enter your details</p>
       <form class="flex flex-col pt-3 md:pt-8">
         <mat-form-field>
-          <mat-label>User Name</mat-label>
-          <input type="user_name" matInput>
+          <mat-label>Email</mat-label>
+          <input type="text" matInput name="user_email" [(ngModel)]="user_email">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Password</mat-label>
-          <input type="password" matInput>
+          <input type="password" matInput name="user_password" [(ngModel)]="user_password">
           <a routerLink="/auth/forgot-password" matSuffix
             class="mr-3 underline-offset-4 text-xs font-semibold text-neutral-800 dark:text-neutral-300 hover:underline hover:text-accent">Forgot?</a>
         </mat-form-field>
-        <button mat-flat-button color="primary" type="button" class="!h-12 mt-5">Sign in</button>
+        <button mat-flat-button color="primary" type="submit" (click)="signIn()" class="!h-12 mt-5">Sign in</button>
       </form>
       <trut-divider class="mt-8">or</trut-divider>
       <div class="grid mt-8 gap-3 grid-cols-2 text-sm">
