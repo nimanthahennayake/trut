@@ -44,16 +44,8 @@ export class CommonComponent implements OnInit {
       link: '/pages/account/settings/notifications'
     },
     {
-      name: 'Billing',
-      link: '/pages/account/settings/billing'
-    },
-    {
       name: 'Cookie',
       link: '/pages/account/settings/cookie'
-    },
-    {
-      name: 'Data Export',
-      link: '/pages/account/settings/data-export'
     },
     {
       name: 'Sessions',
@@ -70,7 +62,7 @@ export class CommonComponent implements OnInit {
       .subscribe(() => {
         this._activateLink();
       })
-    ;
+      ;
   }
 
   private _activateLink() {

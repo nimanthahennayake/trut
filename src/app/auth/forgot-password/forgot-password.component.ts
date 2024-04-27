@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
+import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
+import { AuthService } from '../../../services/auth/auth.service';
+import { NotificationService } from '../../../services/notifications/common.notifications.service';
+import { OutputDto } from '../../../dtos/common.output.status.dtp';
 
 @Component({
   selector: 'app-forgot-password',
@@ -15,6 +18,7 @@ import { MatIcon } from '@angular/material/icon';
     MatInput,
     MatLabel,
     MatSuffix,
+    MatError,
     RouterLink,
     ReactiveFormsModule,
     MatIcon
@@ -23,11 +27,24 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './forgot-password.component.scss'
 })
 export class ForgotPasswordComponent {
-  private _router = inject(Router);
+  form: FormGroup;
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
+    this.form = new FormGroup({
+      user_email: new FormControl('', [Validators.required, Validators.email])
+    });
+  }
 
-  resetPassword() {
-    this._router.navigateByUrl('/auth/password-reset');
+  async sendVerificationCode() {
+    try {
+      if (this.form.valid) {
+        const user_email: string = this.form.value?.user_email;
+        const response: boolean | undefined = await this._authService.resetPassword(user_email);
+      } else {
+        this._notificationService.showBasicNotification('Please fill out email correctly', '', undefined);
+      }
+    } catch (error: any) {
+      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+    }
   }
 }

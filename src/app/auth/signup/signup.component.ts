@@ -53,9 +53,4 @@ export class SignupComponent {
       this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
     }
   }
-  user_password(user_password: any) {
-    throw new Error('Method not implemented.');
-  }
-
-
 }

@@ -6,7 +6,10 @@ export const environment = {
   outputStatus:
   {
       success: 'success',
-      error: 'error'
+      error: 'error',
+      actions: {
+          next: 'next',
+      }
   },
   notificationConfigs: {
     duration: 5000,

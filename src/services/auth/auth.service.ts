@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { NotificationService } from '../notifications/common.notifications.service';
 import { SignUpUserDto, SignedUpUserDto } from '../../dtos/user.signup.dto';
+import { OutputDto } from '../../dtos/common.output.status.dtp';
 
 @Injectable({
     providedIn: 'root'
@@ -79,6 +80,26 @@ export class AuthService {
 
         } catch (error: any) {
             throw new Error(`Something went wrong, api failed: ${error?.message}`);
+        }
+    }
+
+    async resetPassword(user_email: string): Promise<boolean> {
+        try {
+            const resetPasswordDto: { user_email: string } = { user_email };
+            const outputDto: OutputDto | undefined = await this._http.post<OutputDto>(`${this.client_url}/users/resetpassword`, resetPasswordDto).toPromise();
+
+            if (outputDto) {
+                this._notificationService.showApiNotification(outputDto);
+                if (outputDto?.status === environment.outputStatus?.success) {
+                    this._router.navigate(['/auth/password-reset']);
+                }
+            } else {
+                this._notificationService.showBasicNotification('Something went wrong, please try again', '', undefined);
+            }
+
+            return true;
+        } catch (error: any) {
+            throw new Error(`Something went wrong, api failed, ${error?.message}`);
         }
     }
 }

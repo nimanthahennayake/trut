@@ -22,16 +22,6 @@ const routes: Routes = [
         loadComponent: () => import('./notifications/notifications.component').then(c => c.NotificationsComponent),
       },
       {
-        path: 'billing',
-        title: 'Billing',
-        loadComponent: () => import('./billing/billing.component').then(c => c.BillingComponent),
-      },
-      {
-        path: 'data-export',
-        title: 'Data Export',
-        loadComponent: () => import('./data-export/data-export.component').then(c => c.DataExportComponent),
-      },
-      {
         path: 'sessions',
         title: 'Sessions',
         loadComponent: () => import('./sessions/sessions.component').then(c => c.SessionsComponent),

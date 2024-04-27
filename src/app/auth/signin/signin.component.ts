@@ -43,7 +43,6 @@ export class SigninComponent {
   }
 
   async signIn() {
-    console.log(this.form.value);
     try {
       if (this.form.valid) {
         const signInUserDetails: SignInUserDetails = {
@@ -58,5 +57,4 @@ export class SigninComponent {
       this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
     }
   }
-
 }
