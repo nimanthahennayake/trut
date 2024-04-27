@@ -66,12 +66,32 @@ export class SidebarComponent {
       id: 'settings',
       type: 'group',
       name: 'Settings',
-      icon: 'badge',
+      icon: 'tune',
       children: [
         {
           type: 'link',
-          name: 'Company',
-          link: '/pages/settings'
+          name: 'General',
+          link: '/pages/settings/country'
+        },
+        {
+          type: 'link',
+          name: 'General',
+          link: '/pages/settings/company'
+        },
+        {
+          type: 'link',
+          name: 'General',
+          link: '/pages/settings/facility'
+        },
+        {
+          type: 'link',
+          name: 'General',
+          link: '/pages/settings/division'
+        },
+        {
+          type: 'link',
+          name: 'General',
+          link: '/pages/settings/department'
         },
       ]
     },
