@@ -1,0 +1,15 @@
+<trut-layout-body>
+    <trut-layout>
+      <trut-layout-sidebar class="border-r dark:border-r-neutral-600 w-[300px] py-7 px-5">
+        <trut-navigation [activeKey]="activeLinkId" theme="secondary">
+          @for (navItem of navItems; track navItem) {
+            <a [routerLink]="navItem.link" trut-navigation-item [key]="navItem.link">{{ navItem.name }}</a>
+          }
+        </trut-navigation>
+      </trut-layout-sidebar>
+      <trut-layout-body>
+        <router-outlet></router-outlet>
+      </trut-layout-body>
+    </trut-layout>
+  </trut-layout-body>
+  

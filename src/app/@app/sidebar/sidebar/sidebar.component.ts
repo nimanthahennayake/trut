@@ -59,7 +59,20 @@ export class SidebarComponent {
           type: 'link',
           name: 'Settings',
           link: '/pages/account/settings'
-        }
+        },
+      ]
+    },
+    {
+      id: 'settings',
+      type: 'group',
+      name: 'Settings',
+      icon: 'badge',
+      children: [
+        {
+          type: 'link',
+          name: 'Company',
+          link: '/pages/settings'
+        },
       ]
     },
   ];
