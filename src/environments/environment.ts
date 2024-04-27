@@ -13,5 +13,9 @@ export const environment = {
     horizontal_position: 'center',
     vertical_position: 'top'
   },
-  userSessionTimeOut: 1800
+  userSessionTimeOut: 1800,
+  accessFunctionCodes: {
+    public: 'security_0000',
+    pages: 'security_0001'
+  }
 };

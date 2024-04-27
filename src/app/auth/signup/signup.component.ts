@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
+import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TrutDividerModule } from 'protrack/components';
+import { AuthService } from '../../../services/auth/auth.service';
+import { NotificationService } from '../../../services/notifications/common.notifications.service';
+import { SignUpUserDto, SignedUpUserDto } from '../../../dtos/user.signup.dto';
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +18,7 @@ import { TrutDividerModule } from 'protrack/components';
     MatInput,
     MatLabel,
     MatSuffix,
+    MatError,
     RouterLink,
     ReactiveFormsModule,
     TrutDividerModule
@@ -23,11 +27,35 @@ import { TrutDividerModule } from 'protrack/components';
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
-  private _formBuilder = inject(FormBuilder);
+  form: FormGroup;
 
-  form = this._formBuilder.group({
-    name: this._formBuilder.control('', [Validators.required]),
-    email: this._formBuilder.control('', [Validators.required, Validators.email]),
-    password: this._formBuilder.control('', [Validators.required]),
-  });
+  constructor(private _authService: AuthService, private _notificationService: NotificationService) {
+    this.form = new FormGroup({
+      user_name: new FormControl('', Validators.required),
+      user_email: new FormControl('', [Validators.required, Validators.email]),
+      user_password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+  }
+
+  async signUp() {
+    try {
+      if (this.form.valid) {
+        const signUpUserDto: SignUpUserDto = {
+          user_name: this.form.value?.user_name,
+          user_email: this.form.value?.user_email,
+          user_password: this._authService.encryptPassword(this.form.value?.user_password)
+        };
+        const signedUpUserDto: SignedUpUserDto | undefined = await this._authService.register(signUpUserDto);
+      } else {
+        this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
+      }
+    } catch (error: any) {
+      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+    }
+  }
+  user_password(user_password: any) {
+    throw new Error('Method not implemented.');
+  }
+
+
 }

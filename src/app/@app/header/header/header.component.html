@@ -159,8 +159,8 @@
     <span>Add Account</span>
   </a>
   <mat-divider></mat-divider>
-  <a mat-menu-item>
+  <a mat-menu-item (click)="signOut()">
     <mat-icon  mat-icon-button class="material-symbols-outlined">logout</mat-icon>
-    <button (click)="signOut()">Logout</button>
+    <button>Logout</button>
   </a>
 </mat-menu>

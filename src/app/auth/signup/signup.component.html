@@ -6,22 +6,27 @@
     <div class="lg:w-[30rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
       <h1 class="text-left text-3xl font-bold">Sign up</h1>
       <p class="text-sm mt-3 text-neutral-500">
-        Let's get started 
+        Let's get started
       </p>
-      <form class="flex flex-col pt-3 md:pt-8" [formGroup]="form">
+      <form class="flex flex-col pt-3 md:pt-8" [formGroup]="form" (ngSubmit)="signUp()">
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input type="name" matInput formControlName="name">
+          <input type="name" matInput formControlName="user_name">
+          <mat-error>user name cannot be empty</mat-error>
         </mat-form-field>
+        <br>
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email">
+          <input type="email" matInput formControlName="user_email">
+          <mat-error>please enter a valid email address</mat-error>
         </mat-form-field>
+        <br>
         <mat-form-field>
           <mat-label>Password</mat-label>
-          <input type="password" matInput formControlName="password">
+          <input type="password" matInput formControlName="user_password">
+          <mat-error>password must be at least 6 characters long</mat-error>
         </mat-form-field>
-        <button mat-flat-button color="primary" type="button" class="!h-12 mt-4" [disabled]="form.invalid">Sign
+        <button mat-flat-button color="primary" class="!h-12 mt-4" [disabled]="form.invalid">Sign
           Up</button>
       </form>
       <trut-divider class="mt-8">or</trut-divider>

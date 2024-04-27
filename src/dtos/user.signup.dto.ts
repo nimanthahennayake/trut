@@ -2,7 +2,7 @@
 import { IsEmail, IsNotEmpty, IsString, MaxLength, MinLength } from 'class-validator';
 import { OutputDto } from './common.output.status.dtp';
 
-export class RegisterUserDto {
+export class SignUpUserDto {
 
     @IsNotEmpty()
     @IsString()
@@ -20,7 +20,7 @@ export class RegisterUserDto {
     user_password: string;
 }
 
-export class RegisteredUserDto {
+export class SignedUpUserDto {
     @IsNotEmpty()
     @IsString()
     user_id: string;

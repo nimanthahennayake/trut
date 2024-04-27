@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { MatButton, MatIconButton } from '@angular/material/button';
-import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
+import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatIcon } from '@angular/material/icon';
 import { TrutDividerModule } from 'protrack/components';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SignedUserDto } from '../../../dtos/user.signin.dto';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SignInUserDetails } from '../../../utils/types/types';
 import { NotificationService } from '../../../services/notifications/common.notifications.service';
 import { environment } from '../../../environments/environment';
@@ -24,36 +24,39 @@ import { environment } from '../../../environments/environment';
     MatIcon,
     MatIconButton,
     MatSuffix,
+    MatError,
     TrutDividerModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.scss'
 })
 export class SigninComponent {
-  user_email: string = '';
-  user_password: string = '';
+  form: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router, private notificationService: NotificationService) { }
+  constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
+    this.form = new FormGroup({
+      user_email: new FormControl('', [Validators.required, Validators.email]),
+      user_password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+  }
 
   async signIn() {
+    console.log(this.form.value);
     try {
-      const encryptedPassword = this.encryptPassword(this.user_password);
-
-      const signInUserDetails: SignInUserDetails = {
-        user_email: this.user_email,
-        user_password: encryptedPassword
-      };
-
-      const response: SignedUserDto | undefined = await this.authService.signIn(signInUserDetails);
-
-      
+      if (this.form.valid) {
+        const signInUserDetails: SignInUserDetails = {
+          user_email: this.form.value?.user_email,
+          user_password: this._authService.encryptPassword(this.form.value?.user_password)
+        };
+        const response: SignedUserDto | undefined = await this._authService.signIn(signInUserDetails);
+      } else {
+        this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
+      }
     } catch (error: any) {
-      this.notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
     }
   }
 
-  encryptPassword(password: string): string {
-    return password;
-  }
 }
