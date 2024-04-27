@@ -1,9 +1,0 @@
-<mat-form-field class="w-1/2">
-  <mat-label>Color</mat-label>
-  <input type="text" [(ngModel)]="color" matInput placeholder="Select color">
-  <button trut-color-picker-thumbnail [color]="color"
-          [trutColorPickerTriggerFor]="colorPicker" matSuffix class="mr-2"></button>
-</mat-form-field>
-<ng-template #colorPicker>
-  <trut-color-picker [(color)]="color"></trut-color-picker>
-</ng-template>

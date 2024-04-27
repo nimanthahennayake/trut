@@ -54,6 +54,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this._themeManager.setColorScheme(this._themeManager.getPreferredColorScheme());
 
     if (isPlatformBrowser(this._platformId)) {
@@ -63,5 +64,6 @@ export class AppComponent implements OnInit {
     }
 
     this._seoService.trackCanonicalChanges();
+
   }
 }

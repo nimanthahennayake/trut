@@ -15,7 +15,7 @@ export class SignInUserDto {
     user_password: string;
 }
 
-export class SingedUserDto {
+export class SignedUserDto {
     @IsNotEmpty()
     @IsString()
     user_id: string;

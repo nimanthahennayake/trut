@@ -15,6 +15,7 @@ import { TrutPopoverModule } from 'protrack/components';
 import { AssistantSearchComponent } from '@app/header/_assistant-search/assistant-search.component';
 import { ThemeManagerService } from '@services/theme-manager.service';
 import { LayoutApiService } from 'protrack/components';
+import { AuthService } from '../../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -47,10 +48,13 @@ import { LayoutApiService } from 'protrack/components';
     'class': 'block w-full h-full'
   }
 })
+
 export class HeaderComponent {
   protected _themeManager = inject(ThemeManagerService);
   private _layoutApi = inject(LayoutApiService);
   isDark = this._themeManager.isDark();
+
+  constructor(private _authService: AuthService) { }
 
   @Input()
   sidebarHidden = false;
@@ -63,5 +67,9 @@ export class HeaderComponent {
     }
 
     this.sidebarHidden = !this.sidebarHidden;
+  }
+
+  signOut() {
+    this._authService.signOut();
   }
 }
