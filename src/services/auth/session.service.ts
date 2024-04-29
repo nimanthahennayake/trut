@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, Observable, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +16,7 @@ export class SessionManagerService {
         timer(inactivityPeriod)
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => {
-                this.router.navigate(['/login']);
+                this.router.navigate([environment.defaultPaths.auth]);
             });
     }
 

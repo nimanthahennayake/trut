@@ -32,9 +32,25 @@ export class CommonComponent implements OnInit {
   activeLinkId: string | null;
   navItems: NavItem[] = [
     {
+      name: 'Country',
+      link: '/pages/settings/general/country'
+    },
+    {
       name: 'Company',
-      link: '/pages/settings/company'
-    }
+      link: '/pages/settings/general/company'
+    },
+    {
+      name: 'Facility',
+      link: '/pages/settings/general/facility'
+    },
+    {
+      name: 'Division',
+      link: '/pages/settings/general/division'
+    },
+    {
+      name: 'Department',
+      link: '/pages/settings/general/department'
+    },
   ];
 
   ngOnInit() {

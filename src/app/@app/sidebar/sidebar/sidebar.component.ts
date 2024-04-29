@@ -71,28 +71,8 @@ export class SidebarComponent {
         {
           type: 'link',
           name: 'General',
-          link: '/pages/settings/country'
-        },
-        {
-          type: 'link',
-          name: 'General',
-          link: '/pages/settings/company'
-        },
-        {
-          type: 'link',
-          name: 'General',
-          link: '/pages/settings/facility'
-        },
-        {
-          type: 'link',
-          name: 'General',
-          link: '/pages/settings/division'
-        },
-        {
-          type: 'link',
-          name: 'General',
-          link: '/pages/settings/department'
-        },
+          link: '/pages/settings/general'
+        }
       ]
     },
   ];

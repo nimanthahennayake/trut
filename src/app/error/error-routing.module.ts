@@ -12,6 +12,11 @@ const routes: Routes = [
     title: 'Access Denied',
     loadComponent: () => import('./access-denied/access-denied.component').then(c => c.AccessDeniedComponent)
   },
+  {
+    path: 'not-found',
+    title: 'Not Found',
+    loadComponent: () => import('./not-found/not-found.component').then(c => c.NotFoundComponent)
+  },
 ];
 
 @NgModule({

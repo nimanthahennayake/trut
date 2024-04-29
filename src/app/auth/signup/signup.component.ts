@@ -35,17 +35,20 @@ export class SignupComponent {
       user_email: new FormControl('', [Validators.required, Validators.email]),
       user_password: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
+
+    this._authService.handleAuthInit();
   }
 
   async signUp() {
     try {
       if (this.form.valid) {
+        const hashedPassword = await this._authService.encryptPassword(this.form.value.user_password);
         const signUpUserDto: SignUpUserDto = {
-          user_name: this.form.value?.user_name,
-          user_email: this.form.value?.user_email,
-          user_password: this._authService.encryptPassword(this.form.value?.user_password)
+          user_name: this.form.value.user_name,
+          user_email: this.form.value.user_email,
+          user_password: hashedPassword
         };
-        const signedUpUserDto: SignedUpUserDto | undefined = await this._authService.register(signUpUserDto);
+        await this._authService.register(signUpUserDto);
       } else {
         this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
       }

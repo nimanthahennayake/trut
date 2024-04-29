@@ -40,16 +40,23 @@ export class SigninComponent {
       user_email: new FormControl('', [Validators.required, Validators.email]),
       user_password: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
+
+    this._authService.handleAuthInit();
   }
 
   async signIn() {
     try {
       if (this.form.valid) {
+        const hashedPassword = await this._authService.encryptPassword(this.form.value.user_password);
         const signInUserDetails: SignInUserDetails = {
-          user_email: this.form.value?.user_email,
-          user_password: this._authService.encryptPassword(this.form.value?.user_password)
+          user_email: this.form.value.user_email,
+          user_password: hashedPassword
         };
-        const response: SignedUserDto | undefined = await this._authService.signIn(signInUserDetails);
+        const response = await this._authService.signIn(signInUserDetails);
+
+        if (!response?.user_id) {
+          this.form.get('user_password')?.reset();
+        }
       } else {
         this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
       }
@@ -57,4 +64,5 @@ export class SigninComponent {
       this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
     }
   }
+
 }

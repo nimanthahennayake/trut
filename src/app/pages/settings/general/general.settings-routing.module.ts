@@ -31,6 +31,11 @@ const routes: Routes = [
         title: 'Department',
         loadComponent: () => import('./department/department.component').then(c => c.DepartmentComponent),
       },
+      {
+        path: 'settings',
+        pathMatch: 'full',
+        redirectTo: 'general/country'
+      }
     ]
   }
 ];
@@ -39,4 +44,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SettingsRoutingModule { }
+export class GeneralSettingsRoutingModule { }

@@ -10,13 +10,11 @@ export const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-    canActivate: [AuthGuard], data: { function_code: environment.accessFunctionCodes.public }
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'error',
-    loadChildren: () => import('./error/error.module').then(m => m.ErrorModule),
-    canActivate: [AuthGuard], data: { function_code: environment.accessFunctionCodes.public }
+    loadChildren: () => import('./error/error.module').then(m => m.ErrorModule)
   },
   {
     path: '',
@@ -26,7 +24,6 @@ export const routes: Routes = [
   {
     path: '**',
     title: 'Page Not Found',
-    loadComponent: () => import('./error/not-found/not-found.component').then(c => c.NotFoundComponent),
-    canActivate: [AuthGuard], data: { function_code: environment.accessFunctionCodes.public }
+    loadComponent: () => import('./error/not-found/not-found.component').then(c => c.NotFoundComponent)
   }
 ];
