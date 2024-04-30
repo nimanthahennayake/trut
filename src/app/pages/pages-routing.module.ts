@@ -15,6 +15,10 @@ const routes: Routes = [
         loadChildren: () => import('./settings/general/general.settings.module').then(m => m.GeneralSettingsModule)
       },
       {
+        path: 'settings/useraccess',
+        loadChildren: () => import('./settings/useraccess/useraccess.settings.module').then(m => m.UserAccessSettingsModule)
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'account/settings'

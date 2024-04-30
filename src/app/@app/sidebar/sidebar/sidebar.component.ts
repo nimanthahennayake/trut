@@ -72,6 +72,11 @@ export class SidebarComponent {
           type: 'link',
           name: 'General',
           link: '/pages/settings/general'
+        },
+        {
+          type: 'link',
+          name: 'User Access',
+          link: '/pages/settings/useraccess'
         }
       ]
     },
