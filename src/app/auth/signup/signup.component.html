@@ -22,8 +22,10 @@
         <mat-form-field>
           <mat-label>Password</mat-label>
           <input type="password" matInput formControlName="user_password">
-          <mat-error>password must be at least 6 characters long</mat-error>
+          <mat-error>please enter a valid password</mat-error>
         </mat-form-field>
+        <trut-password-strength #passwordStrengthComponent [password]="form.value.user_password!" [hidden]="!form.value.user_password"></trut-password-strength>
+        <trut-password-strength-info [passwordComponent]="passwordStrengthComponent" [hidden]="!form.value.user_password"></trut-password-strength-info>
         <button mat-flat-button color="primary" class="!h-12 mt-4" [disabled]="form.invalid">Sign
           Up</button>
       </form>

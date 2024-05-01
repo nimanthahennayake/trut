@@ -7,7 +7,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatIcon } from '@angular/material/icon';
 import { AuthService } from '../../../services/auth/auth.service';
 import { NotificationService } from '../../../services/notifications/common.notifications.service';
-import { OutputDto } from '../../../dtos/common.output.status.dtp';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-forgot-password',
@@ -41,10 +41,10 @@ export class ForgotPasswordComponent {
         const user_email: string = this.form.value?.user_email;
         const response: boolean | undefined = await this._authService.resetPassword(user_email);
       } else {
-        this._notificationService.showBasicNotification('Please fill out email correctly', '', undefined);
+        this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please fill out email correctly', '', '', undefined);
       }
     } catch (error: any) {
-      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+      this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', `Something went wrong, please try again`, error?.message, '', undefined);
     }
   }
 }

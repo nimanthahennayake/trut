@@ -100,7 +100,7 @@ export class AuthService {
                 localStorage.setItem(environment.storageItems.successful_signin, await this.encryptText('false'));
             }
         } else {
-            this._notificationService.showBasicNotification('Something went wrong, please try again', '', undefined);
+            this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', '', '', undefined);
         }
     }
 
@@ -110,10 +110,10 @@ export class AuthService {
             if (response?.output.status === environment.outputStatus?.success) {
                 this._router.navigate([environment.defaultPaths.auth]);
             } else {
-                this._notificationService.showBasicNotification('Something went wrong, please try again', '', undefined);
+                this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', '', '', undefined);
             }
         } else {
-            this._notificationService.showBasicNotification('Something went wrong, please try again', '', undefined);
+            this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', '', '', undefined);
         }
     }
 

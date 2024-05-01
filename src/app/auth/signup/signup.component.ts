@@ -7,7 +7,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { TrutDividerModule } from 'protrack/components';
 import { AuthService } from '../../../services/auth/auth.service';
 import { NotificationService } from '../../../services/notifications/common.notifications.service';
-import { SignUpUserDto, SignedUpUserDto } from '../../../dtos/user.signup.dto';
+import { SignUpUserDto } from '../../../dtos/user.signup.dto';
+import { environment } from '../../../environments/environment';
+import { PasswordStrengthModule } from 'protrack/components';
 
 @Component({
   selector: 'app-signup',
@@ -21,7 +23,8 @@ import { SignUpUserDto, SignedUpUserDto } from '../../../dtos/user.signup.dto';
     MatError,
     RouterLink,
     ReactiveFormsModule,
-    TrutDividerModule
+    TrutDividerModule,
+    PasswordStrengthModule
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
@@ -48,12 +51,18 @@ export class SignupComponent {
           user_email: this.form.value.user_email,
           user_password: hashedPassword
         };
-        await this._authService.register(signUpUserDto);
+
+        const response = await this._authService.register(signUpUserDto);
+
+        if (!response?.output.status) {
+          this.form.get('user_password')?.reset();
+          this.form.get('user_email')?.reset();
+        }
       } else {
-        this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
+        this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please fill out all required fields correctly', '', '', undefined);
       }
     } catch (error: any) {
-      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+      this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', `Something went wrong, please try again`, error?.message, '', undefined);
     }
   }
 }

@@ -9,6 +9,13 @@ export const environment = {
     error: 'error',
     actions: {
       next: 'next',
+    },
+    variant: {
+      secondary: 'secondary',
+      informative: 'informative',
+      negative: 'negative',
+      positive: 'positive',
+      notice: 'notice'
     }
   },
   notificationConfigs: {

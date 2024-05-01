@@ -41,7 +41,7 @@
   font-weight: var(--trut-alert-title-font-weight);
   margin-bottom: 0.25rem;
   font-size: var(--trut-alert-title-font-size);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 :host .actions {

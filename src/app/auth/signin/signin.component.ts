@@ -58,10 +58,10 @@ export class SigninComponent {
           this.form.get('user_password')?.reset();
         }
       } else {
-        this._notificationService.showBasicNotification('Please fill out all required fields correctly', '', undefined);
+        this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please fill out all required fields correctly', '', '', undefined);
       }
     } catch (error: any) {
-      this._notificationService.showBasicNotification(`Something went wrong, please try again. ${error?.message}`, '', undefined);
+      this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', `Please try again`, error?.message, '', undefined);
     }
   }
 
