@@ -1,0 +1,10 @@
+<trut-alert variant={{data.variant}}>
+    <trut-alert-title>{{data.title}}</trut-alert-title>
+    <p>{{data.error_message}}</p>
+    <p>{{data.message}}</p>
+    <button mat-flat-button trutAlertAction (click)="data.custom_action" [hidden]="custom_action_state" matRipple>{{
+        data.action }}</button>
+    <button trutAlertAction trueAlertClose matRipple>
+        <mat-icon class="material-symbols-outlined">close</mat-icon>
+    </button>
+</trut-alert>

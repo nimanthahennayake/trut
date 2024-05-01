@@ -5,6 +5,14 @@ export class OutputDto {
 
     @IsNotEmpty()
     @IsString()
+    title: string;
+
+    @IsNotEmpty()
+    @IsString()
+    variant: string;
+
+    @IsNotEmpty()
+    @IsString()
     status: string;
 
     @IsNotEmpty()
