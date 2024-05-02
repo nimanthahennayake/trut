@@ -16,9 +16,9 @@ export class NotificationService {
   showApiNotification(output: OutputDto | undefined, custom_action?: (() => void)): void {
     if (output) {
       if (output.error) {
-        this.showBasicNotification(output?.variant, output?.title, `Oops! ${output?.message}`, output?.error_message, output?.action, custom_action);
+        this.showBasicNotification(output?.variant, output?.title, output?.message, `Oops! ${output?.error_message}`, output?.action, custom_action);
       } else {
-        this.showBasicNotification(output?.variant, output?.title, `${output?.message}`, '', output?.action, custom_action);
+        this.showBasicNotification(output?.variant, output?.title, output?.message, '', output?.action, custom_action);
       }
     } else {
       this.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', `Whoopsie! Looks like our api response output vanished, Let's try again`, '', '', custom_action);

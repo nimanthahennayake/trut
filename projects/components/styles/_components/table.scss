@@ -24,3 +24,16 @@ html.dark {
     @apply bg-neutral-600;
   }
 }
+
+.mat-mdc-header-cell {
+  border-right-color: var(--mat-table-row-item-outline-color, rgba(139, 139, 139, 0.12));
+  border-right-width: var(--mat-table-row-item-outline-width, 1px);
+  border-right-style: solid;
+  font-weight: bold !important;
+}
+
+.mat-mdc-cell {
+  border-right-color: var(--mat-table-row-item-outline-color, rgba(139, 139, 139, 0.12));
+  border-right-width: var(--mat-table-row-item-outline-width, 1px);
+  border-right-style: solid;
+}

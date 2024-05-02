@@ -25,6 +25,11 @@ const routes: Routes = [
         path: 'user-functions',
         title: 'Division',
         loadComponent: () => import('./userfunctions/userfunctions.component').then(c => c.UserfunctionsComponent),
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'users'
       }
     ]
   }

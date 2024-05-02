@@ -35,6 +35,11 @@ const routes: Routes = [
         path: 'settings',
         pathMatch: 'full',
         redirectTo: 'general/country'
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'country'
       }
     ]
   }

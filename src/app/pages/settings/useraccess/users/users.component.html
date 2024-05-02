@@ -1,32 +1,113 @@
-<div class="h-[100% ] border">
-    <trut-layout>
-        <trut-layout-topbar>
-            <trut-announcement iconName="help" type="informative" closable>
-                You still have not uploaded your Mart invoice due on 22 April 2024
-            </trut-announcement>
-        </trut-layout-topbar>
-        <trut-layout-header>
-            <div class="border-b px-6 h-14 flex items-center">
-                Header
-            </div>
-        </trut-layout-header>
-        <trut-layout-sidebar>
-            <div class="p-6 border-r h-full w-[240px]">Sidebar</div>
-        </trut-layout-sidebar>
+<div class="h-full border">
+    <trut-layout-body>
         <trut-layout>
+            <trut-layout-topbar>
+                <!-- <trut-announcement iconName="help" type="informative" closable>
+                    You still have not uploaded your Mart invoice due on 22 April 2024
+                </trut-announcement> -->
+            </trut-layout-topbar>
             <trut-layout-header>
-                <div class="border-b px-6 h-12 flex items-center">
-                    Subheader
+                <div class="border-b px-6 h-14 flex items-center">
+                    Header
                 </div>
             </trut-layout-header>
-            <trut-layout-body>
-                <div class="h-[1000px] p-6">Body with scroll</div>
-            </trut-layout-body>
-            <trut-layout-footer>
-                <div class="border-t px-6 h-10 flex items-center text-xs">
-                    This is footer example &copy; 2024
+            <trut-layout-sidebar>
+                <div class="p-6 border-r h-full w-full">
+                    <p>Search</p>
+                    <mat-divider></mat-divider>
+                    <div class="space-y-12 py-6">
+                        <p>Search by user name and status</p>
+                        <!-- <form [formGroup]="search_option_1">
+                            <mat-form-field class="w-1/2">
+                                <mat-label>User Name</mat-label>
+                                <input type="text" matInput formControlName="state_user_name" required
+                                    [matAutocomplete]="auto_user_name">
+                                <mat-autocomplete #auto_user_name="mat_auto_complete">
+                                    @for (group of state_group_options | async; track group) {
+                                    <mat-optgroup [label]="group.letter">
+                                        @for (name of group.names; track name) {
+                                        <mat-option [value]="name">{{name}}</mat-option>
+                                        }
+                                    </mat-optgroup>
+                                    }
+                                </mat-autocomplete>
+                            </mat-form-field>
+                        </form> -->
+                        <trut-divider>or</trut-divider>
+                        <p>Search by user email and status</p>
+                    </div>
                 </div>
-            </trut-layout-footer>
+            </trut-layout-sidebar>
+            <trut-layout-sidebar>
+                <div class="p-6 border-r h-full w-full">
+                    <p>Edit</p>
+                </div>
+            </trut-layout-sidebar>
+            <trut-layout>
+                <trut-layout-header>
+                    <div class="border-b px-6 h-12 flex items-center">
+                        <!-- <mat-icon class="material-symbols-outlined search-icon">search</mat-icon>
+                        <input type="text" placeholder="Recommend to search: My orders">
+                        @if (searchText) {
+                        <div class="absolute end-1 w-max">
+                            <button mat-icon-button (click)="clearText()">
+                                <mat-icon class="material-symbols-outlined">close</mat-icon>
+                            </button>
+                        </div>
+                        } -->
+                    </div>
+                </trut-layout-header>
+                <trut-layout-body>
+                    <div class="h-full p-0">
+                        <div>
+                            <table mat-table [dataSource]="data" class="not-prose">
+                                <!-- Position Column -->
+                                <ng-container matColumnDef="position" sticky>
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        No. </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                </ng-container>
+
+                                <!-- Name Column -->
+                                <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        Name </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                </ng-container>
+
+                                <!-- Weight Column -->
+                                <ng-container matColumnDef="weight">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        Weight </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                                </ng-container>
+
+                                <!-- Symbol Column -->
+                                <ng-container matColumnDef="symbol">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        Symbol </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                                <tr mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></tr>
+                                <tr class="mat-row" *matNoDataRow>
+                                    <td class="mat-cell" colspan="4">No data matching the filter</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </trut-layout-body>
+                <trut-layout-footer>
+                    <div class="border-t px-6 items-right">
+                        <mat-paginator [length]="number_of_records" [pageSize]="limit" [pageSizeOptions]="[5, 10, 20]"
+                            showFirstLastButtons aria-label=""></mat-paginator>
+                    </div>
+                    <div class="border-t px-6 h-10 flex items-center text-xs">
+                        This is footer example &copy; 2024
+                    </div>
+                </trut-layout-footer>
+            </trut-layout>
         </trut-layout>
-    </trut-layout>
+    </trut-layout-body>
 </div>
