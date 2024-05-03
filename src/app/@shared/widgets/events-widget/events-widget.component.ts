@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 
 @Component({
   selector: 'app-events-widget',

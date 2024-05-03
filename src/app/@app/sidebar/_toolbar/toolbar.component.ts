@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDivider } from '@angular/material/divider';
 import { AsyncPipe } from '@angular/common';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatBadge } from '@angular/material/badge';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';

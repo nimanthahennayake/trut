@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'trut/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatSlideToggle } from '@angular/material/slide-toggle';

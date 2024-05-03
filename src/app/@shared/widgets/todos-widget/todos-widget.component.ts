@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import {

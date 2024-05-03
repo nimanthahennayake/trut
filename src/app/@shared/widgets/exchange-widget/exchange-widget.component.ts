@@ -1,5 +1,5 @@
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatIcon } from '@angular/material/icon';
 import { MatDivider } from '@angular/material/divider';
 import { MatRipple } from '@angular/material/core';

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-import { TrutDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'trut/components';
 
 @Component({
   standalone: true,

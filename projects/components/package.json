@@ -1,18 +1,18 @@
 {
-  "name": "protrack/components",
+  "name": "trut/components",
   "description": "",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nimanthas/protrack.git"
+    "url": "https://github.com/Nimanthas/trut.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Nimanthas/protrack/issues"
+    "url": "https://github.com/Nimanthas/trut/issues"
   },
   "homepage": "",
   "keywords": [
-    "protrack admin",
+    "trut admin",
     "angular admin",
     "admin panel",
     "angular dashboard",

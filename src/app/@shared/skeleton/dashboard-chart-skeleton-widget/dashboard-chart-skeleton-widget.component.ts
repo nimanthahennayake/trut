@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutSkeletonModule } from 'protrack/components';
+import { TrutSkeletonModule } from 'trut/components';
 
 @Component({
   selector: 'app-dashboard-chart-skeleton-widget',

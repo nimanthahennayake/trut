@@ -4,7 +4,7 @@ import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatIcon } from '@angular/material/icon';
-import { TrutDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'trut/components';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SignedUserDto } from '../../../dtos/user.signin.dto';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';

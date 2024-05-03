@@ -10,13 +10,13 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { CdkConnectedOverlay, CdkOverlayOrigin, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-import { SuggestionsComponent } from 'protrack/components';
-import { SuggestionBlockComponent } from 'protrack/components';
-import { SuggestionComponent } from 'protrack/components';
+import { SuggestionsComponent } from 'trut/components';
+import { SuggestionBlockComponent } from 'trut/components';
+import { SuggestionComponent } from 'trut/components';
 import { MatButton, MatIconButton } from '@angular/material/button';
-import { SuggestionIconDirective } from 'protrack/components';
-import { TrutAvatarModule } from 'protrack/components';
-import { SuggestionThumbDirective } from 'protrack/components';
+import { SuggestionIconDirective } from 'trut/components';
+import { TrutAvatarModule } from 'trut/components';
+import { SuggestionThumbDirective } from 'trut/components';
 import { FormsModule } from '@angular/forms';
 
 @Component({

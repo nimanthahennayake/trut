@@ -12,9 +12,9 @@ export class PageTitleStrategyService extends TitleStrategy {
     const title = this.buildTitle(routerState);
 
     if (title !== undefined) {
-      this._title.setTitle(`${title} | ProTrack`);
+      this._title.setTitle(`${title} | Trut`);
     } else {
-      this._title.setTitle('ProTrack');
+      this._title.setTitle('Trut');
     }
   }
 }

@@ -9,12 +9,12 @@ import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
 import { MatDivider } from '@angular/material/divider';
 import { MatTooltip } from '@angular/material/tooltip';
 import { RouterLink } from '@angular/router';
-import { TrutAvatarModule, IconComponent } from 'protrack/components';
+import { TrutAvatarModule, IconComponent } from 'trut/components';
 import { NotificationListComponent } from '@app/header/_notifications/notification-list/notification-list.component';
-import { TrutPopoverModule } from 'protrack/components';
+import { TrutPopoverModule } from 'trut/components';
 import { AssistantSearchComponent } from '@app/header/_assistant-search/assistant-search.component';
 import { ThemeManagerService } from '@services/theme-manager.service';
-import { LayoutApiService } from 'protrack/components';
+import { LayoutApiService } from 'trut/components';
 import { AuthService } from '../../../../services/auth/auth.service';
 
 @Component({

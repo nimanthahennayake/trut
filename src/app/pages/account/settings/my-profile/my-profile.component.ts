@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { VDividerComponent } from 'protrack/components';
+import { VDividerComponent } from 'trut/components';
 
 @Component({
   standalone: true,

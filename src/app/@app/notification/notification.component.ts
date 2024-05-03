@@ -4,7 +4,7 @@ import { Component, Inject } from '@angular/core';
 import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar';
 import { MatIcon } from '@angular/material/icon';
 import { MatRipple } from '@angular/material/core';
-import { TrutAlertModule } from 'protrack/components';
+import { TrutAlertModule } from 'trut/components';
 
 @Component({
   selector: 'app-notification.template',

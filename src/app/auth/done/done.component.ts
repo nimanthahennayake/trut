@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutPinInputModule } from 'protrack/components';
+import { TrutPinInputModule } from 'trut/components';
 import { FormsModule } from '@angular/forms';
 import { MatAnchor, MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';

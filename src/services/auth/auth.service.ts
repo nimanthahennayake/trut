@@ -103,7 +103,7 @@ export class AuthService {
             this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', '', '', undefined);
         }
     }
- 
+
     private async handleRegister(response: SignedUpUserDto | undefined): Promise<void> {
         if (response) {
             this._notificationService.showApiNotification(response?.output);

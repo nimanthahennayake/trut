@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { TrutNavigationModule } from 'protrack/components';
-import { LayoutBodyComponent } from 'protrack/components';
-import { LayoutComponent } from 'protrack/components';
-import { LayoutSidebarComponent } from 'protrack/components';
+import { TrutNavigationModule } from 'trut/components';
+import { LayoutBodyComponent } from 'trut/components';
+import { LayoutComponent } from 'trut/components';
+import { LayoutSidebarComponent } from 'trut/components';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { Location } from '@angular/common';

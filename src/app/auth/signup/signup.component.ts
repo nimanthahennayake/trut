@@ -4,12 +4,12 @@ import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/f
 import { MatInput } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { TrutDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'trut/components';
 import { AuthService } from '../../../services/auth/auth.service';
 import { NotificationService } from '../../../services/notifications/common.notifications.service';
 import { SignUpUserDto } from '../../../dtos/user.signup.dto';
 import { environment } from '../../../environments/environment';
-import { PasswordStrengthModule } from 'protrack/components';
+import { PasswordStrengthModule } from 'trut/components';
 
 @Component({
   selector: 'app-signup',

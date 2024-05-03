@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
-import { TrutAvatarModule } from 'protrack/components';
+import { TrutAvatarModule } from 'trut/components';
 import { MatRipple } from '@angular/material/core';
-import { TrutSkeletonModule } from 'protrack/components';
+import { TrutSkeletonModule } from 'trut/components';
 import { NgTemplateOutlet } from '@angular/common';
 import { Notification } from '@app/header/_notifications/types';
 import {

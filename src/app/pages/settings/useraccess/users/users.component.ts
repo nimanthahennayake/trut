@@ -1,20 +1,20 @@
 import { Component, ViewChild } from '@angular/core';
-import { LayoutBodyComponent } from 'protrack/components';
-import { LayoutComponent } from 'protrack/components';
-import { LayoutHeaderComponent } from 'protrack/components';
-import { LayoutSidebarComponent } from 'protrack/components';
-import { LayoutFooterComponent } from 'protrack/components';
-import { LayoutTopbarComponent } from 'protrack/components';
+import { LayoutBodyComponent } from 'trut/components';
+import { LayoutComponent } from 'trut/components';
+import { LayoutHeaderComponent } from 'trut/components';
+import { LayoutSidebarComponent } from 'trut/components';
+import { LayoutFooterComponent } from 'trut/components';
+import { LayoutTopbarComponent } from 'trut/components';
 import { MatIcon } from '@angular/material/icon';
-import { TrutAnnouncementModule } from 'protrack/components';
+import { TrutAnnouncementModule } from 'trut/components';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TrutDividerModule } from 'protrack/components';
+import { TrutDividerModule } from 'trut/components';
 import { MatDivider } from '@angular/material/divider';
-import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, FilterBuilderItemType, IconComponent } from 'protrack/components';
+import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, FilterBuilderItemType, IconComponent } from 'trut/components';
 
 export interface PeriodicElement {
   name: string;

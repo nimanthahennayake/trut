@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrutGaugeModule } from 'protrack/components';
+import { TrutGaugeModule } from 'trut/components';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
