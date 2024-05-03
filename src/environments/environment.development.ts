@@ -42,5 +42,9 @@ export const environment = {
     not_found: '/error/not-found',
     internal_server_error: '/error/internal-server-error',
     reset_password: '/auth/password-reset'
+  },
+  paginationSettings: {
+    defaultPage: 1,
+    default_limit: 10
   }
 };

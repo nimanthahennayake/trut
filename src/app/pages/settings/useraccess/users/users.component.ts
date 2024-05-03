@@ -14,7 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TrutDividerModule } from 'trut/components';
 import { MatDivider } from '@angular/material/divider';
-import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, FilterBuilderItemType, IconComponent } from 'trut/components';
+import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, IconComponent } from 'trut/components';
+import { PaginationInputDto } from '../../../../../dtos/common.pagination.dto';
+import { FilterOperatorDto } from '../../../../../dtos/common.filter.operator.dto';
+import { environment } from '../../../../../environments/environment';
 
 export interface PeriodicElement {
   name: string;
@@ -72,20 +75,24 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class UsersComponent {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  data: any = ELEMENT_DATA;
-  numberOfRecords: number = 0;
-  limit: number = 10;
-  page: number = 1;
-  isLoadingResults: boolean = true;
+
   filterValue: FilterBuilderGroup[] = [];
   fieldDefinitions: FilterBuilderFieldDef[] = [];
+  paginationInput: PaginationInputDto = new PaginationInputDto;
+  searchTerm: string = '';
+  filterCriteria: any = [];
+  securityUserData: any = [];
+  isLoadingResults: boolean = true;
+  filterOperator: FilterOperatorDto = new FilterOperatorDto;
+  paginationOptions: any = environment.paginationSettings.pageSizeOptions;
+  protected searchText: string = '';
+
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  protected searchText = '';
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.data.filter = filterValue.trim().toLowerCase();
+    this.securityUserData.filter = filterValue.trim().toLowerCase();
   }
 
   clearText() {

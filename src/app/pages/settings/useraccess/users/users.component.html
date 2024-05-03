@@ -1,4 +1,4 @@
-<div class="h-full border">
+<div class="h-full">
     <trut-layout-body>
         <trut-layout>
             <trut-layout-topbar>
@@ -63,7 +63,7 @@
                 <trut-layout-body>
                     <div class="h-full p-0">
                         <div>
-                            <table mat-table [dataSource]="data" class="not-prose">
+                            <table mat-table [dataSource]="securityUserData" class="not-prose">
                                 <!-- Position Column -->
                                 <ng-container matColumnDef="position" sticky>
                                     <th mat-header-cell *matHeaderCellDef>
@@ -103,11 +103,10 @@
                 </trut-layout-body>
                 <trut-layout-footer>
                     <div class="border-t px-6 items-right">
-                        <mat-paginator [length]="numberOfRecords" [pageSize]="limit" [pageSizeOptions]="[5, 10, 20]"
-                            showFirstLastButtons aria-label=""></mat-paginator>
+                        <mat-paginator [length]="paginationInput.numberOfRecords" [pageSize]="paginationInput.limit"
+                            [pageSizeOptions]="paginationOptions" showFirstLastButtons aria-label=""></mat-paginator>
                     </div>
                     <div class="border-t px-6 h-10 flex items-center text-xs">
-                        This is footer example &copy; 2024
                     </div>
                 </trut-layout-footer>
             </trut-layout>

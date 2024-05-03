@@ -33,7 +33,7 @@ export class AuthService {
 
     async signIn(signInUserDto: SignInUserDto): Promise<SignedUserDto | undefined> {
         try {
-            const signedUserDto = await this._http.post<SignedUserDto>(`${this.clientUrl}/users/signin`, signInUserDto).toPromise();
+            const signedUserDto = await this._http.post<SignedUserDto>(`${this.clientUrl}/auth/signin`, signInUserDto).toPromise();
             this.handleAuthentication(signedUserDto);
             return signedUserDto;
         } catch (error: any) {
@@ -43,7 +43,7 @@ export class AuthService {
 
     async register(signUpUserDto: SignUpUserDto): Promise<SignedUpUserDto | undefined> {
         try {
-            const signedUpUserDto = await this._http.post<SignedUpUserDto>(`${this.clientUrl}/users/signup`, signUpUserDto).toPromise();
+            const signedUpUserDto = await this._http.post<SignedUpUserDto>(`${this.clientUrl}/auth/signup`, signUpUserDto).toPromise();
             this.handleRegister(signedUpUserDto);
             return signedUpUserDto;
         } catch (error: any) {
@@ -54,7 +54,7 @@ export class AuthService {
     async resetPassword(userEmail: string): Promise<boolean> {
         try {
             const resetPasswordDto: { userEmail: string } = { userEmail };
-            const outputDto = await this._http.post<OutputDto>(`${this.clientUrl}/users/resetpassword`, resetPasswordDto).toPromise();
+            const outputDto = await this._http.post<OutputDto>(`${this.clientUrl}/auth/resetpassword`, resetPasswordDto).toPromise();
             this._notificationService.showApiNotification(outputDto);
             return outputDto?.status === environment.outputStatus?.success;
         } catch (error: any) {
