@@ -1,9 +1,9 @@
-//:root {
+// :root {
 //  --trut-layout-padding-start: 0px;
 //  --trut-layout-padding-end: 0px;
 //  --trut-layout-padding-top: 0px;
 //  --trut-layout-padding-bottom: 0px;
-//
+
 //  /* Sidebar */
 //  --trut-layout-sidebar-top: 0px;
 //  --trut-layout-sidebar-width: 18.75rem;
@@ -11,33 +11,33 @@
 //  --trut-layout-sidebar-hidden-hover-offset: 0.625rem;
 //  --trut-layout-sidebar-animation-delay: .5s;
 //  --trut-layout-sidebar-animation-duration: .3s;
-//
+
 //  /* Topbar */
 //  --trut-layout-topbar-height: 3.75rem;
-//
+
 //  /* Header */
 //  --trut-layout-header-height: 3.75rem;
 //  --trut-layout-header-top: 0px;
-//
+
 //  /* Footer */
 //  --trut-layout-footer-height: 3.75rem;
-//
+
 //  /* Aside */
 //  --trut-layout-aside-width: 25rem;
 //  --trut-layout-aside-top: 0px;
-//
+
 //  /* Top Header */
 //  --trut-layout-top-header-height: 3.75rem;
 //  --trut-layout-top-header-top: 0px;
-//}
-//
-//.trut-layout {
+// }
+
+// .trut-layout {
 //  @apply block min-h-screen;
 //  @apply pl-[var(--trut-layout-padding-start)];
 //  @apply pr-[var(--trut-layout-padding-end)];
 //  @apply pt-[var(--trut-layout-padding-top)];
 //  @apply pb-[var(--trut-layout-padding-bottom)];
-//}
+// }
 //
 ///* Sidebar */
 //.trut-layout-sidebar {

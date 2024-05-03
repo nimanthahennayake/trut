@@ -30,7 +30,7 @@ import { PasswordStrengthModule } from 'trut/components';
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
-  form: FormGroup;
+  form: FormGroup<{ userName: any; userEmail: any; userPassword: any; }>;
 
   constructor(private _authService: AuthService, private _notificationService: NotificationService) {
     this.form = new FormGroup({

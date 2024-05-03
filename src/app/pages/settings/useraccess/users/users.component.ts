@@ -18,6 +18,10 @@ import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, Ico
 import { PaginationInputDto } from '../../../../../dtos/common.pagination.dto';
 import { FilterOperatorDto } from '../../../../../dtos/common.filter.operator.dto';
 import { environment } from '../../../../../environments/environment';
+import { UserService } from '../../../../../services/user/user.service';
+import { Router } from '@angular/router';
+import { NotificationService } from '../../../../../services/notifications/common.notifications.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 export interface PeriodicElement {
   name: string;
@@ -73,22 +77,34 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
+  form: FormGroup<{ userEmail: any; userPassword: any; }>;
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
   filterValue: FilterBuilderGroup[] = [];
   fieldDefinitions: FilterBuilderFieldDef[] = [];
   paginationInput: PaginationInputDto = new PaginationInputDto;
-  searchTerm: string = '';
   filterCriteria: any = [];
   securityUserData: any = [];
   isLoadingResults: boolean = true;
   filterOperator: FilterOperatorDto = new FilterOperatorDto;
   paginationOptions: any = environment.paginationSettings.pageSizeOptions;
-  protected searchText: string = '';
+  protected searchTerm: string = '';
+  protected editMode: boolean = false;
+
+  constructor(private _userService: UserService, private _router: Router, private _notificationService: NotificationService) {
+    this.form = new FormGroup({
+      userEmail: new FormControl('', [Validators.required, Validators.email]),
+      userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+
+    this._userService.getUsers({ pagination: this.paginationInput, searchTerm: this.searchTerm, filterCriteria: this.filterValue });
+  }
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
+
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

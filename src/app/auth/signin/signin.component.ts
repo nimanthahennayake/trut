@@ -33,7 +33,7 @@ import { environment } from '../../../environments/environment';
   styleUrl: './signin.component.scss'
 })
 export class SigninComponent {
-  form: FormGroup;
+  form: FormGroup<{ userEmail: any; userPassword: any; }>;
 
   constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
     this.form = new FormGroup({

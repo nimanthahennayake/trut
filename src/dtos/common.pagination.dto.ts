@@ -10,9 +10,9 @@ export class PaginationInputDto {
 
     @IsNotEmpty()
     @IsNumber()
-    limit: number = environment.paginationSettings.default_limit;
+    limit: number = environment.paginationSettings.defaultLimit;
 
     @IsNotEmpty()
     @IsNumber()
-    numberOfRecords: number = environment.paginationSettings.default_limit;
+    numberOfRecords: number = environment.paginationSettings.defaultLimit;
 }

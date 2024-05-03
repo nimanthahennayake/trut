@@ -11,7 +11,7 @@
                     Header
                 </div>
             </trut-layout-header>
-            <trut-layout-sidebar>
+            <trut-layout-sidebar [hidden]="editMode">
                 <div class="p-6 border-r h-full w-full">
                     <p>Search</p>
                     <mat-divider></mat-divider>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </trut-layout-sidebar>
-            <trut-layout-sidebar>
+            <trut-layout-sidebar [hidden]="!editMode">
                 <div class="p-6 border-r h-full w-full">
                     <p>Edit</p>
                 </div>

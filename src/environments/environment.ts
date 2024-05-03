@@ -45,7 +45,7 @@ export const environment = {
   },
   paginationSettings: {
     defaultPage: 1,
-    default_limit: 10,
+    defaultLimit: 10,
     pageSizeOptions: [10, 20, 50, 100]
   }
 };

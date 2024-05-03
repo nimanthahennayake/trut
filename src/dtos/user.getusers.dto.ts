@@ -1,9 +1,9 @@
 // user.dto.ts
 import { IsNotEmpty, IsString } from 'class-validator';
-import { OutputDto } from './common.output.status.dto';
+import { OutputDto } from './common.output.status.dtp';
 import { PaginationInputDto } from './common.pagination.dto';
 import { TableHeadersDto } from './common.table.headers.dto';
-import SecurityUserEntity from 'src/orm.entities/security/security.user.entity';
+import SecurityUser from './security.user.dto';
 
 export class GetUsersInputDto {
 
@@ -23,7 +23,7 @@ export class GetUsersOutputDto {
     tableHeaders: TableHeadersDto | undefined;
 
     @IsNotEmpty()
-    users: SecurityUserEntity[] | undefined;
+    users: SecurityUser[] | undefined;
 
     @IsNotEmpty()
     paginationOutput: PaginationInputDto;

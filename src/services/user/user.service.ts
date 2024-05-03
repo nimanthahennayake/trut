@@ -4,7 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { NotificationService } from '../notifications/common.notifications.service';
-import { SignInUserDto, SignedUserDto } from '../../dtos/user.signin.dto';
+import { GetUsersInputDto, GetUsersOutputDto } from '../../dtos/user.getusers.dto';
+import { GetUserDetails } from '../../utils/types/types';
 
 @Injectable({
     providedIn: 'root',
@@ -20,11 +21,12 @@ export class UserService {
         private _notificationService: NotificationService
     ) { }
 
-    async getUsers(signInUserDto: SignInUserDto): Promise<SignedUserDto | undefined> {
+    async getUsers(getUserDetails: GetUserDetails): Promise<GetUsersOutputDto | undefined> {
         try {
-            const signedUserDto = await this._http.post<SignedUserDto>(`${this.clientUrl}/users/signin`, signInUserDto).toPromise();
+            const getUsersInputDto: GetUsersInputDto = { paginationInput: getUserDetails.pagination, searchTerm: getUserDetails.searchTerm, filterCriteria: getUserDetails.filterCriteria };
+            const getUsersOutputDto = await this._http.post<GetUsersOutputDto>(`${this.clientUrl}/user/getusers`, getUsersInputDto).toPromise();
             //this.handleAuthentication(signedUserDto);
-            return signedUserDto;
+            return getUsersOutputDto;
         } catch (error: any) {
             throw new Error(`API failed: ${error?.message}`);
         }
