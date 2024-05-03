@@ -1,7 +1,7 @@
 export interface SignInUserDetails {
 
-    user_email: string;
+    userEmail: string;
 
-    user_password: string;
+    userPassword: string;
 
 }

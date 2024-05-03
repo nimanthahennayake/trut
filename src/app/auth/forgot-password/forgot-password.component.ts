@@ -31,15 +31,15 @@ export class ForgotPasswordComponent {
 
   constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
     this.form = new FormGroup({
-      user_email: new FormControl('', [Validators.required, Validators.email])
+      userEmail: new FormControl('', [Validators.required, Validators.email])
     });
   }
 
   async sendVerificationCode() {
     try {
       if (this.form.valid) {
-        const user_email: string = this.form.value?.user_email;
-        const response: boolean | undefined = await this._authService.resetPassword(user_email);
+        const userEmail: string = this.form.value?.userEmail;
+        const response: boolean | undefined = await this._authService.resetPassword(userEmail);
       } else {
         this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please fill out email correctly', '', '', undefined);
       }

@@ -20,15 +20,15 @@ export const environment = {
   },
   notificationConfigs: {
     duration: 5000,
-    horizontal_position: 'center',
-    vertical_position: 'top'
+    horizontalPosition: 'center',
+    verticalPosition: 'top'
   },
   userSessionTimeOut: 1800,
   storageItems: {
-    successful_signin: 'ssfsgi',
-    token_armorlock_client: 'tknalc',
-    singed_time: 'sgdtme',
-    singed_user_id: 'sgusid'
+    successfulSignIn: 'ssfsgi',
+    tokenArmorlockClient: 'tknalc',
+    singedTime: 'sgdtme',
+    singedUserId: 'sgusid'
   },
   bcryptSalt: 10,
   accessFunctionCodes: {
@@ -38,7 +38,7 @@ export const environment = {
   defaultPaths: {
     home: '/pages',
     auth: '/auth/sign-in',
-    access_denied: '/error/access-denied',
+    accessDenied: '/error/access-denied',
     not_found: '/error/not-found',
     internal_server_error: '/error/internal-server-error',
     reset_password: '/auth/password-reset'

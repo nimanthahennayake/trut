@@ -26,5 +26,5 @@ export class OutputDto {
     @IsNotEmpty()
     error: boolean;
 
-    error_message: string;
+    errorMessage: string;
 }

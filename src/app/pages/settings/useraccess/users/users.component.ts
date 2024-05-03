@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TrutDividerModule } from 'protrack/components';
 import { MatDivider } from '@angular/material/divider';
+import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, FilterBuilderItemType, IconComponent } from 'protrack/components';
 
 export interface PeriodicElement {
   name: string;
@@ -61,7 +62,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
     MatInputModule,
     MatFormFieldModule,
     TrutDividerModule,
-    MatDivider
+    MatDivider,
+    TrutFilterBuilderModule,
+    IconComponent,
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
@@ -70,10 +73,12 @@ export class UsersComponent {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   data: any = ELEMENT_DATA;
-  number_of_records: number = 0;
+  numberOfRecords: number = 0;
   limit: number = 10;
   page: number = 1;
-  is_loading_results: boolean = true;
+  isLoadingResults: boolean = true;
+  filterValue: FilterBuilderGroup[] = [];
+  fieldDefinitions: FilterBuilderFieldDef[] = [];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   protected searchText = '';

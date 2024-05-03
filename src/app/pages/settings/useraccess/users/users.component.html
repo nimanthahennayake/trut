@@ -35,6 +35,9 @@
                         </form> -->
                         <trut-divider>or</trut-divider>
                         <p>Search by user email and status</p>
+                        <trut-divider>or</trut-divider>
+                        <p>Build a custom filter</p>
+                        <trut-filter-builder [fieldDefs]="fieldDefinitions" [value]="filterValue"></trut-filter-builder>
                     </div>
                 </div>
             </trut-layout-sidebar>
@@ -100,7 +103,7 @@
                 </trut-layout-body>
                 <trut-layout-footer>
                     <div class="border-t px-6 items-right">
-                        <mat-paginator [length]="number_of_records" [pageSize]="limit" [pageSizeOptions]="[5, 10, 20]"
+                        <mat-paginator [length]="numberOfRecords" [pageSize]="limit" [pageSizeOptions]="[5, 10, 20]"
                             showFirstLastButtons aria-label=""></mat-paginator>
                     </div>
                     <div class="border-t px-6 h-10 flex items-center text-xs">

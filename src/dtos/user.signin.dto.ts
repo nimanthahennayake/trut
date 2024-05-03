@@ -7,22 +7,22 @@ export class SignInUserDto {
     @IsNotEmpty()
     @IsString()
     @IsEmail()
-    user_email: string;
+    userEmail: string;
 
     @IsNotEmpty()
     @IsString()
     @MinLength(8)
-    user_password: string;
+    userPassword: string;
 }
 
 export class SignedUserDto {
     @IsNotEmpty()
     @IsString()
-    user_id: string;
+    userId: string;
 
     @IsNotEmpty()
     @IsString()
-    access_token: string;
+    accessToken: string;
 
     @IsNotEmpty()
     @IsString()

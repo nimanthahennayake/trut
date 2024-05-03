@@ -12,7 +12,7 @@ import { OutputDto } from '../../dtos/common.output.status.dtp';
 @Injectable({
     providedIn: 'root',
 })
-export class AuthService {
+export class UsersService {
     private clientUrl = environment.apiClients?.armorlock_client;
     private isLoggedInSubject = new BehaviorSubject<boolean>(false);
 
@@ -21,17 +21,13 @@ export class AuthService {
         private _router: Router,
         private _notificationService: NotificationService
     ) {
-        this.handleAuthInit();
+        this.handleUsersInit();
     }
 
-    async handleAuthInit(): Promise<void> {
-        const isLoggedIn = await this.isLoggedIn();
-        if (isLoggedIn) {
-            this._router.navigate([environment.defaultPaths.home]);
-        }
+    async handleUsersInit(): Promise<void> {
     }
 
-    async signIn(signInUserDto: SignInUserDto): Promise<SignedUserDto | undefined> {
+    async getUsers(signInUserDto: SignInUserDto): Promise<SignedUserDto | undefined> {
         try {
             const signedUserDto = await this._http.post<SignedUserDto>(`${this.clientUrl}/users/signin`, signInUserDto).toPromise();
             this.handleAuthentication(signedUserDto);
@@ -103,7 +99,7 @@ export class AuthService {
             this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', '', '', undefined);
         }
     }
- 
+
     private async handleRegister(response: SignedUpUserDto | undefined): Promise<void> {
         if (response) {
             this._notificationService.showApiNotification(response?.output);

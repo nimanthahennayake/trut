@@ -37,8 +37,8 @@ export class SigninComponent {
 
   constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
     this.form = new FormGroup({
-      user_email: new FormControl('', [Validators.required, Validators.email]),
-      user_password: new FormControl('', [Validators.required, Validators.minLength(6)])
+      userEmail: new FormControl('', [Validators.required, Validators.email]),
+      userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
 
     this._authService.handleAuthInit();
@@ -47,15 +47,15 @@ export class SigninComponent {
   async signIn() {
     try {
       if (this.form.valid) {
-        const hashedPassword = await this._authService.encryptPassword(this.form.value.user_password);
+        const hashedPassword = await this._authService.encryptPassword(this.form.value.userPassword);
         const signInUserDetails: SignInUserDetails = {
-          user_email: this.form.value.user_email,
-          user_password: hashedPassword
+          userEmail: this.form.value.userEmail,
+          userPassword: hashedPassword
         };
         const response = await this._authService.signIn(signInUserDetails);
 
-        if (!response?.user_id) {
-          this.form.get('user_password')?.reset();
+        if (!response?.userId) {
+          this.form.get('userPassword')?.reset();
         }
       } else {
         this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please fill out all required fields correctly', '', '', undefined);

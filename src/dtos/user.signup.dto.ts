@@ -6,24 +6,24 @@ export class SignUpUserDto {
 
     @IsNotEmpty()
     @IsString()
-    user_name: string;
+    userName: string;
 
     @IsNotEmpty()
     @IsString()
     @MaxLength(100)
     @IsEmail()
-    user_email: string;
+    userEmail: string;
 
     @IsNotEmpty()
     @IsString()
     @MinLength(8)
-    user_password: string;
+    userPassword: string;
 }
 
 export class SignedUpUserDto {
     @IsNotEmpty()
     @IsString()
-    user_id: string;
+    userId: string;
 
     @IsNotEmpty()
     @IsString()

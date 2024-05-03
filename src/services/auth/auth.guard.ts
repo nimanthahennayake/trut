@@ -12,21 +12,21 @@ export class AuthGuard implements CanActivate {
     constructor(private _authService: AuthService, private _router: Router) { }
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-        const function_code = next.data?.['function_code'];
+        const functionCode = next.data?.['functionCode'];
         return of(true); //Nimanthah dev
 
         return from(this._authService.isLoggedIn()).pipe(
             switchMap((isLoggedIn) => {
                 if (isLoggedIn) {
-                    if (!function_code || function_code === environment.accessFunctionCodes.public) {
+                    if (!functionCode || functionCode === environment.accessFunctionCodes.public) {
                         return of(true);
                     } else {
-                        return from(this._authService.hasFunction(function_code)).pipe(
+                        return from(this._authService.hasFunction(functionCode)).pipe(
                             map((hasFunction) => {
                                 if (hasFunction) {
                                     return true;
                                 } else {
-                                    this._router.navigate([environment.defaultPaths.access_denied]);
+                                    this._router.navigate([environment.defaultPaths.accessDenied]);
                                     return false;
                                 }
                             }),

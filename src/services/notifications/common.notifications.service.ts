@@ -16,7 +16,7 @@ export class NotificationService {
   showApiNotification(output: OutputDto | undefined, custom_action?: (() => void)): void {
     if (output) {
       if (output.error) {
-        this.showBasicNotification(output?.variant, output?.title, output?.message, `Oops! ${output?.error_message}`, output?.action, custom_action);
+        this.showBasicNotification(output?.variant, output?.title, output?.message, `Oops! ${output?.errorMessage}`, output?.action, custom_action);
       } else {
         this.showBasicNotification(output?.variant, output?.title, output?.message, '', output?.action, custom_action);
       }
@@ -25,16 +25,16 @@ export class NotificationService {
     }
   }
 
-  showBasicNotification(variant: string, title: string, message: string, error_message: string, action: string, custom_action: (() => void) | undefined) {
+  showBasicNotification(variant: string, title: string, message: string, errorMessage: string, action: string, custom_action: (() => void) | undefined) {
     const snackBarRef = this._snackBar.openFromComponent(NotificationComponent, {
       duration: environment.notificationConfigs.duration,
-      horizontalPosition: <MatSnackBarHorizontalPosition>environment.notificationConfigs.horizontal_position,
-      verticalPosition: <MatSnackBarVerticalPosition>environment.notificationConfigs.vertical_position,
+      horizontalPosition: <MatSnackBarHorizontalPosition>environment.notificationConfigs.horizontalPosition,
+      verticalPosition: <MatSnackBarVerticalPosition>environment.notificationConfigs.verticalPosition,
       data: {
         variant,
         title,
         message,
-        error_message,
+        errorMessage,
         action,
         custom_action,
         close: () => {
