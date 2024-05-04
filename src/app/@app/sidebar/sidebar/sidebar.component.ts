@@ -53,7 +53,7 @@ export class SidebarComponent {
       id: 'account',
       type: 'group',
       name: 'Account',
-      icon: 'badge',
+      //icon: 'badge',
       children: [
         {
           type: 'link',
@@ -66,7 +66,7 @@ export class SidebarComponent {
       id: 'settings',
       type: 'group',
       name: 'Settings',
-      icon: 'tune',
+      //icon: 'tune',
       children: [
         {
           type: 'link',

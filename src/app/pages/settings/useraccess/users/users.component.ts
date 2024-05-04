@@ -26,6 +26,14 @@ import { CommonModule } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { CommonService } from '../../../../../services/common.service';
 import { CdkDragDrop, CdkDrag, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
+import {
+  MatAccordion,
+  MatExpansionPanel,
+  MatExpansionPanelDescription,
+  MatExpansionPanelHeader, MatExpansionPanelTitle
+} from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
+import { TrutResizableContainerModule } from 'trut/components';
 
 @Component({
   selector: 'app-users',
@@ -52,13 +60,20 @@ import { CdkDragDrop, CdkDrag, CdkDropList, moveItemInArray } from '@angular/cdk
     MatProgressBar,
     MatTableModule,
     CdkDropList,
-    CdkDrag
+    CdkDrag,
+    MatAccordion,
+    MatExpansionPanel,
+    MatExpansionPanelHeader,
+    MatExpansionPanelDescription,
+    MatExpansionPanelTitle,
+    MatTabsModule,
+    TrutResizableContainerModule
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-  form: FormGroup<{ userEmail: any; userPassword: any; }>;
+  stateOption01: FormGroup<{ userEmail: any; userStatus: any; }>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   columnProperties: any = [];
@@ -75,12 +90,14 @@ export class UsersComponent {
   protected searchTerm: string = '';
   protected editMode: boolean = false;
 
-  clickedRow: any = null;
+  clickedRow: any = [];
+
+  panelOpenState = false;
 
   constructor(private _userService: UserService, private _notificationService: NotificationService, public _commonService: CommonService) {
-    this.form = new FormGroup({
+    this.stateOption01 = new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
-      userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
+      userStatus: new FormControl('', [Validators.required])
     });
   }
 
@@ -97,8 +114,7 @@ export class UsersComponent {
   }
 
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.securityUserData.filter = filterValue.trim().toLowerCase();
+    this.securityUserData.filter.set((event.target as HTMLInputElement).value.trim().toLowerCase());
   }
 
   clearText() {
@@ -131,7 +147,7 @@ export class UsersComponent {
         numberOfRecords: <number>response?.paginationOutput.numberOfRecords
       };
     } catch (error: any) {
-      this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', error.message, '', undefined);
+      this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please try again', error.message, '', undefined);
     } finally {
       this.isLoadingResults = false;
     }
@@ -144,8 +160,8 @@ export class UsersComponent {
   }
 
   onSelectUser(row: any) {
-    this.clickedRow = row;
-    console.log(row);
+    Object.assign(this.clickedRow, row)
+    console.log(this.clickedRow);
   }
 
 }

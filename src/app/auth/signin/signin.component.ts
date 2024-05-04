@@ -36,10 +36,10 @@ export class SigninComponent {
   form: FormGroup<{ userEmail: any; userPassword: any; }>;
 
   constructor(private _authService: AuthService, private _router: Router, private _notificationService: NotificationService) {
-    this.form = new FormGroup({
+    Object.assign(this.form, new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
       userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
-    });
+    }));
 
     this._authService.handleAuthInit();
   }

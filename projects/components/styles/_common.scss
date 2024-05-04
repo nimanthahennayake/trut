@@ -166,6 +166,11 @@
   --mat-option-label-text-size: theme('fontSize.tiny');
 }
 
+:root {
+  --custom-font-family: inherit !important;
+}
+
+
 html {
   @include mat.all-component-themes($m3-light-theme);
   @include matx.color-variants-back-compat($m3-light-theme);

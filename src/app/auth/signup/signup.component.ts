@@ -33,11 +33,11 @@ export class SignupComponent {
   form: FormGroup<{ userName: any; userEmail: any; userPassword: any; }>;
 
   constructor(private _authService: AuthService, private _notificationService: NotificationService) {
-    this.form = new FormGroup({
+    Object.assign(this.form, new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl('', [Validators.required, Validators.email]),
       userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
-    });
+    }));
 
     this._authService.handleAuthInit();
   }
