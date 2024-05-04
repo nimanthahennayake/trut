@@ -34,6 +34,8 @@ import {
 } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TrutResizableContainerModule } from 'trut/components';
+import { MatOption, MatSelect } from '@angular/material/select';
+import { MatMiniFabButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-users',
@@ -67,7 +69,10 @@ import { TrutResizableContainerModule } from 'trut/components';
     MatExpansionPanelDescription,
     MatExpansionPanelTitle,
     MatTabsModule,
-    TrutResizableContainerModule
+    TrutResizableContainerModule,
+    MatOption,
+    MatSelect,
+    MatMiniFabButton
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
@@ -93,7 +98,6 @@ export class UsersComponent {
   clickedRow: any = [];
 
   panelOpenState = false;
-
   constructor(private _userService: UserService, private _notificationService: NotificationService, public _commonService: CommonService) {
     this.stateOption01 = new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
@@ -164,4 +168,7 @@ export class UsersComponent {
     console.log(this.clickedRow);
   }
 
+  focus($event: FocusEvent) {
+    console.log($event);
+  }
 }

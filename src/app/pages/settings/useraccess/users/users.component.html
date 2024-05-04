@@ -34,7 +34,7 @@
                               </mat-autocomplete>
                             </mat-form-field>
                           </form> -->
-                          
+
                         <trut-divider>or</trut-divider>
                         <p>Search by user email and status</p>
                         <trut-divider>or</trut-divider>
@@ -49,9 +49,41 @@
                 </div>
             </trut-layout-sidebar>
             <trut-layout>
+                <trut-layout-header>
+                    <div class="w-full p-2 h-14 items-right border-b">
+                        <div class="flex gap-2 items-right">
+                            <mat-icon class="material-symbols-outlined search-icon">search</mat-icon>
+                            <input type="text" placeholder="Recommend to search: My orders" (focus)="focus($event)">
+                            @if (searchTerm) {
+                            <div class="absolute end-1 w-max">
+                                <button mat-icon-button (click)="clearText()">
+                                    <mat-icon class="material-symbols-outlined">close</mat-icon>
+                                </button>
+                            </div>
+                            }
+                        </div>
+                        <div class="flex gap-2 items-right">
+                            <button mat-mini-fab color="accent">
+                                <mat-icon class="material-symbols-outlined">add</mat-icon>
+                            </button>
+                            <button mat-mini-fab color="primary">
+                                <mat-icon class="material-symbols-outlined">refresh</mat-icon>
+                            </button>
+                            <button mat-mini-fab color="warn">
+                                <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
+                            </button>
+                            <button mat-mini-fab>
+                                <mat-icon class="material-symbols-outlined">restart_alt</mat-icon>
+                            </button>
+                            <button mat-mini-fab>
+                                <mat-icon class="material-symbols-outlined">save</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </trut-layout-header>
                 <trut-layout-body>
-                    <div class="h-full p-0">
-                        <div>
+                    <div class="h-full items-right">
+                        <div class="w-full p-0">
                             <table mat-table [dataSource]="securityUserData" cdkDropList
                                 cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)"
                                 class="not-prose">
@@ -63,7 +95,6 @@
                                         {{element[column.columnDataFieldName]}}
                                     </td>
                                 </ng-container>
-
                                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                                 <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelectUser(row)"
                                     [class.demo-row-is-clicked]="true"></tr>
