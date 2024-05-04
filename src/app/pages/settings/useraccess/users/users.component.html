@@ -50,35 +50,47 @@
             </trut-layout-sidebar>
             <trut-layout>
                 <trut-layout-header>
-                    <div class="w-full p-2 h-14 items-right border-b">
-                        <div class="flex gap-2 items-right">
-                            <mat-icon class="material-symbols-outlined search-icon">search</mat-icon>
-                            <input type="text" placeholder="Recommend to search: My orders" (focus)="focus($event)">
-                            @if (searchTerm) {
-                            <div class="absolute end-1 w-max">
-                                <button mat-icon-button (click)="clearText()">
-                                    <mat-icon class="material-symbols-outlined">close</mat-icon>
-                                </button>
-                            </div>
-                            }
-                        </div>
-                        <div class="flex gap-2 items-right">
-                            <button mat-mini-fab color="accent">
-                                <mat-icon class="material-symbols-outlined">add</mat-icon>
-                            </button>
-                            <button mat-mini-fab color="primary">
-                                <mat-icon class="material-symbols-outlined">refresh</mat-icon>
-                            </button>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
-                            </button>
-                            <button mat-mini-fab>
-                                <mat-icon class="material-symbols-outlined">restart_alt</mat-icon>
-                            </button>
-                            <button mat-mini-fab>
-                                <mat-icon class="material-symbols-outlined">save</mat-icon>
-                            </button>
-                        </div>
+                    <div class="h-14 border-b">
+                        <trut-layout>
+                            <trut-layout-sidebar class="p-2">
+                                <div class="h-full flex w-[250px]">
+                                    <div class="flex gap-2">
+                                        <button mat-mini-fab color="accent">
+                                            <mat-icon class="material-symbols-outlined">add</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab color="primary" (onClick)="getUsers()">
+                                            <mat-icon class="material-symbols-outlined">refresh</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab color="warn">
+                                            <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab>
+                                            <mat-icon class="material-symbols-outlined">restart_alt</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab>
+                                            <mat-icon class="material-symbols-outlined">save</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </trut-layout-sidebar>
+                            <trut-layout-body class="p-2">
+                                <div class="h-full flex items-left">
+                                    <form [formGroup]="tableSearch" (ngSubmit)="getUsers()">
+                                        <mat-form-field>
+                                            <input type="text" matInput formControlName="searchTerm"
+                                                placeholder="Recommend to search: Name, Email">
+                                            @if (tableSearch.value.searchTerm) {
+                                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearText()">
+                                                <mat-icon>close</mat-icon>
+                                            </button>}
+                                        </mat-form-field>
+                                        <button mat-flat-button color="primary" class="!h-12 mt-4"
+                                            [disabled]="tableSearch.invalid">Sign
+                                            In</button>
+                                    </form>
+                                </div>
+                            </trut-layout-body>
+                        </trut-layout>
                     </div>
                 </trut-layout-header>
                 <trut-layout-body>

@@ -36,6 +36,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { TrutResizableContainerModule } from 'trut/components';
 import { MatOption, MatSelect } from '@angular/material/select';
 import { MatMiniFabButton } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
@@ -72,12 +73,14 @@ import { MatMiniFabButton } from '@angular/material/button';
     TrutResizableContainerModule,
     MatOption,
     MatSelect,
-    MatMiniFabButton
+    MatMiniFabButton,
+    ReactiveFormsModule
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
+  tableSearch: FormGroup<{ searchTerm: any }>;
   stateOption01: FormGroup<{ userEmail: any; userStatus: any; }>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -92,7 +95,7 @@ export class UsersComponent {
   isLoadingResults: boolean = true;
   filterOperator: FilterOperatorDto = new FilterOperatorDto;
   paginationOptions: any = environment.paginationSettings.pageSizeOptions;
-  protected searchTerm: string = '';
+  //protected searchTerm: string = '';
   protected editMode: boolean = false;
 
   clickedRow: any = [];
@@ -102,6 +105,9 @@ export class UsersComponent {
     this.stateOption01 = new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
       userStatus: new FormControl('', [Validators.required])
+    });
+    this.tableSearch = new FormGroup({
+      searchTerm: new FormControl('', [Validators.required])
     });
   }
 
@@ -128,7 +134,7 @@ export class UsersComponent {
   async getUsers() {
     this.isLoadingResults = true;
     try {
-      const response = await this._userService.getUsers({ pagination: this.paginationInput, searchTerm: this.searchTerm, filterCriteria: this.filterValue });
+      const response = await this._userService.getUsers({ pagination: this.paginationInput, searchTerm: this.tableSearch.value.searchTerm, filterCriteria: this.filterValue });
       if (response && response.tableHeaders) {
         this.securityUserData = response.users;
         this.displayedColumns = response.tableHeaders.columns

@@ -17,7 +17,7 @@
 }
 
 :host(.is-bordered) {
-  border-color: var(--trut-alert-border-color);
+  border-color:  var(--trut-alert-border-color);
 }
 
 :host .thumbnail {
