@@ -1,14 +1,18 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-@Pipe({
-    name: 'customDate'
+
+@Injectable({
+    providedIn: 'root',
 })
-export class CustomDatePipe implements PipeTransform {
-    transform(value: string): string {
-        if (!value) return '';
-        const datePipe = new DatePipe('en-US');
-        const formattedDate = datePipe.transform(value, 'yyyy-MM-dd HH:mm:ss');
-        return formattedDate || '';
+
+export class CommonService {
+    constructor(private _datePipe: DatePipe) { }
+
+    async transformValue(value: string, type: string): Promise<string> {
+        if (type == "date") {
+            value = <string>this._datePipe.transform(value, 'yyyy-MM-dd HH:mm:ss');
+        }
+        return value;
     }
 }

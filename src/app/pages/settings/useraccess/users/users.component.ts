@@ -24,7 +24,8 @@ import { NotificationService } from '../../../../../services/notifications/commo
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
-
+import { DatePipe } from '@angular/common';
+import { CommonService } from '../../../../../services/common.service';
 
 @Component({
   selector: 'app-users',
@@ -71,11 +72,15 @@ export class UsersComponent {
   protected searchTerm: string = '';
   protected editMode: boolean = false;
 
-  constructor(private _userService: UserService, private _notificationService: NotificationService) {
+  constructor(private _userService: UserService, private _notificationService: NotificationService, public _commonService: CommonService) {
     this.form = new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
       userPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
+  }
+
+  transformValue(input: string, type: string): Promise<string> {
+    return this._commonService.transformValue(input, type);
   }
 
   ngOnInit() {

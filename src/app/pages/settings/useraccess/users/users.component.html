@@ -73,7 +73,9 @@
                                     [matColumnDef]="column.columnDataFieldName" [sticky]="column.sticky">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header="column.columnIsSortable">
                                         {{column.columnHeaderName }}</th>
-                                    <td mat-cell *matCellDef="let element">{{ element[column.columnDataFieldName] }}
+                                    <td mat-cell *matCellDef="let element">{{
+                                        transformValue(element[column.columnDataFieldName],
+                                        element[column.columnDataType]) }}
                                     </td>
                                 </ng-container>
 
