@@ -28,7 +28,8 @@ export class UserService {
             //this.handleAuthentication(signedUserDto);
             return getUsersOutputDto;
         } catch (error: any) {
-            throw new Error(`API failed: ${error?.message}`);
+            this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', error.message, '', undefined);
+            return undefined;
         }
     }
 }

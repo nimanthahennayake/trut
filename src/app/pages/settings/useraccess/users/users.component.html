@@ -59,43 +59,29 @@
                         </div>
                         } -->
                     </div>
+                    <div class="border-b flex">
+                        @if (isLoadingResults) {
+                        <mat-progress-bar mode="query"></mat-progress-bar>
+                        }
+                    </div>
                 </trut-layout-header>
                 <trut-layout-body>
                     <div class="h-full p-0">
                         <div>
                             <table mat-table [dataSource]="securityUserData" class="not-prose">
-                                <!-- Position Column -->
-                                <ng-container matColumnDef="position" sticky>
-                                    <th mat-header-cell *matHeaderCellDef>
-                                        No. </th>
-                                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                <ng-container *ngFor="let column of columnProperties"
+                                    [matColumnDef]="column.columnDataFieldName" [sticky]="column.sticky">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header="column.columnIsSortable">
+                                        {{column.columnHeaderName }}</th>
+                                    <td mat-cell *matCellDef="let element">{{ element[column.columnDataFieldName] }}
+                                    </td>
                                 </ng-container>
 
-                                <!-- Name Column -->
-                                <ng-container matColumnDef="name">
-                                    <th mat-header-cell *matHeaderCellDef>
-                                        Name </th>
-                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                                </ng-container>
-
-                                <!-- Weight Column -->
-                                <ng-container matColumnDef="weight">
-                                    <th mat-header-cell *matHeaderCellDef>
-                                        Weight </th>
-                                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                                </ng-container>
-
-                                <!-- Symbol Column -->
-                                <ng-container matColumnDef="symbol">
-                                    <th mat-header-cell *matHeaderCellDef>
-                                        Symbol </th>
-                                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-                                </ng-container>
-
-                                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-                                <tr mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></tr>
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                                 <tr class="mat-row" *matNoDataRow>
-                                    <td class="mat-cell" colspan="4">No data matching the filter</td>
+                                    <td class="mat-cell" [attr.colspan]="columnProperties.length">No data matching the
+                                        filter</td>
                                 </tr>
                             </table>
                         </div>
@@ -104,7 +90,8 @@
                 <trut-layout-footer>
                     <div class="border-t px-6 items-right">
                         <mat-paginator [length]="paginationInput.numberOfRecords" [pageSize]="paginationInput.limit"
-                            [pageSizeOptions]="paginationOptions" showFirstLastButtons aria-label=""></mat-paginator>
+                            [pageSizeOptions]="paginationOptions" (page)="onPaginateChange($event)" showFirstLastButtons
+                            aria-label="test"></mat-paginator>
                     </div>
                     <div class="border-t px-6 h-10 flex items-center text-xs">
                     </div>
