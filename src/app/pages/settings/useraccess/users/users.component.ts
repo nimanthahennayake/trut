@@ -24,8 +24,8 @@ import { NotificationService } from '../../../../../services/notifications/commo
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
-import { DatePipe } from '@angular/common';
 import { CommonService } from '../../../../../services/common.service';
+import { CdkDragDrop, CdkDrag, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-users',
@@ -49,7 +49,10 @@ import { CommonService } from '../../../../../services/common.service';
     TrutFilterBuilderModule,
     IconComponent,
     CommonModule,
-    MatProgressBar
+    MatProgressBar,
+    MatTableModule,
+    CdkDropList,
+    CdkDrag
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
@@ -79,7 +82,11 @@ export class UsersComponent {
     });
   }
 
-  transformValue(input: string, type: string): Promise<string> {
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.displayedColumns, event.previousIndex, event.currentIndex);
+  }
+
+  transformValue(input: string, type: string): string {
     return this._commonService.transformValue(input, type);
   }
 
@@ -132,6 +139,10 @@ export class UsersComponent {
     this.paginationInput.page = $event.pageIndex + 1;
     this.paginationInput.limit = $event.pageSize;
     await this.getUsers();
+  }
+
+  onSelectUser(row: any) {
+    console.log(row);
   }
 
 }

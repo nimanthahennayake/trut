@@ -63,3 +63,10 @@
   --trut-alert-thumbnail-bg: theme('colors.amber.500');
   --trut-alert-border-color: theme('colors.amber.400');
 }
+
+/* notification.component.scss */
+.mdc-snackbar__surface {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}

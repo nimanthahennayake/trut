@@ -333,10 +333,3 @@ html.dark {
   --mat-table-row-item-outline-color: theme('colors.inverse');
   --mat-paginator-container-background-color: none;
 }
-
-/* notification.component.scss */
-.mdc-snackbar__surface {
-  background: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}

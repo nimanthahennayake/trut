@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { DatePipe } from '@angular/common';
 
 
 @Injectable({
@@ -7,11 +6,10 @@ import { DatePipe } from '@angular/common';
 })
 
 export class CommonService {
-    constructor(private _datePipe: DatePipe) { }
-
-    async transformValue(value: string, type: string): Promise<string> {
+    transformValue(value: string, type: string): string {
         if (type == "date") {
-            value = <string>this._datePipe.transform(value, 'yyyy-MM-dd HH:mm:ss');
+            const dateFormat = 'yyyy-MM-dd HH:mm:ss';
+            value = <string>new Date(value).toLocaleString('en-US', { hour12: false });
         }
         return value;
     }
