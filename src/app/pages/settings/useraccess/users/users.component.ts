@@ -75,6 +75,8 @@ export class UsersComponent {
   protected searchTerm: string = '';
   protected editMode: boolean = false;
 
+  clickedRow: any = null;
+
   constructor(private _userService: UserService, private _notificationService: NotificationService, public _commonService: CommonService) {
     this.form = new FormGroup({
       userEmail: new FormControl('', [Validators.required, Validators.email]),
@@ -142,6 +144,7 @@ export class UsersComponent {
   }
 
   onSelectUser(row: any) {
+    this.clickedRow = row;
     console.log(row);
   }
 
