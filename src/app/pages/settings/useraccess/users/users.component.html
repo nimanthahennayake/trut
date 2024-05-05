@@ -1,11 +1,6 @@
 <div class="h-full">
     <trut-layout-body>
         <trut-layout>
-            <trut-layout-topbar>
-                <!-- <trut-announcement iconName="help" type="informative" closable>
-                    You still have not uploaded your Mart invoice due on 22 April 2024
-                </trut-announcement> -->
-            </trut-layout-topbar>
             <trut-layout-header>
                 <div class="border-b px-6 h-14 flex items-center">
                     Header
@@ -58,7 +53,7 @@
                                         <button mat-mini-fab color="accent">
                                             <mat-icon class="material-symbols-outlined">add</mat-icon>
                                         </button>
-                                        <button mat-mini-fab color="primary" (onClick)="getUsers()">
+                                        <button mat-mini-fab color="primary" (click)="getUsers()">
                                             <mat-icon class="material-symbols-outlined">refresh</mat-icon>
                                         </button>
                                         <button mat-mini-fab color="warn">
@@ -75,18 +70,18 @@
                             </trut-layout-sidebar>
                             <trut-layout-body class="p-2">
                                 <div class="h-full flex items-left">
-                                    <form [formGroup]="tableSearch" (ngSubmit)="getUsers()">
-                                        <mat-form-field>
+                                    <form [formGroup]="tableSearch" (ngSubmit)="getUsers()" class="global-search-form">
+                                        <button mat-mini-fab color="primary" [disabled]="tableSearch.invalid">
+                                            <mat-icon class="material-symbols-outlined">search</mat-icon>
+                                        </button>
+                                        <mat-form-field class="search-input">
                                             <input type="text" matInput formControlName="searchTerm"
-                                                placeholder="Recommend to search: Name, Email">
+                                                placeholder="Recommend to search: Name, Email" class="search-input-text">
                                             @if (tableSearch.value.searchTerm) {
                                             <button matSuffix mat-icon-button aria-label="Clear" (click)="clearText()">
                                                 <mat-icon>close</mat-icon>
                                             </button>}
                                         </mat-form-field>
-                                        <button mat-flat-button color="primary" class="!h-12 mt-4"
-                                            [disabled]="tableSearch.invalid">Sign
-                                            In</button>
                                     </form>
                                 </div>
                             </trut-layout-body>
@@ -129,12 +124,15 @@
                             [pageSizeOptions]="paginationOptions" (page)="onPaginateChange($event)" showFirstLastButtons
                             aria-label="test"></mat-paginator>
                     </div>
-                    <div>
+                    <div class="h-1">
                         @if (isLoadingResults) {
                         <mat-progress-bar mode="query"></mat-progress-bar>
                         }
                     </div>
-                    <div class="border-t px-6 h-10 flex items-center text-xs">
+                    <div class="border-t h-11">
+                        <trut-announcement iconName="help" type="informative">
+                            You still have not uploaded your Mart invoice due on 22 April 2024
+                        </trut-announcement>
                     </div>
                 </trut-layout-footer>
             </trut-layout>

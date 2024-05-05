@@ -30,6 +30,7 @@ export class UserService {
         } catch (error: any) {
             this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Something went wrong, please try again', error.message, '', undefined);
             return undefined;
+            //return { paginationOutput: getUserDetails.pagination, tableHeaders: undefined, users: undefined, output: undefined };
         }
     }
 }

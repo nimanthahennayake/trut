@@ -86,7 +86,7 @@ export class UsersComponent {
 
   columnProperties: any = [];
   displayedColumns: string[];
-  paginationInput: PaginationInputDto = new PaginationInputDto;
+  paginationInput: PaginationInputDto = { page: environment.paginationSettings.defaultPage, limit: environment.paginationSettings.defaultLimit, numberOfRecords: 0 };
 
   filterValue: FilterBuilderGroup[] = [];
   fieldDefinitions: FilterBuilderFieldDef[] = [];
@@ -128,7 +128,8 @@ export class UsersComponent {
   }
 
   clearText() {
-    throw new Error('Method not implemented.');
+    this.tableSearch.reset();
+    this.getUsers();
   }
 
   async getUsers() {
@@ -151,11 +152,12 @@ export class UsersComponent {
         }));
         this.securityUserData.paginator = this.paginator;
       }
-      this.paginationInput = {
-        page: <number>response?.paginationOutput.page,
-        limit: <number>response?.paginationOutput.limit,
-        numberOfRecords: <number>response?.paginationOutput.numberOfRecords
-      };
+      this.paginationInput.numberOfRecords = <number>response?.paginationOutput.numberOfRecords;
+      // {
+      //   page: <number>response?.paginationOutput.page,
+      //   limit: <number>response?.paginationOutput.limit,
+      //   numberOfRecords: <number>response?.paginationOutput.numberOfRecords
+      // };
     } catch (error: any) {
       this._notificationService.showBasicNotification(environment.outputStatus.variant.negative, 'Something went wrong', 'Please try again', error.message, '', undefined);
     } finally {
