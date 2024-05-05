@@ -30,4 +30,12 @@ export class TableColumnDto {
     @IsNotEmpty()
     @IsBoolean()
     sticky: boolean;
+
+    @IsNotEmpty()
+    @IsBoolean()
+    stickyEnd: boolean;
+
+    @IsNotEmpty()
+    @IsBoolean()
+    actionColumn: boolean;
 }

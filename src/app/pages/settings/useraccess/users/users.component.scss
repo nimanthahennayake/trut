@@ -29,7 +29,18 @@
 .global-search-form mat-form-field {
     height: 40px;
     line-height: 0px;
+
     .mat-mdc-text-field-wrapper.mdc-text-field {
         height: 40px !important;
     }
+}
+
+.table-action-th {
+    width: 40px;
+    padding: 0px 4px 0px 4px;
+}
+
+.table-action-td {
+    width: 40px;
+    padding: 0px 4px 0px 4px;
 }

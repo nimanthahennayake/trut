@@ -2,74 +2,43 @@
     <trut-layout-body>
         <trut-layout>
             <trut-layout-header>
-                <div class="border-b px-6 h-14 flex items-center">
+                <div class="border-b px-6 h-20 flex items-center">
                     Header
                 </div>
             </trut-layout-header>
-            <trut-layout-sidebar [hidden]="editMode">
-                <div class="p-6 border-r h-full w-full">
-                    <div class="space-y-12 py-6">
-                        <p>Search by user name and status</p>
-                        <!-- <form [formGroup]="stateOption01">
-                            <mat-form-field class="w-1/2">
-                              <mat-label>Email</mat-label>
-                              <input type="text"
-                                     matInput
-                                     formControlName="stateGroup"
-                                     required
-                                     [matAutocomplete]="autoGroupEmail">
-                              <mat-autocomplete #autoGroup="matAutocomplete">
-                                @for (group of stateEmailOptions | async; track group) {
-                                  <mat-optgroup [label]="group.letter">
-                                    @for (name of group.names; track name) {
-                                      <mat-option [value]="name">{{name}}</mat-option>
-                                    }
-                                  </mat-optgroup>
-                                }
-                              </mat-autocomplete>
-                            </mat-form-field>
-                          </form> -->
-
-                        <trut-divider>or</trut-divider>
-                        <p>Search by user email and status</p>
-                        <trut-divider>or</trut-divider>
-                        <p>Build a custom filter</p>
-                        <trut-filter-builder [fieldDefs]="fieldDefinitions" [value]="filterValue"></trut-filter-builder>
-                    </div>
-                </div>
-            </trut-layout-sidebar>
-            <trut-layout-sidebar [hidden]="!editMode">
-                <div class="p-6 border-r h-full w-full">
-                    <p>Edit</p>
-                </div>
-            </trut-layout-sidebar>
             <trut-layout>
                 <trut-layout-header>
                     <div class="h-14 border-b">
                         <trut-layout>
                             <trut-layout-sidebar class="p-2">
-                                <div class="h-full flex w-[250px]">
+                                <div class="h-full flex items-center">
                                     <div class="flex gap-2">
-                                        <button mat-mini-fab color="accent">
+                                        <button mat-mini-fab color="accent" (click)="toggle('add')">
                                             <mat-icon class="material-symbols-outlined">add</mat-icon>
                                         </button>
-                                        <button mat-mini-fab color="primary" (click)="getUsers()">
+                                        <button mat-mini-fab color="primary" (click)="toggle('refresh')">
                                             <mat-icon class="material-symbols-outlined">refresh</mat-icon>
                                         </button>
-                                        <button mat-mini-fab color="warn">
+                                        <button mat-mini-fab color="warn" (click)="toggle('filter')">
                                             <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
                                         </button>
-                                        <button mat-mini-fab>
+                                        <button mat-mini-fab (click)="toggle('sort')">
+                                            <mat-icon class="material-symbols-outlined">sort</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab (click)="toggle('select_columns')">
+                                            <mat-icon class="material-symbols-outlined">checklist_rtl</mat-icon>
+                                        </button>
+                                        <button mat-mini-fab (click)="toggle('reset')">
                                             <mat-icon class="material-symbols-outlined">restart_alt</mat-icon>
                                         </button>
-                                        <button mat-mini-fab>
-                                            <mat-icon class="material-symbols-outlined">save</mat-icon>
+                                        <button mat-mini-fab (click)="toggle('export')">
+                                            <mat-icon class="material-symbols-outlined">download</mat-icon>
                                         </button>
                                     </div>
                                 </div>
                             </trut-layout-sidebar>
                             <trut-layout-body class="p-2">
-                                <div class="h-full flex items-left">
+                                <div class="h-full flex items-center">
                                     <uni-search></uni-search>
                                 </div>
                             </trut-layout-body>
@@ -77,34 +46,55 @@
                     </div>
                 </trut-layout-header>
                 <trut-layout-body>
-                    <div class="h-full items-right">
-                        <div class="w-full p-0">
-                            <table mat-table [dataSource]="securityUserData" cdkDropList
-                                cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)"
-                                class="not-prose">
-                                <ng-container *ngFor="let column of columnProperties"
-                                    [matColumnDef]="column.columnDataFieldName" [sticky]="column.sticky">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header="column.columnIsSortable">
-                                        {{column.columnHeaderName }}</th>
-                                    <td mat-cell *matCellDef="let element">
-                                        {{element[column.columnDataFieldName]}}
-                                    </td>
-                                </ng-container>
-                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelectUser(row)"
-                                    [class.demo-row-is-clicked]="true"></tr>
-                                <tr class="mat-row" *matNoDataRow>
-                                    <td class="mat-cell" [attr.colspan]="columnProperties.length">
-                                        <div>
-                                            <trut-announcement iconName="error" type="negative">
-                                                Oops! We couldn't find any records to display. Let's try again
-                                            </trut-announcement>
-                                        </div>
-                                    <td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                    <trut-layout>
+                        <trut-layout-body class="p-0">
+                            <div class="h-full items-right">
+                                <div class="w-full p-0">
+                                    <table mat-table [dataSource]="securityUserData" cdkDropList
+                                        cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)"
+                                        class="not-prose">
+                                        <!-- Table Columns -->
+                                        <ng-container *ngFor="let column of columnProperties"
+                                            [matColumnDef]="column.columnDataFieldName" [sticky]="column.sticky"
+                                            [stickyEnd]="column.stickyEnd">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="true"
+                                                [ngClass]="{'table-action-th': column.actionColumn}">
+                                                {{ column.columnHeaderName }}
+                                            </th>
+                                            <td mat-cell *matCellDef="let element"
+                                                [ngClass]="{'table-action-td': column.actionColumn}">
+                                                <button *ngIf="column.actionColumn" mat-mini-fab
+                                                    (click)="toggle(column.columnDataFieldName)">
+                                                    <mat-icon class="material-symbols-outlined">{{
+                                                        column.columnDataFieldName
+                                                        }}</mat-icon>
+                                                </button>
+                                                <span *ngIf="!column.actionColumn">{{
+                                                    element[column.columnDataFieldName]
+                                                    }}</span>
+                                            </td>
+                                        </ng-container>
+                                        <!-- Table Rows -->
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                                            (click)="onSelectUser(row)" [class.demo-row-is-clicked]="true"></tr>
+                                        <tr class="mat-row" *matNoDataRow>
+                                            <td class="mat-cell" [attr.colspan]="columnProperties.length">
+                                                <div></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </trut-layout-body>
+                        <trut-layout-aside>
+                            <div class="p-0 h-full w-full">
+                                <div class="space-y-12 py-6" [hidden]="editMode">Test Edit</div>
+                                <div class="space-y-12 py-6" [hidden]="filterMode">Test filer</div>
+                                <div class="space-y-12 py-6" [hidden]="addRecordMode">Test add</div>
+                            </div>
+                        </trut-layout-aside>
+                    </trut-layout>
                 </trut-layout-body>
                 <trut-layout-footer>
                     <div class="border-t px-6 items-right">
@@ -118,6 +108,9 @@
                         }
                     </div>
                     <div class="border-t h-11">
+                        <trut-announcement iconName="error" type="negative" [hidden]="columnProperties.length">
+                            Oops! We couldn't find any records to display. Let's try again
+                        </trut-announcement>
                         <trut-announcement iconName="help" type="informative">
                             You still have not uploaded your Mart invoice due on 22 April 2024
                         </trut-announcement>

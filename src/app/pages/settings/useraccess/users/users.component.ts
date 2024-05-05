@@ -5,6 +5,7 @@ import { LayoutHeaderComponent } from 'trut/components';
 import { LayoutSidebarComponent } from 'trut/components';
 import { LayoutFooterComponent } from 'trut/components';
 import { LayoutTopbarComponent } from 'trut/components';
+import { LayoutAsideComponent } from 'trut/components';
 import { MatIcon } from '@angular/material/icon';
 import { TrutAnnouncementModule } from 'trut/components';
 import { MatTableModule } from '@angular/material/table';
@@ -49,6 +50,7 @@ import { environment } from '@environments/environment';
     LayoutSidebarComponent,
     LayoutFooterComponent,
     LayoutTopbarComponent,
+    LayoutAsideComponent,
     MatIcon,
     TrutAnnouncementModule,
     MatTableModule,
@@ -98,7 +100,10 @@ export class UsersComponent {
   filterOperator: FilterOperatorDto = new FilterOperatorDto;
   paginationOptions: any = environment.paginationSettings.pageSizeOptions;
   //protected searchTerm: string = '';
-  protected editMode: boolean = false;
+
+  protected editMode: boolean = true;
+  protected filterMode: boolean = true;
+  protected addRecordMode: boolean = true;
 
   clickedRow: any = [];
 
@@ -111,6 +116,38 @@ export class UsersComponent {
     this.tableSearch = new FormGroup({
       searchTerm: new FormControl('', [Validators.required])
     });
+  }
+
+  toggle(event: string) {
+    console.log(event);
+    switch (event) {
+      case 'delete':
+        console.log('delete');
+        break;
+      case 'edit':
+        this.editMode = !this.editMode;
+        this.filterMode = true;
+        this.addRecordMode = true;
+        break;
+      case 'add':
+        this.addRecordMode = !this.addRecordMode;
+        this.filterMode = true;
+        this.editMode = true;
+        break;
+      case 'refresh':
+        break;
+      case 'filter':
+        this.filterMode = !this.filterMode;
+        this.addRecordMode = true;
+        this.editMode = true;
+        break;
+      case 'reset':
+        break;
+      case 'export':
+        break;
+      case undefined:
+        break;
+    }
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -150,7 +187,9 @@ export class UsersComponent {
           columnFilterable: col.columnFilterable,
           columnVisible: col.columnVisible,
           columnIsSortable: col.columnIsSortble,
-          sticky: col.sticky
+          sticky: col.sticky,
+          stickyEnd: col.stickyEnd,
+          actionColumn: col.actionColumn
         }));
         this.securityUserData.paginator = this.paginator;
       }
@@ -174,11 +213,6 @@ export class UsersComponent {
   }
 
   onSelectUser(row: any) {
-    Object.assign(this.clickedRow, row)
-    console.log(this.clickedRow);
-  }
-
-  focus($event: FocusEvent) {
-    console.log($event);
+    Object.assign(this.clickedRow, row);
   }
 }
