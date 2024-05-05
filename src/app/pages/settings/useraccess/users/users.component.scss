@@ -10,11 +10,16 @@
 }
 
 .search-input {
-    width: 320px;
+    width: 400px;
+    font-family: inherit;
+
+    .mat-mdc-text-field-wrapper {
+        height: 40px !important;
+    }
 }
 
 .search-input input {
-    margin-top: -4px;
+    margin-top: -8px;
 }
 
 .search-input button {
@@ -24,5 +29,7 @@
 .global-search-form mat-form-field {
     height: 40px;
     line-height: 0px;
-    /* Ensures vertical centering of text */
+    .mat-mdc-text-field-wrapper.mdc-text-field {
+        height: 40px !important;
+    }
 }

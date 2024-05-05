@@ -70,19 +70,7 @@
                             </trut-layout-sidebar>
                             <trut-layout-body class="p-2">
                                 <div class="h-full flex items-left">
-                                    <form [formGroup]="tableSearch" (ngSubmit)="getUsers()" class="global-search-form">
-                                        <button mat-mini-fab color="primary" [disabled]="tableSearch.invalid">
-                                            <mat-icon class="material-symbols-outlined">search</mat-icon>
-                                        </button>
-                                        <mat-form-field class="search-input">
-                                            <input type="text" matInput formControlName="searchTerm"
-                                                placeholder="Recommend to search: Name, Email" class="search-input-text">
-                                            @if (tableSearch.value.searchTerm) {
-                                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearText()">
-                                                <mat-icon>close</mat-icon>
-                                            </button>}
-                                        </mat-form-field>
-                                    </form>
+                                    <uni-search></uni-search>
                                 </div>
                             </trut-layout-body>
                         </trut-layout>

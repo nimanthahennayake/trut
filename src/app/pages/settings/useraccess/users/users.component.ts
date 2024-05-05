@@ -37,6 +37,7 @@ import { TrutResizableContainerModule } from 'trut/components';
 import { MatOption, MatSelect } from '@angular/material/select';
 import { MatMiniFabButton } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UniSearchComponent } from '@shared/@search/uni.search.component';
 
 @Component({
   selector: 'app-users',
@@ -74,7 +75,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatOption,
     MatSelect,
     MatMiniFabButton,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UniSearchComponent
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'

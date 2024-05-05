@@ -1,0 +1,15 @@
+<mat-icon class="material-symbols-outlined search-icon">search</mat-icon>
+<input type="text" [(ngModel)]="searchText" placeholder="Search"
+  (focus)="focus($event, suggestionDropdown)">
+@if (searchText) {
+<div class="absolute end-1 w-max">
+  <button mat-icon-button (click)="clearText()">
+    <mat-icon class="material-symbols-outlined">close</mat-icon>
+  </button>
+</div>
+}
+
+<ng-template #suggestionDropdown>
+  <trut-suggestions class="rounded-b border-t dark:border-t-neutral-600 w-[600px] dark:bg-neutral-700 p-4 space-y-4">
+  </trut-suggestions>
+</ng-template>
