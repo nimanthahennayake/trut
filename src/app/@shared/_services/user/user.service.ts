@@ -4,8 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 import { environment } from '@environments/environment';
 import { Router } from '@angular/router';
 import { NotificationService } from '../notifications/common.notifications.service';
-import { GetUsersInputDto, GetUsersOutputDto } from '@shared/@dtos/user.getusers.dto';
-import { GetUserDetails } from '@shared/@utils/types/types';
+import { GetUsersInputDto, GetUsersOutputDto } from '@shared/_services/dtos/user.getusers.dto';
+import { GetUserDetails } from '@shared/_services/utils/types/types';
 
 @Injectable({
     providedIn: 'root',

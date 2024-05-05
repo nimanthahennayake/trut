@@ -5,9 +5,9 @@ import { MatInput } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
-import { AuthService } from '@shared/@services/auth/auth.service';
-import { NotificationService } from '@shared/@services/notifications/common.notifications.service';
-import { environment } from '../../../environments/environment';
+import { AuthService } from '@shared/_services/auth/auth.service';
+import { NotificationService } from '@shared/_services/notifications/common.notifications.service';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-forgot-password',

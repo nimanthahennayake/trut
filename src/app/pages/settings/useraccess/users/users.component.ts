@@ -15,15 +15,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { TrutDividerModule } from 'trut/components';
 import { MatDivider } from '@angular/material/divider';
 import { TrutFilterBuilderModule, FilterBuilderFieldDef, FilterBuilderGroup, IconComponent } from 'trut/components';
-import { PaginationInputDto } from '@shared/@dtos/common.pagination.dto';
-import { FilterOperatorDto } from '@shared/@dtos/common.filter.operator.dto';
-import { UserService } from '@shared/@services/user/user.service';
+import { PaginationInputDto } from '@shared/_services/dtos/common.pagination.dto';
+import { FilterOperatorDto } from '@shared/_services/dtos/common.filter.operator.dto';
+import { UserService } from '@shared/_services/user/user.service';
 import { Router } from '@angular/router';
-import { NotificationService } from '@shared/@services/notifications/common.notifications.service';
+import { NotificationService } from '@shared/_services/notifications/common.notifications.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
-import { CommonService } from '@shared/@services/common.service';
+import { CommonService } from '@shared/_services/common.service';
 import { CdkDragDrop, CdkDrag, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import {
   MatAccordion,
@@ -36,8 +36,8 @@ import { TrutResizableContainerModule } from 'trut/components';
 import { MatOption, MatSelect } from '@angular/material/select';
 import { MatMiniFabButton } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UniSearchComponent } from '@shared/@search/uni.search.component';
-import { environment } from '../../../../../environments/environment';
+import { UniSearchComponent } from '@shared/search/uni.search.component';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-users',
