@@ -3,8 +3,8 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { NotificationComponent } from '@app/notification/notification.component';
-import { environment } from '../../environments/environment';
-import { OutputDto } from '../../dtos/common.output.status.dtp';
+import { environment } from '@environments/environment';
+import { OutputDto } from '@shared/@dtos/common.output.status.dtp';
 
 @Injectable({
   providedIn: 'root'

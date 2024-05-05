@@ -1,6 +1,6 @@
 // user.dto.ts
 import { IsNotEmpty, IsNumber } from 'class-validator';
-import { environment } from '../environments/environment';
+import { environment } from '@environments/environment';
 
 export class PaginationInputDto {
 

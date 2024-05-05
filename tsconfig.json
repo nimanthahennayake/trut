@@ -5,6 +5,9 @@
       "@shared/*": [
         "./src/app/@shared/*"
       ],
+      "@environments/*": [
+        "./src/environments/*"
+      ],
       "@services/*": [
         "./src/app/@services/*"
       ],

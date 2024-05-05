@@ -6,7 +6,7 @@ import { MatBadge } from '@angular/material/badge';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 import { MatTooltip } from '@angular/material/tooltip';
-import { AuthService } from '../../../../services/auth/auth.service';
+import { AuthService } from '@shared/@services/auth/auth.service';
 
 @Component({
   selector: 'app-sidebar-toolbar',

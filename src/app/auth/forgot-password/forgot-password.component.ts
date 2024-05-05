@@ -5,8 +5,8 @@ import { MatInput } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
-import { AuthService } from '../../../services/auth/auth.service';
-import { NotificationService } from '../../../services/notifications/common.notifications.service';
+import { AuthService } from '@shared/@services/auth/auth.service';
+import { NotificationService } from '@shared/@services/notifications/common.notifications.service';
 import { environment } from '../../../environments/environment';
 
 @Component({

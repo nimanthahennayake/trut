@@ -5,11 +5,11 @@ import { MatError, MatFormField, MatLabel, MatSuffix } from '@angular/material/f
 import { MatInput } from '@angular/material/input';
 import { MatIcon } from '@angular/material/icon';
 import { TrutDividerModule } from 'trut/components';
-import { AuthService } from '../../../services/auth/auth.service';
-import { SignedUserDto } from '../../../dtos/user.signin.dto';
+import { AuthService } from '@shared/@services/auth/auth.service';
+import { SignedUserDto } from '@shared/@dtos/user.signin.dto';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SignInUserDetails } from '../../../utils/types/types';
-import { NotificationService } from '../../../services/notifications/common.notifications.service';
+import { SignInUserDetails } from '@shared/@utils/types/types';
+import { NotificationService } from '@shared/@services/notifications/common.notifications.service';
 import { environment } from '../../../environments/environment';
 
 @Component({

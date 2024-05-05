@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { environment } from '@environments/environment';
 import { Router } from '@angular/router';
 import { NotificationService } from '../notifications/common.notifications.service';
-import { GetUsersInputDto, GetUsersOutputDto } from '../../dtos/user.getusers.dto';
-import { GetUserDetails } from '../../utils/types/types';
+import { GetUsersInputDto, GetUsersOutputDto } from '@shared/@dtos/user.getusers.dto';
+import { GetUserDetails } from '@shared/@utils/types/types';
 
 @Injectable({
     providedIn: 'root',

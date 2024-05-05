@@ -1,4 +1,4 @@
-import { PaginationInputDto } from "../../dtos/common.pagination.dto";
+import { PaginationInputDto } from "@shared/@dtos/common.pagination.dto";
 
 export interface SignInUserDetails {
 

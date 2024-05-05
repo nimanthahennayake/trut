@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import * as bcrypt from 'bcryptjs';
-import { environment } from '../../environments/environment';
+import { environment } from '@environments/environment';
 import { Router } from '@angular/router';
 import { NotificationService } from '../notifications/common.notifications.service';
-import { SignInUserDto, SignedUserDto } from '../../dtos/user.signin.dto';
-import { SignUpUserDto, SignedUpUserDto } from '../../dtos/user.signup.dto';
-import { OutputDto } from '../../dtos/common.output.status.dtp';
+import { SignInUserDto, SignedUserDto } from '@shared/@dtos/user.signin.dto';
+import { SignUpUserDto, SignedUpUserDto } from '@shared/@dtos/user.signup.dto';
+import { OutputDto } from '@shared/@dtos/common.output.status.dtp';
 
 @Injectable({
     providedIn: 'root',

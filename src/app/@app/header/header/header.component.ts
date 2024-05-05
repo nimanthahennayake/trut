@@ -15,7 +15,7 @@ import { TrutPopoverModule } from 'trut/components';
 import { AssistantSearchComponent } from '@app/header/_assistant-search/assistant-search.component';
 import { ThemeManagerService } from '@services/theme-manager.service';
 import { LayoutApiService } from 'trut/components';
-import { AuthService } from '../../../../services/auth/auth.service';
+import { AuthService } from '@shared/@services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
